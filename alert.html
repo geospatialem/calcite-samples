@@ -2,10 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="initial-scale=1, maximum-scale=1, user-scalable=no"
-    />
     <title>alert</title>
     <script
       type="module"
@@ -17,12 +13,15 @@
       href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.81/dist/calcite/calcite.css"
     />
     <style>
+      h1 {
+        padding-top: 4rem;
+      }
       h1,
       calcite-alert {
         margin-bottom: 5rem;
       }
-      h2 {
-        margin-bottom: 3rem;
+      li {
+        margin-bottom: 2rem;
       }
       main {
         padding: 3rem;
@@ -33,7 +32,39 @@
     <main>
       <h1><code>alert</code></h1>
 
-      <calcite-alert></calcite-alert>
+      <ol>
+        <li>Four alert dialogs will load on the page.</li> 
+        <li>Three alerts are set to dismiss over a specified time unless the user dismisses them first.</li>
+        <li>The alerts will dismiss from the upper left first, then upper right, and lastly lower left.</li>
+        <li>The last alert will remain open unless dismissed by the user.</li>
+      </ol>
+
+      <!-- 1. auto-dismiss-duration: fast, placement: top -->
+      <calcite-alert id="alert1" active auto-dismiss auto-dismiss-duration="fast" color="red" icon="exclamation-mark-triangle" intl-close="Close" placement="top-start" scale="m">
+          <div slot="title">1. Fast dismiss</div>
+          <div slot="message">This message will disappear first (fast).</div>
+      </calcite-alert>
+
+      <!-- 2. auto-dismiss-duration: medium, placement: top-end -->
+      <calcite-alert id="alert2" active auto-dismiss auto-dismiss-duration="medium" color="red" icon="exclamation-mark-triangle" intl-close="Close" placement="top-end" scale="m">
+          <div slot="title">2. Medium dismiss</div>
+          <div slot="message">This message will disappear second (medium).</div>
+      </calcite-alert>
+
+      <!-- 3. auto-dismiss-duration: slow, placement: bottom-start -->
+      <calcite-alert id="alert3" active auto-dismiss auto-dismiss-duration="slow" color="red" icon="exclamation-mark-triangle" intl-close="Close" placement="bottom-start" scale="m">
+        <div slot="title">3. Slow dismiss</div>
+        <div slot="message">This message will disappear third (slow).</div>
+      </calcite-alert>
+
+      <!-- 4. placement: bottom-end -->
+      <calcite-alert id="alert4" active color="blue" icon="exclamation-mark-triangle" intl-close="Close" placement="bottom-end" scale="m">
+        <div slot="title">4. Not time dismissed</div>
+        <div slot="message">This message will remain open unless dismissed.</div>
+      </calcite-alert>
+
+
+
     </main>
   </body>
 </html>

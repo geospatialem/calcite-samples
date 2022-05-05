@@ -2,11 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="initial-scale=1, maximum-scale=1, user-scalable=no"
-    />
-    <title>accordion</title>
+    <title>accordion and accordion-item</title>
     <script
       type="module"
       src="https://unpkg.com/@esri/calcite-components@1.0.0-beta.81/dist/calcite/calcite.esm.js"
@@ -31,9 +27,32 @@
   </head>
   <body>
     <main>
-      <h1><code>accordion</code></h1>
+      <h1><code>accordion and accordion-item</code></h1>
 
-      <calcite-accordion></calcite-accordion>
+      <h2>1. appearance: default, selection-mode: single</h2>
+      
+      <calcite-accordion appearance="default" icon-position="end" icon-type="chevron" scale="m" selection-mode="single">
+        <calcite-accordion-item icon="embark" item-title="Watercraft" item-subtitle="Yachts, boats, and dinghies" active>Example accordion item content</calcite-accordion-item>
+        <calcite-accordion-item icon="car" item-title="Automobiles" item-subtitle="Cars, trucks, and busses">Example accordion item content</calcite-accordion-item>
+        <calcite-accordion-item icon="plane" item-title="Aircraft" item-subtitle="Planes, helicopters, and jets">Example accordion item content</calcite-accordion-item>
+      </calcite-accordion>
+
+        <h2>2. appearance: minimal, selection-mode: multi</h2>
+
+        <calcite-accordion appearance="minimal" icon-position="end" icon-type="chevron" scale="m" selection-mode="multi">
+          <calcite-accordion-item icon="embark" item-title="Watercraft 2" item-subtitle="Yachts, boats, and dinghies" active>Example accordion item content</calcite-accordion-item>
+          <calcite-accordion-item icon="car" item-title="Automobiles 2" item-subtitle="Cars, trucks, and busses" active>Example accordion item content</calcite-accordion-item>
+          <calcite-accordion-item icon="plane" item-title="Aircraft 2" item-subtitle="Planes, helicopters, and jets">Example accordion item content</calcite-accordion-item>
+        </calcite-accordion>
+
+        <h2>3. appearance: transparent, selection-mode: single-persist</h2>
+
+        <calcite-accordion appearance="transparent" icon-position="end" icon-type="chevron" scale="m" selection-mode="single-persist">
+          <calcite-accordion-item icon="embark" item-title="Watercraft 3" item-subtitle="Yachts, boats, and dinghies" active>Example accordion item content</calcite-accordion-item>
+          <calcite-accordion-item icon="car" item-title="Automobiles 3" item-subtitle="Cars, trucks, and busses">Example accordion item content</calcite-accordion-item>
+          <calcite-accordion-item icon="plane" item-title="Aircraft 3" item-subtitle="Planes, helicopters, and jets">Example accordion item content</calcite-accordion-item>
+        </calcite-accordion>
+
     </main>
   </body>
 </html>

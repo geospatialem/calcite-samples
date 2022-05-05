@@ -24,6 +24,9 @@ Contains the following components:
 - calcite-button 
 - calcite-alert 
 - calcite-progress
-## Single
-### 1. [Stepper](stepper.html)
+## Components
+
+### [Accordion and Accordion Item](accordion.html)
+### [Alert](alert.html)
+### [Stepper and Stepper Item](stepper.html)
 
