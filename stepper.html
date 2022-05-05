@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>stepper</title>
+    <script
+      type="module"
+      src="https://unpkg.com/@esri/calcite-components@1.0.0-beta.81/dist/calcite/calcite.esm.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.81/dist/calcite/calcite.css"
+    />
+    <style>
+      h1,
+      calcite-stepper {
+        margin-bottom: 5rem;
+      }
+      h2 {
+        margin-bottom: 3rem;
+      }
+      main {
+        padding: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1><code>stepper</code></h1>
+
+      <h2>Test #1: Layout, horizontal</h2>
+			
+			<calcite-stepper icon numbered>
+				<calcite-stepper-item item-title="Complete property" complete>Step 1
+					contains a "complete" property.</calcite-stepper-item>
+				<calcite-stepper-item item-title="Error property" error>Step 2 contains an "error" property.</calcite-stepper-item>
+				<calcite-stepper-item item-title="Active property" active>
+					Step 3 contains an "active" property.</calcite-stepper-item>
+				<calcite-stepper-item item-title="Disabled property" disabled>Step 4
+					contains a "disabled" property.</calcite-stepper-item>
+			</calcite-stepper>
+
+
+			<h2>Test #2: Layout, grid</h2>
+			
+			<calcite-stepper layout="grid" icon>
+				<calcite-stepper-item item-title="Step 1" item-subtitle="'Complete' property" complete>Step 1
+					contains a "complete" property.</calcite-stepper-item>
+				<calcite-stepper-item item-title="Step 2" item-subtitle="'Error' property" error>Step 2 contains an "error" property.</calcite-stepper-item>
+				<calcite-stepper-item item-title="Step 3" item-subtitle="'Active' property" active>
+					Step 3 contains an "active" property.</calcite-stepper-item>
+				<calcite-stepper-item item-title="Step 4" item-subtitle="'Disabled' property" disabled>Step 4
+					contains a "disabled" property.</calcite-stepper-item>
+			</calcite-stepper>
+
+
+			<h2>Test #3: Layout, vertical</h2>
+			
+			<calcite-stepper layout="vertical" icon>
+				<calcite-stepper-item item-title="Step 1" item-subtitle="'Complete' property" complete>Step 1
+					contains a "complete" property.</calcite-stepper-item>
+				<calcite-stepper-item item-title="Step 2" item-subtitle="'Error' property" error>Step 2 contains an "error" property.</calcite-stepper-item>
+				<calcite-stepper-item item-title="Step 3" item-subtitle="'Active' property" active>
+					Step 3 contains an "active" property.</calcite-stepper-item>
+				<calcite-stepper-item item-title="Step 4" item-subtitle="'Disabled' property" disabled>Step 4
+					contains a "disabled" property.</calcite-stepper-item>
+			</calcite-stepper>
+      
+    </main>
+  </body>
+</html>
