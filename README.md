@@ -1,32 +1,31 @@
 # calcite-samples
 ## [Form](_form.html)
 Contains the following components:
-- calcite-label
-- calcite-switch
-- calcite-notice
-- calcite-link
-- calcite-tooltip-manager
-- calcite-tooltip
-- calcite-icon 
-- calcite-input 
-- calcite-select 
-- calcite-option
-- calcite-radio-button-group
-- calcite-radio-button 
-- calcite-slider 
-- calcite-combobox
-- calcite-combobox-item
-- calcite-radio-group
-- calcite-radio-group-item 
-- calcite-checkbox 
-- calcite-input-date-picker 
-- calcite-rating 
-- calcite-button 
-- calcite-alert 
-- calcite-progress
+- alert
+- button
+- checkbox
+- combobox
+- combobox-item
+- icon
+- input
+- input-date-picker
+- label
+- link
+- notice
+- option
+- progress
+- radio-button
+- radio-button-group
+- radio-group
+- radio-group-item
+- rating
+- select
+- slider
+- switch
+- tooltip
+- tooltip-manager
 ## Components
 
-### [Accordion and Accordion Item](accordion.html)
-### [Alert](alert.html)
-### [Stepper and Stepper Item](stepper.html)
-
+- [Accordion and Accordion Item](accordion.html)  
+- [Alert](alert.html)  
+- [Stepper and Stepper Item](stepper.html)  
