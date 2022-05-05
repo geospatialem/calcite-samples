@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<title>Calcite Form</title>
+	<script
+	  type="module"
+	  src="https://unpkg.com/@esri/calcite-components@1.0.0-beta.81/dist/calcite/calcite.esm.js"
+	></script>
+	<link
+	  rel="stylesheet"
+	  type="text/css"
+	  href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.81/dist/calcite/calcite.css"
+	/>
+	
+	<style>
+	html,
+	body {
+	  margin: 0;
+	  padding: 0;
+	}
+	
+	.sr-only {
+	  position: absolute;
+	  width: 1px;
+	  height: 1px;
+	  padding: 0;
+	  margin: -1px;
+	  overflow: hidden;
+	  clip: rect(0,0,0,0);
+	  border: 0;
+	}
+
+	body {
+	  font-family: var(--calcite-sans-family);
+	  font-size: var(--calcite-font-size-0);
+	  color: var(--calcite-ui-text-1);
+	  max-width: 1024px;
+	  min-width: 280px;
+	  width: 70vw;
+	  padding: 0 var(--calcite-spacing-double);
+	  margin: 0 auto;
+	  background-color: var(--calcite-ui-background);
+	}
+
+	/* Theme Switcher */
+	#theme-label {
+	  position: fixed;
+	  top: 20px;
+	  right: 20px;
+	  z-index: 2;
+	  background-color: var(--calcite-ui-background);
+	  border: 1px solid;
+	  border-color: var(--calcite-ui-border-1);
+	  border-radius: var(--calcite-border-radius);
+	  margin: 0;
+	  padding: 10px;
+	}
+
+	#theme-label label {
+	  margin: 0;
+	}
+
+	/* Progress bar */
+	#progress {
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  z-index: 999;
+	}
+
+	/* Form */
+	ol {
+	  margin: 0.5em 0;
+	  padding: 0 1.5rem;
+	}
+
+	ol li {
+	  padding: 0 0 1em 0;
+	}
+
+	fieldset {
+	  margin: 2.5rem 0;
+	  padding: 1rem;
+	  border-collapse: collapse;
+	  border: 1px solid;
+	  border-color: var(--calcite-ui-border-1);
+	  border-radius: var(--calcite-border-radius);
+	}
+	</style>
+	</head>
+	
+	<!-- Components included:
+	 * calcite-label
+	 * calcite-switch
+	 * calcite-notice
+	 * calcite-link
+	 * calcite-tooltip-manager
+	 * calcite-tooltip
+	 * calcite-icon 
+	 * calcite-input 
+	 * calcite-select 
+	 * calcite-option
+	 * calcite-radio-button-group
+	 * calcite-radio-button 
+	 * calcite-slider 
+	 * calcite-combobox
+	 * calcite-combobox-item
+	 * calcite-radio-group
+	 * calcite-radio-group-item 
+	 * calcite-checkbox 
+	 * calcite-input-date-picker 
+	 * calcite-rating 
+	 * calcite-button 
+	 * calcite-alert 
+	 * calcite-progress
+	-->
+
+	<body>
+		<main>
+
+			<h1>Calcite Form</h1>
+			
+			<h2>Internal Notes - Considerations for inclusion?:</h2>
+			<ul>
+				<li><calcite-link href="https://developers.arcgis.com/calcite-design-system/components/input-message" target="_blank">Input Message</calcite-link> for displaying required field?</li>
+				<li><calcite-link href="https://developers.arcgis.com/calcite-design-system/components/chip/" target="_blank">Chip</calcite-link> with <calcite-link href="https://developers.arcgis.com/calcite-design-system/components/avatar/" target="_blank">Avatar</calcite-link> for a login test?</li>
+			</ul>
+
+			<!-- calcite-switch -->
+			<div id="theme-label">
+			  <calcite-label layout="inline">
+				Toggle theme
+				<calcite-switch id="theme-switch"></calcite-switch>
+			  </calcite-label>
+			</div>
+
+			<!-- calcite-notice -->
+			<!-- calcite-link -->
+			<calcite-notice icon="information" active dismissible>
+			  <div slot="title">Accessibility audit on the Calcite components.</div>
+			  <div slot="message">To verify each component, fill out the form in its entirety, and submit the form with the calcite-button <code>id="submit"</code>.</div>
+			  <div slot="link"><p>Resource 1: <calcite-link href="https://codepen.io/jcfranco/pen/vYmoKYq" target="_blank">Survey Form Demo</p>
+			  <p>Resource 2: <calcite-link href="https://codepen.io/jcfranco/pen/vYmoKYq" target="_blank">Survey Form Demo<span class="sr-only">, opens in a new browser window</span></calcite-link></p></div>
+			</calcite-notice>
+
+			<!-- Form -->
+			<form id="form">
+			  <fieldset>
+				<legend>Questionnaire</legend>
+				<ol>
+				  <li>
+				  <calcite-tooltip-manager>
+				  <!-- calcite-tooltip -->
+				  <!-- calcite-icon -->
+				  <calcite-tooltip reference-element="theme-help">It's a pleasure to meet you! Let us know your name incase we have any further questions.</calcite-tooltip>
+				  <!-- calcite-input -->
+				  <calcite-label>
+					<span>Your name
+					  <calcite-icon tabindex="0" id="theme-help" icon="question" scale="s"></calcite-icon>
+					</span>
+					<calcite-input type="text" placeholder="John Doe">
+					</calcite-input>
+				  </calcite-label>
+				  </calcite-tooltip-manager>
+				  </li>
+				  <li>
+					<!-- calcite-select -->
+					<!-- calcite-option -->
+					<calcite-label>Where did you hear about Calcite components?
+					<calcite-select>
+					  <calcite-option label="Please select&hellip;"></calcite-option>
+					  <calcite-option label="Esri DevSummit"></calcite-option>
+					  <calcite-option label="Search engine"></calcite-option>
+					  <calcite-option label="Social media"></calcite-option>
+					  <calcite-option label="A little bird told me"></calcite-option>
+					</calcite-select>
+					</calcite-label>
+				  </li>
+				  <li>
+					<!-- calcite-radio-button-group -->
+					<!-- calcite-radio-button -->
+					<calcite-label>Will you be using Calcite components in an upcoming project?</calcite-label>
+					<calcite-radio-button-group>
+					  <calcite-label layout=inline>
+						Yes
+						<calcite-radio-button value="yes"></calcite-radio-button>
+					  </calcite-label>
+
+					  <calcite-label layout=inline>
+						No
+						<calcite-radio-button value="no"></calcite-radio-button>
+					  </calcite-label>
+
+					  <calcite-label layout=inline>
+						Maybe
+						<calcite-radio-button value="maybe"></calcite-radio-button>
+					  </calcite-label>
+					</calcite-radio-button-group>
+				  </li>
+				  <li>
+					<!-- calcite-slider -->
+					<calcite-label>How many components will you be using?
+					  <calcite-slider snap label-handles label-ticks ticks="2" label="Number of components" value="0" min="0" max="10" step="1"></calcite-slider>
+					</calcite-label>
+				  </li>
+				  <li>
+					<!-- calcite-combobox -->
+					<!-- calcite-combobox-item -->
+					<calcite-label>What is your favourite component(s)?
+					  <calcite-combobox id="combobox" placeholder="Select favorites&hellip;" max-items="6"></calcite-combobox>
+					</calcite-label>
+				  </li>
+				  <li>
+					<!-- calcite-radio-group -->
+					<!-- calcite-radio-group-item -->
+					<calcite-label>How useful is the Calcite design system?
+					<calcite-radio-group layout="horizontal">
+						<calcite-radio-group-item value="0">
+						  😴 Very useless
+						</calcite-radio-group-item>
+						<calcite-radio-group-item value="1">🥱 Somewhat useless
+						</calcite-radio-group-item>
+						<calcite-radio-group-item value="2" checked>🤔Undecided
+						</calcite-radio-group-item>
+						<calcite-radio-group-item value="3">😀Somewhat useful
+						</calcite-radio-group-item>
+						<calcite-radio-group-item value="5">🥳 Very useful
+						</calcite-radio-group-item>
+					  </calcite-radio-group>
+					</calcite-label>
+				  </li>
+				  <li>
+					<!-- calcite-checkbox -->
+					<fieldset>
+					  <legend>
+						What is the most important aspect(s) of a component?
+					  </legend>
+					  <calcite-label layout=inline>
+						<calcite-checkbox></calcite-checkbox>
+						Configurability
+					  </calcite-label>
+					  <calcite-label layout=inline>
+						<calcite-checkbox></calcite-checkbox>
+						Accessibility
+					  </calcite-label>
+					  <calcite-label layout=inline>
+						<calcite-checkbox></calcite-checkbox>
+						Ease of use
+					  </calcite-label>
+					</fieldset>
+				  </li>
+				  <li>
+					<!-- calcite-input-date-picker -->
+					<calcite-label>When did you hear about Calcite components?
+					<calcite-input-date-picker id="date-picker"></calcite-input-date-picker>
+					</calcite-label>
+				  </li>
+				  <li>
+					<!-- calcite-rating -->
+					<calcite-label>How many stars would you give Calcite components?
+					  <calcite-rating value="1"></calcite-rating>
+					</calcite-label>
+				  </li>
+				</ol>
+				<!-- calcite-button -->
+				<calcite-button id="submit" type="submit">Submit</calcite-button>
+			  </fieldset>
+			</form>
+
+			<!-- calcite-alert -->
+			<calcite-alert id="alert" icon auto-dismiss auto-dismiss-duration="medium" color="green">
+			  <div slot="message">
+				<strong>Success!</strong>
+				Thank you for your feedback.
+			  </div>
+			</calcite-alert>
+
+			<!-- calcite-progress -->
+			<calcite-progress id="progress" type="indeterminate" hidden></calcite-progress>
+			
+		</main>
+	</body>
+	<script>
+		window.onload = () => {
+		  // Theme Switcher
+		  const themeSwitch = document.getElementById("theme-switch");
+		  themeSwitch.addEventListener("calciteSwitchChange", () => {
+			document.body.classList.toggle("calcite-theme-dark");
+		  });
+
+		  // Combobox
+		  const comboboxItems = [
+			"Accordion",
+			"Alert",
+			"Button",
+			"Dropdown",
+			"Card",
+			"Combobox",
+			"Icon",
+			"Label",
+			"Loader",
+			"Modal",
+			"Notice",
+			"Pagination",
+			"Popover",
+			"Slider",
+			"Switch",
+			"Tabs",
+			"Tooltip",
+			"Tree"
+		  ];
+		  const combobox = document.getElementById("combobox");
+		  comboboxItems.forEach((item, index) => {
+			const comboboxItem = document.createElement("calcite-combobox-item");
+			comboboxItem.textLabel = item;
+			comboboxItem.value = index;
+			combobox.appendChild(comboboxItem);
+		  });
+
+		  // Datepicker
+		  const datePicker = document.getElementById("date-picker");
+		  datePicker.maxAsDate = new Date();
+		  datePicker.min = "2021-01-01";
+
+		  // Form submission
+		  const form = document.getElementById("form");
+		  const submit = document.getElementById("submit");
+		  const progress = document.getElementById("progress");
+		  const alert = document.getElementById("alert");
+
+		  form.onsubmit = () => {
+			submit.loading = true;
+			progress.removeAttribute("hidden");
+
+			setTimeout(() => {
+			  submit.loading = false;
+			  progress.setAttribute("hidden", "");
+			  alert.active = true;
+			}, 2500);
+		  };
+		};
+	</script>
+</html>
