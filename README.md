@@ -1,29 +1,6 @@
 # calcite-samples
 ## [Form](0-form.html)
-Contains the following components:
-- alert
-- button
-- checkbox
-- combobox
-- combobox-item
-- icon
-- input
-- input-date-picker
-- label
-- link
-- notice
-- option
-- progress
-- radio-button
-- radio-button-group
-- radio-group
-- radio-group-item
-- rating
-- select
-- slider
-- switch
-- tooltip
-- tooltip-manager
+Complex sample that contains multiple components.
 ## Components
 
 - [Accordion and Accordion Item](accordion.html)  
