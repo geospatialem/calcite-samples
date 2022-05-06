@@ -122,9 +122,7 @@
 			
 			<h2>Internal Notes - Considerations for inclusion?:</h2>
 			<ul>
-				<li><calcite-link href="https://developers.arcgis.com/calcite-design-system/components/input-message" target="_blank">Input Message</calcite-link> for displaying required field?</li>
-				<li><calcite-link href="https://developers.arcgis.com/calcite-design-system/components/chip/" target="_blank">Chip</calcite-link> with <calcite-link href="https://developers.arcgis.com/calcite-design-system/components/avatar/" target="_blank">Avatar</calcite-link> for a login test?</li>
-			</ul>
+				<li><calcite-link href="https://developers.arcgis.com/calcite-design-system/components/input-message" target="_blank">Input Message</calcite-link> for displaying required field?</li>			</ul>
 
 			<!-- calcite-switch -->
 			<div id="theme-label">
@@ -164,9 +162,12 @@
 				  </calcite-tooltip-manager>
 				  </li>
 				  <li>
+
 					<!-- calcite-select -->
 					<!-- calcite-option -->
-					<calcite-label>Where did you hear about Calcite components?
+					<fieldset>
+						<legend>
+					<calcite-label>Where did you hear about Calcite components?</legend>
 					<calcite-select>
 					  <calcite-option label="Please select&hellip;"></calcite-option>
 					  <calcite-option label="Esri DevSummit"></calcite-option>
@@ -175,11 +176,16 @@
 					  <calcite-option label="A little bird told me"></calcite-option>
 					</calcite-select>
 					</calcite-label>
+					</fieldset>
 				  </li>
 				  <li>
 					<!-- calcite-radio-button-group -->
 					<!-- calcite-radio-button -->
-					<calcite-label>Will you be using Calcite components in an upcoming project?</calcite-label>
+					<fieldset>
+						<legend>
+							<calcite-label>
+								Will you be using Calcite components in an upcoming project?
+						</legend>
 					<calcite-radio-button-group>
 					  <calcite-label layout=inline>
 						Yes
@@ -196,12 +202,16 @@
 						<calcite-radio-button value="maybe"></calcite-radio-button>
 					  </calcite-label>
 					</calcite-radio-button-group>
+					</calcite-label>
+					</fieldset>
 				  </li>
 				  <li>
 					<!-- calcite-slider -->
-					<calcite-label>How many components will you be using?
+					<fieldset>
+						<legend><calcite-label>How many components will you be using?</legend>
 					  <calcite-slider snap label-handles label-ticks ticks="2" label="Number of components" value="0" min="0" max="10" step="1"></calcite-slider>
 					</calcite-label>
+				</fieldset>
 				  </li>
 				  <li>
 					<!-- calcite-combobox -->
@@ -213,7 +223,9 @@
 				  <li>
 					<!-- calcite-radio-group -->
 					<!-- calcite-radio-group-item -->
-					<calcite-label>How useful is the Calcite design system?
+					<fieldset>
+						<legend>
+							<calcite-label>How useful is the Calcite design system?</legend>
 					<calcite-radio-group layout="horizontal">
 						<calcite-radio-group-item value="0">
 						  😴 Very useless
@@ -228,6 +240,7 @@
 						</calcite-radio-group-item>
 					  </calcite-radio-group>
 					</calcite-label>
+					</fieldset>
 				  </li>
 				  <li>
 					<!-- calcite-checkbox -->
@@ -257,13 +270,18 @@
 				  </li>
 				  <li>
 					<!-- calcite-rating -->
-					<calcite-label>How many stars would you give Calcite components?
+					<fieldset>
+						<legend>
+							<calcite-label>How many stars would you give Calcite components?</legend>
 					  <calcite-rating value="1"></calcite-rating>
 					</calcite-label>
+					</fieldset>
 				  </li>
 				</ol>
 				<!-- calcite-button -->
 				<calcite-button id="submit" type="submit">Submit</calcite-button>
+				<!-- calcite-button -->
+				<calcite-button appearance="clear" id="reset" type="reset">Reset form</calcite-button>
 			  </fieldset>
 			</form>
 

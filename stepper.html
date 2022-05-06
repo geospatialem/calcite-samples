@@ -20,16 +20,49 @@
       h2 {
         margin-bottom: 3rem;
       }
-      main {
-        padding: 3rem;
+      body {
+        font-family: var(--calcite-sans-family);
+        font-size: var(--calcite-font-size-0);
+        color: var(--calcite-ui-text-1);
+        max-width: 1024px;
+        min-width: 280px;
+        width: 70vw;
+        padding: 0 var(--calcite-spacing-double);
+        margin: 0 auto;
+        background-color: var(--calcite-ui-background);
+      }
+      /* Theme Switcher */
+      #theme-label {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 2;
+        background-color: var(--calcite-ui-background);
+        border: 1px solid;
+        border-color: var(--calcite-ui-border-1);
+        border-radius: var(--calcite-border-radius);
+        margin: 0;
+        padding: 10px;
+      }
+      #theme-label label {
+        margin: 0;
       }
     </style>
   </head>
   <body>
     <main>
+      
+      <!-- calcite-switch -->
+			<div id="theme-label">
+			  <calcite-label layout="inline">
+				Toggle theme
+				<calcite-switch id="theme-switch"></calcite-switch>
+			  </calcite-label>
+			</div>
+
       <h1><code>stepper and stepper-item</code></h1>
 
-      <h2>Test #1: Layout, horizontal</h2>
+      <h2>Test #1: Layout: horizontal</h2>
 			
 			<calcite-stepper icon numbered>
 				<calcite-stepper-item item-title="Complete property" complete>Step 1
@@ -42,7 +75,7 @@
 			</calcite-stepper>
 
 
-			<h2>Test #2: Layout, grid</h2>
+			<h2>Test #2: Layout: grid</h2>
 			
 			<calcite-stepper layout="grid" icon>
 				<calcite-stepper-item item-title="Step 1" item-subtitle="'Complete' property" complete>Step 1
@@ -55,9 +88,9 @@
 			</calcite-stepper>
 
 
-			<h2>Test #3: Layout, vertical</h2>
+			<h2>Test #3: Scale: small and Layout: vertical</h2>
 			
-			<calcite-stepper layout="vertical" icon>
+			<calcite-stepper scale="s" layout="vertical" icon>
 				<calcite-stepper-item item-title="Step 1" item-subtitle="'Complete' property" complete>Step 1
 					contains a "complete" property.</calcite-stepper-item>
 				<calcite-stepper-item item-title="Step 2" item-subtitle="'Error' property" error>Step 2 contains an "error" property.</calcite-stepper-item>
@@ -69,4 +102,13 @@
       
     </main>
   </body>
+  <script>
+    window.onload = () => {
+      // Theme Switcher
+      const themeSwitch = document.getElementById("theme-switch");
+      themeSwitch.addEventListener("calciteSwitchChange", () => {
+      document.body.classList.toggle("calcite-theme-dark");
+      });
+    };
+  </script>
 </html>
