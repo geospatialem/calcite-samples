@@ -18,7 +18,7 @@
         margin-bottom: 5rem;
       }
       h2 {
-        margin-bottom: 3rem;
+        margin: 3rem 0rem;
       }
       body {
         font-family: var(--calcite-sans-family);
@@ -52,6 +52,8 @@
   <body>
     <main>
       
+      <h1><code>stepper and stepper-item</code></h1>
+
       <!-- calcite-switch -->
 			<div id="theme-label">
 			  <calcite-label layout="inline">
@@ -60,9 +62,9 @@
 			  </calcite-label>
 			</div>
 
-      <h1><code>stepper and stepper-item</code></h1>
+      <p>Navigate through each individual sample. Each sample includes different properties, but similar content.</p>
 
-      <h2>Test #1: Layout: horizontal</h2>
+      <h2>Test 1: Horizontal layout</h2>
 			
 			<calcite-stepper icon numbered>
 				<calcite-stepper-item item-title="Complete property" complete>Step 1
@@ -75,7 +77,7 @@
 			</calcite-stepper>
 
 
-			<h2>Test #2: Layout: grid</h2>
+			<h2>Test 2: Grid layout</h2>
 			
 			<calcite-stepper layout="grid" icon>
 				<calcite-stepper-item item-title="Step 1" item-subtitle="'Complete' property" complete>Step 1
@@ -88,7 +90,7 @@
 			</calcite-stepper>
 
 
-			<h2>Test #3: Scale: small and Layout: vertical</h2>
+			<h2>Test 3: Vertical layout and Small scale</h2>
 			
 			<calcite-stepper scale="s" layout="vertical" icon>
 				<calcite-stepper-item item-title="Step 1" item-subtitle="'Complete' property" complete>Step 1
