@@ -120,12 +120,6 @@
 
 			<h1>Calcite Form</h1>
 			
-			<!--TODO:-->
-			<!-- <h2>Internal Notes - Considerations for inclusion?:</h2>
-			<ul>
-				<li><calcite-link href="https://developers.arcgis.com/calcite-design-system/components/input-message" target="_blank">Input Message</calcite-link> for displaying required field?</li>			</ul> -->
-
-			<!-- calcite-switch -->
 			<div id="theme-label">
 			  <calcite-label layout="inline">
 				Toggle theme
@@ -137,9 +131,13 @@
 			<!-- calcite-link -->
 			<calcite-notice icon="information" active dismissible>
 			  <div slot="title">Accessibility audit on the Calcite components.</div>
-			  <div slot="message">To verify each component, fill out the form in its entirety, and submit the form with the calcite-button <code>id="submit"</code>.</div>
-			  <div slot="link"><p>Resource 1: <calcite-link href="https://codepen.io/jcfranco/pen/vYmoKYq" target="_blank">Survey Form Demo</p>
-			  <p>Resource 2: <calcite-link href="https://codepen.io/jcfranco/pen/vYmoKYq" target="_blank">Survey Form Demo<span class="sr-only">, opens in a new browser window</span></calcite-link></p></div>
+			  <div slot="message"><ul>
+				  <li>To verify each component, fill out the form in its entirety, and submit the form by selecting the "Submit" button.</li>
+				  <li>The form can be cleared by selecting the "Reset form" button.</li>
+				</ul>
+			</div>
+			  <div slot="link"><p>Link 1 test: <calcite-link href="https://codepen.io/jcfranco/pen/vYmoKYq" target="_blank">Survey Form Demo</p>
+			  <p>Link 2 test: <calcite-link href="https://codepen.io/jcfranco/pen/vYmoKYq" target="_blank">Survey Form Demo<span class="sr-only">, opens in a new browser window</span></calcite-link></p></div>
 			</calcite-notice>
 
 			<!-- Form -->
