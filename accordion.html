@@ -18,7 +18,7 @@
         margin-bottom: 5rem;
       }
       h2 {
-        margin-bottom: 3rem;
+        margin: 3rem 0rem;
       }
       body {
         font-family: var(--calcite-sans-family);
@@ -54,8 +54,6 @@
 
       <h1><code>accordion and accordion-item</code></h1>
 
-      <h2>1. appearance: default, selection-mode: single</h2>
-
       <!-- calcite-switch -->
 			<div id="theme-label">
 			  <calcite-label layout="inline">
@@ -64,22 +62,26 @@
 			  </calcite-label>
 			</div>
       
+      <p>Navigate through each individual sample. Each sample includes different properties but similar content, including three accordion items.</p>
+      
+      <h2>Test 1: Accordion single selection mode</h2>
+      <!-- appearance: default, selection-mode: single -->
       <calcite-accordion appearance="default" icon-position="end" icon-type="chevron" scale="m" selection-mode="single">
         <calcite-accordion-item icon="embark" item-title="Watercraft" item-subtitle="Yachts, boats, and dinghies" active>Example accordion item content</calcite-accordion-item>
         <calcite-accordion-item icon="car" item-title="Automobiles" item-subtitle="Cars, trucks, and busses">Example accordion item content</calcite-accordion-item>
         <calcite-accordion-item icon="plane" item-title="Aircraft" item-subtitle="Planes, helicopters, and jets">Example accordion item content</calcite-accordion-item>
       </calcite-accordion>
 
-        <h2>2. appearance: minimal, selection-mode: multi</h2>
-
+        <h2> Test 2: Accordion multi selection mode</h2>
+        <!-- appearance: minimal, selection-mode: multi -->
         <calcite-accordion appearance="minimal" icon-position="end" icon-type="chevron" scale="m" selection-mode="multi">
           <calcite-accordion-item icon="embark" item-title="Watercraft 2" item-subtitle="Yachts, boats, and dinghies" active>Example accordion item content</calcite-accordion-item>
           <calcite-accordion-item icon="car" item-title="Automobiles 2" item-subtitle="Cars, trucks, and busses" active>Example accordion item content</calcite-accordion-item>
           <calcite-accordion-item icon="plane" item-title="Aircraft 2" item-subtitle="Planes, helicopters, and jets">Example accordion item content</calcite-accordion-item>
         </calcite-accordion>
 
-        <h2>3. scale: small, appearance: transparent, selection-mode: single-persist</h2>
-
+        <h2>Test 3: Accordion single persist selection mode and small scale </h2>
+        <!-- scale: small, appearance: transparent, selection-mode: single-persist -->
         <calcite-accordion appearance="transparent" icon-position="end" icon-type="chevron" scale="s" selection-mode="single-persist">
           <calcite-accordion-item icon="embark" item-title="Watercraft 3" item-subtitle="Yachts, boats, and dinghies" active>Example accordion item content</calcite-accordion-item>
           <calcite-accordion-item icon="car" item-title="Automobiles 3" item-subtitle="Cars, trucks, and busses">Example accordion item content</calcite-accordion-item>
