@@ -13,11 +13,12 @@
       href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.82/dist/calcite/calcite.css"
     />
     <style>
-      h1,
-      calcite-avatar {
+      h1 {
         margin-bottom: 5rem;
       }
-      h2 {
+      h2,
+      calcite-avatar,
+      calcite-chip {
         margin-bottom: 3rem;
       }
       body {
@@ -62,7 +63,29 @@
 
       <h1><code>avatar</code></h1>
 
-      <calcite-avatar></calcite-avatar>
+      <p>Navigate through each individual sample. Each sample includes different properties but similar content, including the same user credentials.</p>
+
+      <h2>Test 1. Medium Avatar</h2>
+      <calcite-avatar full-name="Michael Jordan" user-id="0" username="mjordan"></calcite-avatar>
+
+      <h2>Test 2. Medium Avatar Thumbnail</h2>
+      <calcite-avatar full-name="Michael Jordan" thumbnail="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY2Njc5NDYzOTQ4NDYxNDA4/michael-jordan.jpg" user-id="0" username="mjordan"></calcite-avatar>
+
+      <h2>Test 3. Small Avatar</h2>
+      <calcite-avatar full-name="Michael Jordan" scale="s" user-id="0" username="mjordan"></calcite-avatar>
+
+      <h2>Test 4. Small Avatar Thumbnail</h2>
+      <calcite-avatar full-name="Michael Jordan" scale="s" thumbnail="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY2Njc5NDYzOTQ4NDYxNDA4/michael-jordan.jpg" user-id="0" username="mjordan"></calcite-avatar>
+
+      <h2>Test 5. Chip with Avatar</h2>
+      <calcite-chip>
+        <calcite-avatar slot="image" full-name="Michael Jordan" user-id="0" username="mjordan"></calcite-avatar>Michael Jordan
+      </calcite-chip>
+
+      <h2>Test 6. Chip with Avatar Thumbnail</h2>
+      <calcite-chip>
+        <calcite-avatar slot="image" full-name="Michael Jordan" thumbnail="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY2Njc5NDYzOTQ4NDYxNDA4/michael-jordan.jpg" user-id="0" username="mjordan"></calcite-avatar>Michael Jordan
+      </calcite-chip>
 
     </main>
   </body>
