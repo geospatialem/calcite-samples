@@ -13,12 +13,14 @@
       href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.82/dist/calcite/calcite.css"
     />
     <style>
-      h1,
-      calcite-fab {
+      h1 {
         margin-bottom: 5rem;
       }
       h2 {
-        margin-bottom: 3rem;
+        margin: 5rem 0rem 3rem 0rem;
+      }
+      .color-contrast > calcite-fab {
+        margin-bottom: 2rem;
       }
       body {
         font-family: var(--calcite-sans-family);
@@ -47,6 +49,9 @@
       #theme-label label {
         margin: 0;
       }
+      main {
+        padding-bottom: 5rem;
+      }
     </style>
   </head>
   <body>
@@ -60,9 +65,32 @@
         </calcite-label>
       </div>
 
-      <h1><code>fab</code></h1>
+      <h1><code>floating action button (fab)</code></h1>
 
-      <calcite-fab></calcite-fab>
+      <ol>
+        <li>Navigate through each individual sample. Each sample includes different properties but similar content.</li>
+        <li>Test 1 includes color contrast tests from six samples to be tested with both themes.</li>
+      </ol>
+
+      <h2>Test 1. Color Contrast</h2>
+      <div class="color-contrast">
+        <calcite-fab appearance="outline" icon="folder-plus" label="Add folder" text-enabled text="Add folder"></calcite-fab>
+        <calcite-fab appearance="solid" icon="folder-plus" label="Add folder" text-enabled text="Add folder"></calcite-fab>
+        <calcite-fab appearance="outline" color="red" icon="folder-plus" label="Add folder" text-enabled text="Add folder"></calcite-fab>
+        <calcite-fab appearance="solid" color="red" icon="folder-plus" label="Add folder" text-enabled text="Add folder"></calcite-fab>
+        <calcite-fab appearance="outline" color="blue" icon="folder-plus" label="Add folder" text-enabled text="Add folder"></calcite-fab>
+        <calcite-fab appearance="solid" color="blue" icon="folder-plus" label="Add folder" text-enabled text="Add folder"></calcite-fab>
+      </div>
+      
+      <h2>Test 2. Small scale</h2>
+      <calcite-fab appearance="outline" icon="folder-plus" label="Add folder" scale="s" text-enabled text="Add folder"></calcite-fab>
+      
+      <h2>Test 3. Disabled</h2>
+      <calcite-fab appearance="outline" disabled icon="folder-plus" label="Add folder" text-enabled text="Add folder"></calcite-fab>
+
+      <h2>Test 4. Loading</h2>
+      <calcite-fab appearance="outline" icon="folder-plus" label="Add folder" loading text-enabled text="Add folder"></calcite-fab>
+
 
     </main>
   </body>
