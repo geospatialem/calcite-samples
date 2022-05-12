@@ -6,9 +6,10 @@ Complex sample that contains multiple components.
 1. [Accordion and Accordion Item](accordion.html)  
 2. [Alert](alert.html)  
 3. [Avatar and Chip](avatar.html)
-4. [Stepper and Stepper Item](stepper.html)  
+4. [Floating Action Button (FAB)](fab.html)
+5. [Stepper and Stepper Item](stepper.html)  
 
-## Component pages in progress (n=49)
+## Component pages in progress (n=48)
 - Action Bar, Action Group and Action
 - Action Menu
 - Action Pad and Action
@@ -20,7 +21,6 @@ Complex sample that contains multiple components.
 - Combobox, Combobox Item Group and Combobox Item
 - Date Picker
 - Dropdown, Dropdown Group and Dropdown Item
-- Floating Action Button (FAB)
 - Filter
 - Flow
 - Inline Editable
