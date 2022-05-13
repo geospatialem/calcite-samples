@@ -7,9 +7,10 @@ Complex sample that contains multiple components.
 2. [Alert](alert.html)  
 3. [Avatar and Chip](avatar.html)
 4. [Floating Action Button (FAB)](fab.html)
-5. [Stepper and Stepper Item](stepper.html)  
+5. [Label](label.html)
+6. [Stepper and Stepper Item](stepper.html)  
 
-## Component pages in progress (n=48)
+## Component pages in progress (n=47)
 - Action Bar, Action Group and Action
 - Action Menu
 - Action Pad and Action
@@ -27,7 +28,6 @@ Complex sample that contains multiple components.
 - Input and Input Message
 - Input Date Picker
 - Input Time Picker
-- Label
 - Link
 - List, List Item Group and List Item
 - Loader
