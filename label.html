@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>label</title>
     <script
       type="module"
@@ -13,12 +14,11 @@
       href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.82/dist/calcite/calcite.css"
     />
     <style>
-      h1,
-      calcite-label {
+      h1 {
         margin-bottom: 5rem;
       }
       h2 {
-        margin-bottom: 3rem;
+        margin: 5rem 0rem 3rem 0rem;
       }
       body {
         font-family: var(--calcite-sans-family);
@@ -47,6 +47,9 @@
       #theme-label label {
         margin: 0;
       }
+      main {
+        padding-bottom: 5rem;
+      }
     </style>
   </head>
   <body>
@@ -62,7 +65,42 @@
 
       <h1><code>label</code></h1>
 
-      <calcite-label></calcite-label>
+      <p>Navigate through each individual sample. Each sample should be tested for its label, and not for the individual components (such as input, checkbox, radio button, etc.)</p>
+
+      <h2>Test 1. Label for input</h2>
+      <calcite-label>Label for input 
+        <calcite-input placeholder="Placeholder"></calcite-input>
+      </calcite-label>
+
+      <h2>Test 2. Small label for input</h2>
+      <calcite-label scale="s">Small label for input 
+        <calcite-input placeholder="Placeholder"></calcite-input>
+      </calcite-label>
+
+      <h2>Test 3. Inline label for input</h2>
+      <calcite-label layout="inline" scale="m">Inline label for input 
+        <calcite-input placeholder="Placeholder"></calcite-input>
+      </calcite-label>
+
+      <h2>Test 4. Label for checkbox</h2>
+      <calcite-label layout="inline">
+        <calcite-checkbox></calcite-checkbox>Label for checkbox 
+      </calcite-label>
+
+      <h2>Test 5. Label for radio button</h2>
+      <calcite-label layout="inline">
+        <calcite-radio-button value="true"></calcite-radio-button>Label for radio button
+      </calcite-label>
+
+      <h2>Test 6. Label for switch</h2>
+      <calcite-label>Label for switch
+        <calcite-switch></calcite-switch>
+      </calcite-label>
+
+      <h2>Test 7. Label for combobox</h2>
+      <calcite-combobox label="Label for combobox">
+        <calcite-combobox-item value="Item 1" text-label="Item 1"><calcite-combobox-item>
+      </calcite-combobox>
 
     </main>
   </body>
