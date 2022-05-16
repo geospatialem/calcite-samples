@@ -10,9 +10,10 @@ Complex sample that contains multiple components.
 5. [Label](label.html)
 6. [Shell and Shell Panel](shell.html)
 7. [Stepper and Stepper Item](stepper.html)  
-8. [Value List and Value List Item](value-list.html)
+8. [Switch](switch.html)
+9. [Value List and Value List Item](value-list.html)
 
-## Component pages in progress (n=45)
+## Component pages in progress (n=44)
 - Action Bar, Action Group and Action
 - Action Menu
 - Action Pad and Action
@@ -49,7 +50,6 @@ Complex sample that contains multiple components.
 - Shell Center Row
 - Slider
 - Split Button
-- Switch
 - Tabs, Tab Nav, Tab Title and Tab
 - Tile Select Group and Tile Select
 - Tile
