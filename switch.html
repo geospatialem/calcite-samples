@@ -14,12 +14,14 @@
       href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.82/dist/calcite/calcite.css"
     />
     <style>
-      h1,
-      calcite-switch {
+      h1 {
         margin-bottom: 5rem;
       }
       h2 {
-        margin-bottom: 3rem;
+        margin: 5rem 0rem 3rem 0rem;
+      }
+      main {
+        padding-bottom: 5rem;
       }
       body {
         font-family: var(--calcite-sans-family);
@@ -63,7 +65,31 @@
 
       <h1><code>switch</code></h1>
 
-      <calcite-switch></calcite-switch>
+      <ol>
+        <li>Check color contrast throughout the switches.</li>
+        <li>Can disabled switches be accessed?</li>
+        <li>Are checked switches identified?</li>
+      </ol>
+
+      <h2>Test 1. Switch Size</h2>
+      <calcite-label layout="inline">Small<calcite-switch scale="s"></calcite-switch></calcite-label>
+      <calcite-label layout="inline">Medium<calcite-switch scale="m"></calcite-switch></calcite-label>
+      <calcite-label layout="inline">Large<calcite-switch scale="l"></calcite-switch></calcite-label>
+
+      <h2>Test 2. Switch Disabled</h2>
+      <calcite-label layout="inline">Small disabled<calcite-switch scale="s" disabled></calcite-switch></calcite-label>
+      <calcite-label layout="inline">Medium disabled<calcite-switch scale="m" disabled></calcite-switch></calcite-label>
+      <calcite-label layout="inline">Large disabled<calcite-switch scale="l" disabled></calcite-switch></calcite-label>
+
+      <h2>Test 3. Switch Checked</h2>
+      <calcite-label layout="inline">Small checked<calcite-switch scale="s" checked></calcite-switch></calcite-label>
+      <calcite-label layout="inline">Medium checked<calcite-switch scale="m" checked></calcite-switch></calcite-label>
+      <calcite-label layout="inline">Large checked<calcite-switch scale="l" checked></calcite-switch></calcite-label>
+
+      <h2>Test 4. Switch Checked and Disabled</h2>
+      <calcite-label layout="inline">Small checked and disabled<calcite-switch scale="s" checked disabled></calcite-switch></calcite-label>
+      <calcite-label layout="inline">Medium checked and disabled<calcite-switch scale="m" checked disabled></calcite-switch></calcite-label>
+      <calcite-label layout="inline">Large checked and disabled<calcite-switch scale="l" checked disabled></calcite-switch></calcite-label>
 
     </main>
   </body>
