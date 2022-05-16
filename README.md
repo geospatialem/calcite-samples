@@ -8,9 +8,11 @@ Complex sample that contains multiple components.
 3. [Avatar and Chip](avatar.html)
 4. [Floating Action Button (FAB)](fab.html)
 5. [Label](label.html)
-6. [Stepper and Stepper Item](stepper.html)  
+6. [Shell and Shell Panel](shell.html)
+7. [Stepper and Stepper Item](stepper.html)  
+8. [Value List and Value List Item](value-list.html)
 
-## Component pages in progress (n=47)
+## Component pages in progress (n=45)
 - Action Bar, Action Group and Action
 - Action Menu
 - Action Pad and Action
@@ -44,7 +46,6 @@ Complex sample that contains multiple components.
 - Rating
 - Scrim
 - Select
-- Shell and Shell Panel
 - Shell Center Row
 - Slider
 - Split Button
@@ -56,4 +57,3 @@ Complex sample that contains multiple components.
 - Tip, Tip Group and Tip Manager
 - Tooltip
 - Tree and Tree Item
-- Value List and Value List Item
