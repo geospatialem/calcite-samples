@@ -63,7 +63,88 @@
 
       <h1><code>value-list</code></h1>
 
-      <calcite-value-list></calcite-value-list>
+      <h2>Test 1. Value List</h2>
+      <calcite-value-list>
+        <calcite-value-list-item label="River" description="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream." value="rivers">
+            <calcite-action slot="actions-end" icon="plus"></calcite-action>
+        </calcite-value-list-item>
+        <calcite-value-list-item label="Mountain" description="A large natural elevation of the earth's surface rising abruptly from the surrounding level." value="mountains">
+            <calcite-action slot="actions-end" icon="plus"></calcite-action>
+        </calcite-value-list-item>
+        <calcite-value-list-item label="Lake" description="A large body of water surrounded by land." value="lakes">
+            <calcite-action slot="actions-end" icon="plus"></calcite-action>
+        </calcite-value-list-item>
+      </calcite-value-list>
+
+      <h2>Test 2. Value List with Filter</h2>
+      <calcite-value-list filter-enabled filter-placeholder="Filter list items" selection-follows-focus>
+        <calcite-value-list-item label="River" description="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream." value="rivers">
+            <calcite-action slot="actions-end" icon="plus"></calcite-action>
+        </calcite-value-list-item>
+        <calcite-value-list-item label="Mountain" description="A large natural elevation of the earth's surface rising abruptly from the surrounding level." value="mountains">
+            <calcite-action slot="actions-end" icon="plus"></calcite-action>
+        </calcite-value-list-item>
+        <calcite-value-list-item label="Lake" description="A large body of water surrounded by land." value="lakes">
+            <calcite-action slot="actions-end" icon="plus"></calcite-action>
+        </calcite-value-list-item>
+      </calcite-value-list>
+
+      <h2>Test 3. Value List with Multiple Selections and Actions</h2>
+      <calcite-value-list multiple>
+        <calcite-value-list-item label="River" description="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream." value="rivers">
+          <calcite-action slot="actions-end" text="click-me" onClick="console.log('Verified river');" icon="check">
+          </calcite-action>
+          <calcite-action slot="actions-end" text="click-me" onClick="console.log('Closed river');" icon="x">
+          </calcite-action>
+        </calcite-value-list-item>
+        <calcite-value-list-item label="Mountain" description="A large natural elevation of the earth's surface rising abruptly from the surrounding level." value="mountains">
+          <calcite-action slot="actions-end" text="click-me" onClick="console.log('Verified mountain');" icon="check">
+          </calcite-action>
+          <calcite-action slot="actions-end" text="click-me" onClick="console.log('Closed mountain');" icon="x">
+          </calcite-action>
+        </calcite-value-list-item>
+        <calcite-value-list-item label="Lake" description="A large body of water surrounded by land." value="lakes">
+          <calcite-action slot="actions-end" text="click-me" onClick="console.log('Verified lake');" icon="check">
+          </calcite-action>
+          <calcite-action slot="actions-end" text="click-me" onClick="console.log('Closed lake');" icon="x">
+          </calcite-action>
+        </calcite-value-list-item>
+      </calcite-value-list>
+
+      <h2>Test 4. Value List with Non-interactive and Removable List Items</h2>
+      <calcite-value-list>
+        <calcite-value-list-item non-interactive label="River" value="river" description="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream." removable></calcite-value-list-item>
+        <calcite-value-list-item non-interactive label="Mountain" description="A large natural elevation of the earth's surface rising abruptly from the surrounding level." value="mountain" removable></calcite-value-list-item>
+        <calcite-value-list-item non-interactive label="Lake" description="A large body of water surrounded by land." value="lake" removable></calcite-value-list-item>
+      </calcite-value-list>
+
+      <h2>Test 5. Value List with Drag Enabled</h2>
+      <calcite-value-list drag-enabled selection-follows-focus>
+        <calcite-value-list-item label="River" description="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream." value="rivers">
+            <calcite-action slot="actions-end" icon="plus"></calcite-action>
+        </calcite-value-list-item>
+        <calcite-value-list-item label="Mountain" description="A large natural elevation of the earth's surface rising abruptly from the surrounding level." value="mountains">
+            <calcite-action slot="actions-end" icon="plus"></calcite-action>
+        </calcite-value-list-item>
+        <calcite-value-list-item label="Lake" description="A large body of water surrounded by land." value="lakes">
+            <calcite-action slot="actions-end" icon="plus"></calcite-action>
+        </calcite-value-list-item>
+      </calcite-value-list>
+
+      <h2>Test 6. Grouped Value Lists with Drag Enabled</h2>
+      <p>Move value list items from one list to another.</p>
+
+      <span>List 1</span>
+      <calcite-value-list id="listone" drag-enabled group="dragEnabledGroup">
+        <calcite-value-list-item label="River" description="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream." value="river"></calcite-value-list-item>
+        <calcite-value-list-item label="Mountain" description="A large natural elevation of the earth's surface rising abruptly from the surrounding level." value="mountain"></calcite-value-list-item>
+      </calcite-value-list>
+
+      <span>List 2</span>
+      <calcite-value-list id="listtwo" drag-enabled group="dragEnabledGroup">
+        <calcite-value-list-item label="Lake" description="A large body of water surrounded by land." value="lake"></calcite-value-list-item>
+        <calcite-value-list-item label="Meadow" description="A piece of grassland, especially one used for hay." value="meadow"></calcite-value-list-item>
+      </calcite-value-list>
 
     </main>
   </body>
