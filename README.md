@@ -1,23 +1,22 @@
 # calcite-samples
 ## [Form](0-form.html)
 Complex sample that contains multiple components.
-## Components
+## Components (n=12)
 
-1. [Accordion and Accordion Item](accordion.html)  
-2. [Alert](alert.html)  
-3. [Avatar and Chip](avatar.html)
-4. [Floating Action Button (FAB)](fab.html)
-5. [Label](label.html)
-6. [Shell and Shell Panel](shell.html)
-7. [Stepper and Stepper Item](stepper.html)  
-8. [Switch](switch.html)
-9. [Value List and Value List Item](value-list.html)
+- [Accordion and Accordion Item](accordion.html)  
+- [Action](action.html)
+- [Action Bar, Action Group and Action](action-bar.html)
+- [Action Pad and Action](action-pad.html)
+- [Alert](alert.html)  
+- [Avatar and Chip](avatar.html)
+- [Floating Action Button (FAB)](fab.html)
+- [Label](label.html)
+- [Shell and Shell Panel](shell.html)
+- [Stepper and Stepper Item](stepper.html)  
+- [Switch](switch.html)
+- [Value List and Value List Item](value-list.html)
 
-## Component pages in progress (n=44)
-- Action Bar, Action Group and Action
-- Action Menu
-- Action Pad and Action
-- Action
+## Component pages in progress (n=39)
 - Block, Block Section and Notice
 - Button
 - Card
@@ -40,7 +39,7 @@ Complex sample that contains multiple components.
 - Pagination
 - Panel
 - Pick List, Pick List Group and Pick List Item
-- Popover and Popover Manager
+- Popover
 - Progress
 - Radio Button and Radio Button Group
 - Radio Group and Radio Group Item

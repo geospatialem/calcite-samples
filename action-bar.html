@@ -63,7 +63,47 @@
 
       <h1><code>action-bar</code></h1>
 
-      <calcite-action-bar></calcite-action-bar>
+      <h2>Test 1. Action bar</h2>
+      <calcite-action-bar>
+        <calcite-action text="Information" icon="information"></calcite-action>
+        <calcite-action text="Feedback" slot="bottom-actions" icon="mega-phone"></calcite-action>
+      </calcite-action-bar>
+
+      <h2>Test 2. Action bar small scale</h2>
+      <calcite-action-bar scale="s">
+        <calcite-action text="Information" icon="information"></calcite-action>
+        <calcite-action text="Feedback" slot="bottom-actions" icon="mega-phone"></calcite-action>
+      </calcite-action-bar>
+
+      <h2>Test 3. Action bar with expand disabled</h2>
+      <calcite-action-bar expand-disabled>
+        <calcite-action text="Information" icon="information"></calcite-action>
+        <calcite-action text="Feedback" slot="bottom-actions" icon="mega-phone"></calcite-action>
+      </calcite-action-bar>
+
+      <h2>Test 4. Action bar expanded</h2>
+      <calcite-action-bar expanded>
+        <calcite-action text="Information" icon="information"></calcite-action>
+        <calcite-action text="Feedback" slot="bottom-actions" icon="mega-phone"></calcite-action>
+      </calcite-action-bar>
+
+      <h2>Test 5. Action bar expanded, expand disabled</h2>
+      <calcite-action-bar expand-disabled expanded>
+        <calcite-action text="Information" icon="information"></calcite-action>
+        <calcite-action text="Feedback" slot="bottom-actions" icon="mega-phone"></calcite-action>
+      </calcite-action-bar>
+
+      <h2>Test 6. Action bar with groups</h2>
+      <calcite-action-bar>
+        <calcite-action-group>
+          <calcite-action text="Information" icon="information"></calcite-action>
+          <calcite-action text="Feedback" icon="mega-phone"></calcite-action>
+        </calcite-action-group>
+        <calcite-action-group>
+            <calcite-action text="Layers" icon="layers"></calcite-action>
+            <calcite-action text="Basemaps" icon="layer-basemap"></calcite-action>
+        </calcite-action-group>
+      </calcite-action-bar>
 
     </main>
   </body>
