@@ -14,11 +14,14 @@
       href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.82/dist/calcite/calcite.css"
     />
     <style>
-      h1,
-      calcite-button {
+      h1 {
         margin-bottom: 5rem;
       }
       h2 {
+        margin-top: 3rem;
+      }
+      h2, 
+      calcite-button {
         margin-bottom: 3rem;
       }
       body {
@@ -63,18 +66,195 @@
 
       <h1><code>button</code></h1>
 
-      <calcite-button></calcite-button>
+      <h2>Additional instructions</h2>
+      <ol>
+        <li>For tests 1 and 2, please also perform color contrast tests with and without the theme toggle (at the top of the page).</li>
+        <li>For test 8, a switch is present to toggle loading animation.</li>
+      </ol>
+
+      <br>
+
+      <h2>Test 1. Default: Ensure color contrast tests are performed</h2>
+      <!-- Solid brand -->
+      <calcite-button color="blue" scale="s">Solid brand, small</calcite-button>
+      <calcite-button color="blue" scale="m">Solid brand, medium</calcite-button>
+      <calcite-button color="blue" scale="l">Solid brand, large</calcite-button>
+      <br>
+      <!-- Solid neutral -->
+      <calcite-button color="neutral" scale="s">Solid neutral, small</calcite-button>
+      <calcite-button color="neutral" scale="m">Solid neutral, medium</calcite-button>
+      <calcite-button color="neutral" scale="l">Solid neutral, large</calcite-button>
+      <br>
+      <!-- Solid inverse -->
+      <calcite-button color="inverse" scale="s">Solid inverse, small</calcite-button>
+      <calcite-button color="inverse" scale="m">Solid inverse, medium</calcite-button>
+      <calcite-button color="inverse" scale="l">Solid inverse, large</calcite-button>
+      <br>
+      <!-- Solid danger -->
+      <calcite-button color="red" scale="s">Solid danger, small</calcite-button>
+      <calcite-button color="red" scale="m">Solid danger, medium</calcite-button>
+      <calcite-button color="red" scale="l">Solid danger, large</calcite-button>
+
+
+      <h2>Test 2. Clear Default: Ensure color contrast tests are performed</h2>
+      <!-- Clear brand -->
+      <calcite-button appearance="clear" color="blue" scale="s">Clear brand, small</calcite-button>
+      <calcite-button appearance="clear" color="blue" scale="m">Clear brand, medium</calcite-button>
+      <calcite-button appearance="clear" color="blue" scale="l">Clear brand, large</calcite-button>
+      <br>
+      <!-- Clear neutral -->
+      <calcite-button appearance="clear" color="neutral" scale="s">Clear neutral, small</calcite-button>
+      <calcite-button appearance="clear" color="neutral" scale="m">Clear neutral, medium</calcite-button>
+      <calcite-button appearance="clear" color="neutral" scale="l">Clear neutral, large</calcite-button>
+      <br>
+      <!-- Clear inverse -->
+      <calcite-button appearance="clear" color="inverse" scale="s">Clear inverse, small</calcite-button>
+      <calcite-button appearance="clear" color="inverse" scale="m">Clear inverse, medium</calcite-button>
+      <calcite-button appearance="clear" color="inverse" scale="l">Clear inverse, large</calcite-button>
+      <br>
+      <!-- Clear danger -->
+      <calcite-button appearance="clear" color="red" scale="s">Clear danger, small</calcite-button>
+      <calcite-button appearance="clear" color="red" scale="m">Clear danger, medium</calcite-button>
+      <calcite-button appearance="clear" color="red" scale="l">Clear danger, large</calcite-button>
+
+
+      <h2>Test 3. Default with Icons </h2>
+      <calcite-button icon-start="arrow-left" icon-end="arrow-right" color="blue" scale="s">Button</calcite-button>
+      <calcite-button icon-start="arrow-left" icon-end="arrow-right" color="blue" scale="m">Button</calcite-button>
+      <calcite-button icon-start="arrow-left" icon-end="arrow-right" color="blue" scale="l">Button</calcite-button>
+      
+      
+      <h2>Test 4. Icons only</h2>
+      <calcite-button icon-start="save" color="blue" scale="s"></calcite-button>
+      <calcite-button icon-start="save" color="blue" scale="m"></calcite-button>
+      <calcite-button icon-start="save" color="blue" scale="l"></calcite-button>
+
+
+      <h2>Test 5. Rounded</h2>
+      <calcite-button color="blue" scale="s" round>Button</calcite-button>
+      <calcite-button color="blue" scale="m" round>Button</calcite-button>
+      <calcite-button color="blue" scale="l" round>Button</calcite-button>
+
+
+      <h2>Test 6. Rounded with Icons</h2>
+      <calcite-button icon-start="arrow-left" icon-end="arrow-right" color="blue" scale="s" round>Button</calcite-button>
+      <calcite-button icon-start="arrow-left" icon-end="arrow-right" color="blue" scale="m" round>Button</calcite-button>
+      <calcite-button icon-start="arrow-left" icon-end="arrow-right" color="blue" scale="l" round>Button</calcite-button>
+
+
+      <h2>Test 7. Rounded Icon only</h2>
+      <calcite-button icon-start="save" color="blue" scale="s" round> </calcite-button>
+      <calcite-button icon-start="save" color="blue" scale="m" round> </calcite-button>
+      <calcite-button icon-start="save" color="blue" scale="l" round> </calcite-button>
+
+      <h2>Test 8. Loading: Enable via toggle loading animation switch</h2>
+      <!-- Switcher to add loading class-->  
+      <calcite-label layout="inline">
+        <h3> Toggle loading animation: </h3>
+        <calcite-switch id="loading-switch"></calcite-switch>
+      </calcite-label>
+      <br>
+      <calcite-button class="loading-transition" color="blue" appearance="solid" icon-end="download">Attachments</calcite-button>
+
+      <h2>Test 9. Widths</h2>
+      <calcite-button title="Auto width (default)">Auto width (default)</calcite-button>
+      <calcite-button title="Half width" width="half">Half width</calcite-button>
+      <calcite-button title="Full width" width="full">Full width</calcite-button>
+      <calcite-button title="Full width with icon" icon-start="layers" width="full">Full width with icon</calcite-button>
+
+      <h2>Test 10. Alignments</h2>
+      <calcite-button title="Alignment center (default))" icon-start="layers" icon-end="chevron-down" width="half">Alignment center (default)</calcite-button>
+      <calcite-button title="Alignment start" alignment="start" icon-start="layers" icon-end="chevron-down" width="half">Alignment start</calcite-button>
+      <calcite-button title="Alignment end" alignment="end" icon-start="layers" icon-end="chevron-down" width="half">Alignment end</calcite-button>
+      <calcite-button title="Alignment space-between" alignment="space-between" icon-start="layers" icon-end="chevron-down" width="half">Alignment space-between</calcite-button>
+      <calcite-button title="Alignment icon-start space-between" alignment="icon-start-space-between" icon-start="layers" icon-end="chevron-down" width="half">Alignment icon-start space-between</calcite-button>
+      <calcite-button title="Alignment icon-end space-between" alignment="icon-end-space-between" icon-start="layers" icon-end="chevron-down" width="half">Alignment icon-end space-between</calcite-button>
+
+      <h3>Test 10b. Right-to-Left Alignments: For localizations that read content right-to-left</h3>
+      <calcite-button dir="rtl" title="Alignment center (default))" icon-start="layers" icon-end="chevron-down" width="half">Alignment center (default)</calcite-button>
+      <calcite-button dir="rtl" title="Alignment start" alignment="start" icon-start="layers" icon-end="chevron-down" width="half">Alignment start</calcite-button>
+      <calcite-button dir="rtl" title="Alignment end" alignment="end" icon-start="layers" icon-end="chevron-down" width="half">Alignment end</calcite-button>
+      <calcite-button dir="rtl" title="Alignment space-between" alignment="space-between" icon-start="layers" icon-end="chevron-down" width="half">Alignment space-between</calcite-button>
+      <calcite-button dir="rtl" title="Alignment icon-start space-between" alignment="icon-start-space-between" icon-start="layers" icon-end="chevron-down" width="half">Alignment icon-start space-between</calcite-button>
+      <calcite-button dir="rtl" title="Alignment icon-end space-between" alignment="icon-end-space-between" icon-start="layers" icon-end="chevron-down" width="half">Alignment icon-end space-between</calcite-button>
+
+
+      <h2>Test 11. Icons within Buttons</h2>
+
+      <calcite-button aria-label="Share layer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 30 30">
+          <path fill="#fff" d="M22.117 7H7.883A.883.883 0 0 0 7 7.883v14.234c0 .487.396.883.883.883H15v-7h-3v-2h3v-.992c0-2.066 1.277-3.192 3.121-3.192.883 0 1.879.066 1.879.096V12h-1.764c-1.002 0-1.236.148-1.236.848V14h2.73l-.911 2H17v7h5.117a.884.884 0 0 0 .883-.883V7.883A.883.883 0 0 0 22.117 7z"/>
+        </svg>
+      </calcite-button>
+
+      <calcite-button aria-label="Add layer">
+        <calcite-icon scale="s" icon="layer"></calcite-icon>
+      </calcite-button>
+
+      <calcite-button aria-label="Add layer">
+        <calcite-icon scale="m" icon="layer"></calcite-icon>
+      </calcite-button>
+
+      <calcite-button aria-label="Add layer">
+        <calcite-icon scale="l" icon="layer"></calcite-icon>
+      </calcite-button>
+
+
+      <h2>Test 12. Setting Focus: Setting focus on buttons and input</h2>
+      <calcite-button appearance="clear" onclick="document.querySelector('#button-focus-example-1').setFocus()">Set Focus to Button 1</calcite-button>
+      <calcite-button appearance="clear" onclick="document.querySelector('#button-focus-example-2').setFocus()">Set Focus to Button 2</calcite-button>
+      <calcite-button appearance="clear" onclick="document.querySelector('#button-focus-input').setFocus()">Set Focus to Input</calcite-button>
+
+      <div>
+        <calcite-button id="button-focus-example-1">Button 1 for focus</calcite-button>
+        <calcite-button id="button-focus-example-2">Button 2 for focus</calcite-button>
+        <calcite-label layout="inline">Label for input focus
+          <calcite-input value="" id="button-focus-input" placeholder="Input for focus placeholder" min="10" max="30"></calcite-input>
+        </calcite-label>
+      </div>
+
+
 
     </main>
   </body>
 
   <script>
+    // Loading switch constants
+    const loadingSwitch = document.querySelector("#loading-switch");
+    const scaleRadios = document.querySelector("#scale-group");
+    const appearanceRadios = document.querySelector("#appearance-group");
+    const colorRadios = document.querySelector("#color-group");
+
+    // On load
     window.onload = () => {
       // Theme Switcher
       const themeSwitch = document.getElementById("theme-switch");
       themeSwitch.addEventListener("calciteSwitchChange", () => {
       document.body.classList.toggle("calcite-theme-dark");
       });
+
+      // Loading switch
+      loadingSwitch.addEventListener("calciteSwitchChange", () => {
+          document.querySelectorAll(".loading-transition").forEach((button) => {
+            button.toggleAttribute("loading");
+          });
+      });
+      scaleRadios.addEventListener("calciteRadioGroupChange", (e) => {
+        document.querySelectorAll(".loading-transition").forEach((button) => {
+          button.setAttribute("scale", e.detail);
+        });
+      });
+      appearanceRadios.addEventListener("calciteRadioGroupChange", (e) => {
+        document.querySelectorAll(".loading-transition").forEach((button) => {
+          button.setAttribute("appearance", e.detail);
+        });
+      });
+      colorRadios.addEventListener("calciteRadioGroupChange", (e) => {
+        document.querySelectorAll(".loading-transition").forEach((button) => {
+          button.setAttribute("color", e.detail);
+        });
+      });
+      // End loading switch
     };
 
   </script>
