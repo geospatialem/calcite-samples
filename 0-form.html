@@ -164,9 +164,7 @@
 
 					<!-- calcite-select -->
 					<!-- calcite-option -->
-					<fieldset>
-						<legend>
-					<calcite-label>Where did you hear about Calcite components?</legend>
+					<calcite-label>Where did you hear about Calcite components?
 					<calcite-select>
 					  <calcite-option label="Please select&hellip;"></calcite-option>
 					  <calcite-option label="Esri DevSummit"></calcite-option>
@@ -175,40 +173,30 @@
 					  <calcite-option label="A little bird told me"></calcite-option>
 					</calcite-select>
 					</calcite-label>
-					</fieldset>
 				  </li>
 				  <li>
 					<!-- calcite-radio-button-group -->
 					<!-- calcite-radio-button -->
-					<fieldset>
-						<legend>
-							<calcite-label>
-								Will you be using Calcite components in an upcoming project?
-						</legend>
+					<calcite-label>Will you be using Calcite components in an upcoming project?
 					<calcite-radio-button-group>
-					  <calcite-label layout=inline>
-						Yes
+					  <calcite-label layout=inline>Yes
 						<calcite-radio-button value="yes"></calcite-radio-button>
 					  </calcite-label>
 
-					  <calcite-label layout=inline>
-						No
+					  <calcite-label layout=inline>No
 						<calcite-radio-button value="no"></calcite-radio-button>
 					  </calcite-label>
 
-					  <calcite-label layout=inline>
-						Maybe
+					  <calcite-label layout=inline>Maybe
 						<calcite-radio-button value="maybe"></calcite-radio-button>
 					  </calcite-label>
 					</calcite-radio-button-group>
 					</calcite-label>
-					</fieldset>
 				  </li>
 				  <li>
 					<!-- calcite-slider -->
-					<fieldset>
-						<legend><calcite-label>How many components will you be using?</legend>
-					  <calcite-slider snap label-handles label-ticks ticks="2" label="Number of components" value="0" min="0" max="10" step="1"></calcite-slider>
+					<calcite-label>How many components will you be using?
+						<calcite-slider snap label-handles label-ticks ticks="2" label="Number of components" value="0" min="0" max="10" step="1"></calcite-slider>
 					</calcite-label>
 				</fieldset>
 				  </li>
@@ -222,24 +210,20 @@
 				  <li>
 					<!-- calcite-radio-group -->
 					<!-- calcite-radio-group-item -->
-					<fieldset>
-						<legend>
-							<calcite-label>How useful is the Calcite design system?</legend>
-					<calcite-radio-group layout="horizontal">
-						<calcite-radio-group-item value="0">
-						  😴 Very useless
+					<calcite-label for="radioGroup">How useful is the Calcite design system?
+					<calcite-radio-group id="radioGroup" layout="horizontal">
+						<calcite-radio-group-item value="0">😴 Very useless
 						</calcite-radio-group-item>
 						<calcite-radio-group-item value="1">🥱 Somewhat useless
 						</calcite-radio-group-item>
-						<calcite-radio-group-item value="2" checked>🤔Undecided
+						<calcite-radio-group-item value="2" checked>🤔 Undecided
 						</calcite-radio-group-item>
-						<calcite-radio-group-item value="3">😀Somewhat useful
+						<calcite-radio-group-item value="3">😀 Somewhat useful
 						</calcite-radio-group-item>
 						<calcite-radio-group-item value="5">🥳 Very useful
 						</calcite-radio-group-item>
 					  </calcite-radio-group>
 					</calcite-label>
-					</fieldset>
 				  </li>
 				  <li>
 					<!-- calcite-checkbox -->
@@ -248,33 +232,27 @@
 						What is the most important aspect(s) of a component?
 					  </legend>
 					  <calcite-label layout=inline>
-						<calcite-checkbox></calcite-checkbox>
-						Configuration
+						<calcite-checkbox></calcite-checkbox>Configuration
 					  </calcite-label>
 					  <calcite-label layout=inline>
-						<calcite-checkbox></calcite-checkbox>
-						Accessibility
+						<calcite-checkbox></calcite-checkbox>Accessibility
 					  </calcite-label>
 					  <calcite-label layout=inline>
-						<calcite-checkbox></calcite-checkbox>
-						Ease of use
+						<calcite-checkbox></calcite-checkbox>Ease of use
 					  </calcite-label>
 					</fieldset>
 				  </li>
 				  <li>
 					<!-- calcite-input-date-picker -->
 					<calcite-label>When did you hear about Calcite components?
-					<calcite-input-date-picker id="date-picker"></calcite-input-date-picker>
+						<calcite-input-date-picker id="date-picker"></calcite-input-date-picker>
 					</calcite-label>
 				  </li>
 				  <li>
 					<!-- calcite-rating -->
-					<fieldset>
-						<legend>
-							<calcite-label>How many stars would you give Calcite components?</legend>
-					  <calcite-rating value="1"></calcite-rating>
+					<calcite-label>How many stars would you give Calcite components?
+						<calcite-rating value="1"></calcite-rating>
 					</calcite-label>
-					</fieldset>
 				  </li>
 				</ol>
 				<!-- calcite-button -->
