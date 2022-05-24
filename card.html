@@ -63,7 +63,71 @@
 
       <h1><code>card</code></h1>
 
-      <calcite-card></calcite-card>
+      <h2>Test 1. Default Card</h2>
+      <div id="card-container" style="width:280px">
+        <calcite-card><span slot="title">Card title</span><span slot="subtitle">by
+                &nbsp;<calcite-link href>username</calcite-link></span>
+            <div>Created: Jan 1, 2020<br>Updated: Feb 2, 2021<br>View Count: 0</div>
+            <calcite-button slot="footer-leading" color="neutral" scale="s" icon-start="plus">
+            </calcite-button>
+            <div slot="footer-trailing">
+                <calcite-button color="neutral" id="card-icon-test-2" icon-start="layer">
+                </calcite-button>
+                <calcite-button color="neutral" id="card-icon-test-1" icon-start="attachment">
+                </calcite-button>
+            </div>
+        </calcite-card>
+      </div>
+
+      <h2>Test 2. Selectable Card</h2>
+      <div id="card-container" style="width:280px">
+        <calcite-card selectable><span slot="title">Card title</span><span slot="subtitle">by
+                &nbsp;<calcite-link href>username</calcite-link></span>
+            <div>Created: Jan 1, 2020<br>Updated: Feb 2, 2021<br>View Count: 0</div>
+            <calcite-button slot="footer-leading" color="neutral" scale="s" icon-start="plus">
+            </calcite-button>
+            <div slot="footer-trailing">
+                <calcite-button color="neutral" id="card-icon-test-2" icon-start="layer">
+                </calcite-button>
+                <calcite-button color="neutral" id="card-icon-test-1" icon-start="attachment">
+                </calcite-button>
+            </div>
+        </calcite-card>
+      </div>
+
+      <h2>Test 3. Selected Card</h2>
+      <div id="card-container" style="width:280px">
+        <calcite-card selectable selected><span slot="title">Card title</span><span slot="subtitle">by
+                &nbsp;<calcite-link href>username</calcite-link></span>
+            <div>Created: Jan 1, 2020<br>Updated: Feb 2, 2021<br>View Count: 0</div>
+            <calcite-button slot="footer-leading" color="neutral" scale="s" icon-start="plus">
+            </calcite-button>
+            <div slot="footer-trailing">
+                <calcite-button color="neutral" id="card-icon-test-2" icon-start="layer">
+                </calcite-button>
+                <calcite-button color="neutral" id="card-icon-test-1" icon-start="attachment">
+                </calcite-button>
+            </div>
+        </calcite-card>
+      </div>
+
+
+    <h2>Test 4. Loading Card</h2>
+    <div id="card-container" style="width:280px">
+      <calcite-card loading selectable selected><span slot="title">Card title</span><span
+              slot="subtitle">by
+              &nbsp;<calcite-link href>username</calcite-link></span>
+          <div>Created: Jan 1, 2020<br>Updated: Feb 2, 2021<br>View Count: 0</div>
+          <calcite-button slot="footer-leading" color="neutral" scale="s" icon-start="plus">
+          </calcite-button>
+          <div slot="footer-trailing">
+              <calcite-button color="neutral" id="card-icon-test-2" icon-start="layer">
+              </calcite-button>
+              <calcite-button color="neutral" id="card-icon-test-1" icon-start="attachment">
+              </calcite-button>
+          </div>
+      </calcite-card>
+    </div>
 
     </main>
   </body>
