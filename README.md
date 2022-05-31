@@ -1,7 +1,7 @@
 # calcite-samples
 ## [Form](0-form.html)
 Complex sample that contains multiple components.
-## Components (n=14)
+## Components (n=17)
 
 - [Accordion and Accordion Item](accordion.html)  
 - [Action](action.html)
@@ -12,13 +12,16 @@ Complex sample that contains multiple components.
 - [Button](button.html)
 - [Card](card.html)
 - [Floating Action Button (FAB)](fab.html)
+- [Inline Editable](inline-editable.html)  
 - [Label](label.html)
+- [Loader](loader.html)
+- [Notice](notice.html)
 - [Shell and Shell Panel](shell.html)
 - [Stepper and Stepper Item](stepper.html)  
 - [Switch](switch.html)
 - [Value List and Value List Item](value-list.html)
 
-## Component pages in progress (n=37)
+## Component pages in progress (n=34)
 - Block, Block Section and Notice
 - Color Picker
 - Combobox, Combobox Item Group and Combobox Item
@@ -26,15 +29,12 @@ Complex sample that contains multiple components.
 - Dropdown, Dropdown Group and Dropdown Item
 - Filter
 - Flow
-- Inline Editable
 - Input and Input Message
 - Input Date Picker
 - Input Time Picker
 - Link
 - List, List Item Group and List Item
-- Loader
 - Modal
-- Notice
 - Option and Option Group
 - Pagination
 - Panel
