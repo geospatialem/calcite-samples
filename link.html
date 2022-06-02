@@ -14,11 +14,11 @@
       href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.82/dist/calcite/calcite.css"
     />
     <style>
-      h1,
-      calcite-link {
+      h1 {
         margin-bottom: 5rem;
       }
-      h2 {
+      h2,
+      .link-container {
         margin-bottom: 3rem;
       }
       body {
@@ -63,7 +63,25 @@
 
       <h1><code>link</code></h1>
 
-      <calcite-link></calcite-link>
+      <h2>Test 1. Link with href</h2>
+      <div class="link-container">
+        <calcite-link href="https://developers.arcgis.com/calcite-design-system/">Calcite Design System</calcite-link>
+      </div>
+
+      <h2>Test 2. Disabled Link</h2>
+      <div class="link-container">
+        <calcite-link disabled href="https://developers.arcgis.com/calcite-design-system/">Calcite Design System</calcite-link>
+      </div>
+
+      <h2>Test 3. Link with target</h2>
+      <div class="link-container">
+        <calcite-link href="https://developers.arcgis.com/calcite-design-system/" target="_blank">Calcite Design System</calcite-link>
+      </div>
+
+      <h2>Test 4. Link with icons</h2>
+      <div class="link-container">
+        <calcite-link href="https://developers.arcgis.com/calcite-design-system/" icon-end="paint-bucket">Calcite Design System</calcite-link>
+      </div>
 
     </main>
   </body>

@@ -63,7 +63,32 @@
 
       <h1><code>date-picker</code></h1>
 
-      <calcite-date-picker></calcite-date-picker>
+      <h2>Test 1. Date Picker Scale</h2>
+      <h3>Small:</h3>
+      <calcite-date-picker scale="s"></calcite-date-picker>
+
+      <h3>Medium:</h3>
+      <calcite-date-picker scale="m"></calcite-date-picker>
+
+      <h3>Large:</h3>
+      <calcite-date-picker scale="l"></calcite-date-picker>
+
+      <h2>Test 2. Selected Date: July 11, 2022</h2>
+      <calcite-date-picker value="2022-07-11"></calcite-date-picker>
+
+      <h2>Test 2. Date Picker with Heading Level</h2>
+      <calcite-date-picker heading-level="3"></calcite-date-picker>
+
+      <h2>Test 3. Date Picker with Specified Times: July 11, 2022 through August 5, 2022</h2>
+      <calcite-date-picker min="2022-07-11" max="2022-08-05"></calcite-date-picker>
+
+      <h2>Test 4. Date Picker with Range</h2>
+      <ol>
+        <li>Select a start date</li>
+        <li>Select an end date</li>
+        <li>The range will been created with the start and end date selected</li>
+      </ol>
+      <calcite-date-picker active-range="start" range proximity-selection-disabled></calcite-date-picker>
 
     </main>
   </body>

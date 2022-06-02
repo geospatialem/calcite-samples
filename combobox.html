@@ -18,9 +18,6 @@
       calcite-combobox {
         margin-bottom: 5rem;
       }
-      h2 {
-        margin-bottom: 3rem;
-      }
       body {
         font-family: var(--calcite-sans-family);
         font-size: var(--calcite-font-size-0);
@@ -63,7 +60,136 @@
 
       <h1><code>combobox</code></h1>
 
-      <calcite-combobox></calcite-combobox>
+      <h2>Test 1. Combobox scales</h2>
+      <h3>Small:</h3>
+      <calcite-combobox label="Occupation" scale="s">
+        <calcite-combobox-item value="Fire" text-label="Fire"></calcite-combobox-item>
+        <calcite-combobox-item value="EMS" text-label="EMS"></calcite-combobox-item>
+        <calcite-combobox-item value="Rescue" text-label="Rescue"></calcite-combobox-item>
+        <calcite-combobox-item value="Homeland Security" text-label="Homeland Security"></calcite-combobox-item>
+        <calcite-combobox-item value="Law Enforcement" text-label="Law Enforcement"></calcite-combobox-item>
+        <calcite-combobox-item value="Agriculture" text-label="Agriculture"></calcite-combobox-item>
+        <calcite-combobox-item value="Forestry" text-label="Forestry"></calcite-combobox-item>
+        <calcite-combobox-item value="Mining" text-label="Mining"></calcite-combobox-item>
+      </calcite-combobox>
+
+      <h3>Medium:</h3>
+      <calcite-combobox label="Occupation" scale="m">
+        <calcite-combobox-item value="Fire" text-label="Fire"></calcite-combobox-item>
+        <calcite-combobox-item value="EMS" text-label="EMS"></calcite-combobox-item>
+        <calcite-combobox-item value="Rescue" text-label="Rescue"></calcite-combobox-item>
+        <calcite-combobox-item value="Homeland Security" text-label="Homeland Security"></calcite-combobox-item>
+        <calcite-combobox-item value="Law Enforcement" text-label="Law Enforcement"></calcite-combobox-item>
+        <calcite-combobox-item value="Agriculture" text-label="Agriculture"></calcite-combobox-item>
+        <calcite-combobox-item value="Forestry" text-label="Forestry"></calcite-combobox-item>
+        <calcite-combobox-item value="Mining" text-label="Mining"></calcite-combobox-item>
+      </calcite-combobox>
+
+      <h3>Large:</h3>
+      <calcite-combobox label="Occupation" scale="l">
+        <calcite-combobox-item value="Fire" text-label="Fire"></calcite-combobox-item>
+        <calcite-combobox-item value="EMS" text-label="EMS"></calcite-combobox-item>
+        <calcite-combobox-item value="Rescue" text-label="Rescue"></calcite-combobox-item>
+        <calcite-combobox-item value="Homeland Security" text-label="Homeland Security"></calcite-combobox-item>
+        <calcite-combobox-item value="Law Enforcement" text-label="Law Enforcement"></calcite-combobox-item>
+        <calcite-combobox-item value="Agriculture" text-label="Agriculture"></calcite-combobox-item>
+        <calcite-combobox-item value="Forestry" text-label="Forestry"></calcite-combobox-item>
+        <calcite-combobox-item value="Mining" text-label="Mining"></calcite-combobox-item>
+      </calcite-combobox>
+
+      <h2>Test 2. Combobox with max items</h2>
+      <calcite-combobox label="Occupation" max-items="5">
+        <calcite-combobox-item value="Fire" text-label="Fire"></calcite-combobox-item>
+        <calcite-combobox-item value="EMS" text-label="EMS"></calcite-combobox-item>
+        <calcite-combobox-item value="Rescue" text-label="Rescue"></calcite-combobox-item>
+        <calcite-combobox-item value="Homeland Security" text-label="Homeland Security"></calcite-combobox-item>
+        <calcite-combobox-item value="Law Enforcement" text-label="Law Enforcement"></calcite-combobox-item>
+        <calcite-combobox-item value="Agriculture" text-label="Agriculture"></calcite-combobox-item>
+        <calcite-combobox-item value="Forestry" text-label="Forestry"></calcite-combobox-item>
+        <calcite-combobox-item value="Mining" text-label="Mining"></calcite-combobox-item>
+      </calcite-combobox>
+
+      <h2>Test 3. Combobox with disabled item</h2>
+      <ul>
+        <li>Is the disabled item also disabled from keyboard users?</li>
+      </ul>
+      <br>
+
+      <calcite-combobox label="Occupation">
+        <calcite-combobox-item value="Fire" text-label="Fire"></calcite-combobox-item>
+        <calcite-combobox-item value="EMS" text-label="EMS"></calcite-combobox-item>
+        <calcite-combobox-item value="Rescue" text-label="Rescue"></calcite-combobox-item>
+        <calcite-combobox-item value="Disabled first response value" disabled text-label="Disabled first response item"></calcite-combobox-item>
+        <calcite-combobox-item value="Homeland Security" text-label="Homeland Security"></calcite-combobox-item>
+        <calcite-combobox-item value="Law Enforcement" text-label="Law Enforcement"></calcite-combobox-item>
+        <calcite-combobox-item value="Agriculture" text-label="Agriculture"></calcite-combobox-item>
+        <calcite-combobox-item value="Forestry" text-label="Forestry"></calcite-combobox-item>
+        <calcite-combobox-item value="Mining" text-label="Mining"></calcite-combobox-item>
+      </calcite-combobox>
+
+      <h2>Test 4. Disabled combobox</h2>
+      <calcite-combobox disabled label="Occupation">
+        <calcite-combobox-item value="Fire" text-label="Fire"></calcite-combobox-item>
+        <calcite-combobox-item value="EMS" text-label="EMS"></calcite-combobox-item>
+        <calcite-combobox-item value="Rescue" text-label="Rescue"></calcite-combobox-item>
+        <calcite-combobox-item value="Homeland Security" text-label="Homeland Security"></calcite-combobox-item>
+        <calcite-combobox-item value="Law Enforcement" text-label="Law Enforcement"></calcite-combobox-item>
+        <calcite-combobox-item value="Agriculture" text-label="Agriculture"></calcite-combobox-item>
+        <calcite-combobox-item value="Forestry" text-label="Forestry"></calcite-combobox-item>
+        <calcite-combobox-item value="Mining" text-label="Mining"></calcite-combobox-item>
+      </calcite-combobox>
+
+      <h2>Test 5. Combobox Single selection mode</h2>
+      <calcite-combobox label="Occupation" selection-mode="single">
+        <calcite-combobox-item value="Fire" text-label="Fire"></calcite-combobox-item>
+        <calcite-combobox-item value="EMS" text-label="EMS"></calcite-combobox-item>
+        <calcite-combobox-item value="Rescue" text-label="Rescue"></calcite-combobox-item>
+        <calcite-combobox-item value="Homeland Security" text-label="Homeland Security"></calcite-combobox-item>
+        <calcite-combobox-item value="Law Enforcement" text-label="Law Enforcement"></calcite-combobox-item>
+        <calcite-combobox-item value="Agriculture" text-label="Agriculture"></calcite-combobox-item>
+        <calcite-combobox-item value="Forestry" text-label="Forestry"></calcite-combobox-item>
+        <calcite-combobox-item value="Mining" text-label="Mining"></calcite-combobox-item>
+      </calcite-combobox>
+
+      <h2>Test 6. Combobox Ancestors selection mode</h2>
+      <calcite-combobox label="Occupation" selection-mode="ancestors">
+        <calcite-combobox-item value="First Response" text-label="First Response">
+          <calcite-combobox-item value="Fire" text-label="Fire"></calcite-combobox-item>
+          <calcite-combobox-item value="EMS" text-label="EMS"></calcite-combobox-item>
+          <calcite-combobox-item value="Rescue" text-label="Rescue"></calcite-combobox-item>
+        </calcite-combobox-item>
+        <calcite-combobox-item value="Natural Resources" text-label="Natural Resources">
+          <calcite-combobox-item value="Agriculture" text-label="Agriculture"></calcite-combobox-item>
+          <calcite-combobox-item value="Forestry" text-label="Forestry"></calcite-combobox-item>
+          <calcite-combobox-item value="Mining" text-label="Mining"></calcite-combobox-item>
+        </calcite-combobox-item>
+      </calcite-combobox>
+
+      <h2>Test 7. Combobox groups and disabled items</h2>
+      <ul>
+        <li>Can both groups and their items be accessed?</li>
+      </ul>
+      <br>
+
+      <calcite-combobox label="Occupation">
+        <calcite-combobox-item-group label="Public Safety Sector">
+          <calcite-combobox-item value="First Response" text-label="First Response">
+            <calcite-combobox-item value="Fire" text-label="Fire"></calcite-combobox-item>
+            <calcite-combobox-item value="EMS" text-label="EMS"></calcite-combobox-item>
+            <calcite-combobox-item value="Rescue" text-label="Rescue"></calcite-combobox-item>
+          </calcite-combobox-item>
+          <calcite-combobox-item value="Homeland Security" text-label="Homeland Security">
+            <calcite-combobox-item value="Emergency Management" text-label="Emergency Management"></calcite-combobox-item>
+          </calcite-combobox-item>
+          <calcite-combobox-item value="Law Enforcement" text-label="Law Enforcement">
+          </calcite-combobox-item>
+        </calcite-combobox-item-group>
+        <calcite-combobox-item-group label="Natural Resources Sector">
+          <calcite-combobox-item value="Agriculture" text-label="Agriculture"></calcite-combobox-item>
+          <calcite-combobox-item value="Forestry" text-label="Forestry"></calcite-combobox-item>
+          <calcite-combobox-item value="Mining" text-label="Mining"></calcite-combobox-item>
+      </calcite-combobox-item-group>
+    </calcite-combobox>
 
     </main>
   </body>

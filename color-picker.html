@@ -14,11 +14,11 @@
       href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.82/dist/calcite/calcite.css"
     />
     <style>
-      h1,
-      calcite-color-picker {
+      h1 {
         margin-bottom: 5rem;
       }
-      h2 {
+      h2,
+      calcite-color-picker {
         margin-bottom: 3rem;
       }
       body {
@@ -63,7 +63,30 @@
 
       <h1><code>color-picker</code></h1>
 
-      <calcite-color-picker></calcite-color-picker>
+      <h2>Test 1. Color Picker Scales</h2>
+      <h3>Small scale</h3>
+      <calcite-color-picker scale="s"></calcite-color-picker>
+      <h3>Medium scale</h3>
+      <calcite-color-picker scale="m"></calcite-color-picker>
+      <h3>Large scale</h3>
+      <calcite-color-picker scale="l"></calcite-color-picker>
+
+      <h2>Test 2. Color Picker Disabled</h2>
+      <calcite-color-picker disabled></calcite-color-picker>
+
+      <h2>Test 3. Color Picker without Channels</h2>
+      <calcite-color-picker hide-channels></calcite-color-picker>
+
+      <h2>Test 4. Color Picker without HEX</h2>
+      <calcite-color-picker hide-hex></calcite-color-picker>
+
+      <h2>Test 5. Color Picker without Save</h2>
+      <calcite-color-picker hide-saved></calcite-color-picker>
+
+      <h2>Test 6. Color Picker without channels, HEX or SAVE</h2>
+      <calcite-color-picker hide-channels hide-hex hide-saved></calcite-color-picker>
+
+
 
     </main>
   </body>
