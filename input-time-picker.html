@@ -64,24 +64,38 @@
       <h1><code>input-time-picker</code></h1>
 
       <h2>Test 1. Input Time Picker Scale</h2>
-      <h3>Small:</h3>
-      <calcite-input-time-picker scale="s"></calcite-input-time-picker>
-      <h3>Medium:</h3>
-      <calcite-input-time-picker scale="m"></calcite-input-time-picker>
-      <h3>Large:</h3>
-      <calcite-input-time-picker scale="l"></calcite-input-time-picker>
+
+      <calcite-label>Small small time picker
+        <calcite-input-time-picker scale="s"></calcite-input-time-picker>
+      </calcite-label>
+
+      <calcite-label>Medium scale time picker
+        <calcite-input-time-picker scale="m"></calcite-input-time-picker>
+      </calcite-label>
+      <calcite-label>Large scale time picker
+        <calcite-input-time-picker scale="l"></calcite-input-time-picker>
+      </calcite-label>
 
       <h2>Test 2. Disabled Input Time Picker</h2>
-      <calcite-input-time-picker disabled></calcite-input-time-picker>
+      <calcite-label>Disabled time picker
+        <calcite-input-time-picker disabled></calcite-input-time-picker>
+      </calcite-label>
 
       <h2>Test 3. Input Time Picker set to 12:00pm</h2>
-      <calcite-input-time-picker value="12:00"></calcite-input-time-picker>
+      <calcite-label>Set time picker
+        <calcite-input-time-picker value="12:00"></calcite-input-time-picker>
+      </calcite-label>
 
       <h2>Test 4. Input Time Picker with seconds</h2>
-      <calcite-input-time-picker step="30"></calcite-input-time-picker>
+      <calcite-label>Time picker with seconds
+        <calcite-input-time-picker step="30"></calcite-input-time-picker>
+      </calcite-label>
 
+      <h2>Test 5. Input Time Picker with labels</h2>
+      <calcite-label>Time picker with labels
+        <calcite-input-time-picker intl-hour="hour" intl-hour-down="hour down" intl-hour-up="hour up" intl-meridiem="am/pm" intl-meridiem-down="am/pm down" intl-meridiem-up="am/pm up" intl-minute="minute" intl-minute-down="minute down" intl-minute-up="minute up" intl-second="second" intl-second-down="second down" intl-second-up="second up"></calcite-input-time-picker>
+      </calcite-label>
 
-      <h2></h2>
 
     </main>
   </body>

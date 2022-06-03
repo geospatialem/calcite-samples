@@ -125,9 +125,9 @@
       
       
       <h2>Test 4. Icons only</h2>
-      <calcite-button icon-start="save" color="blue" scale="s"></calcite-button>
-      <calcite-button icon-start="save" color="blue" scale="m"></calcite-button>
-      <calcite-button icon-start="save" color="blue" scale="l"></calcite-button>
+      <calcite-button icon-start="save" color="blue" scale="s" text-label="Save" label="Icon only small scale save"></calcite-button>
+      <calcite-button icon-start="save" color="blue" scale="m" text-label="Save" label="Icon only medium scale save"></calcite-button>
+      <calcite-button icon-start="save" color="blue" scale="l" text-label="Save" label="Icon only large scale save"></calcite-button>
 
 
       <h2>Test 5. Rounded</h2>
@@ -143,9 +143,9 @@
 
 
       <h2>Test 7. Rounded Icon only</h2>
-      <calcite-button icon-start="save" color="blue" scale="s" round> </calcite-button>
-      <calcite-button icon-start="save" color="blue" scale="m" round> </calcite-button>
-      <calcite-button icon-start="save" color="blue" scale="l" round> </calcite-button>
+      <calcite-button icon-start="save" color="blue" scale="s" round label="Small scale save"> </calcite-button>
+      <calcite-button icon-start="save" color="blue" scale="m" round label="Medium scale save"> </calcite-button>
+      <calcite-button icon-start="save" color="blue" scale="l" round label="Large scale save"> </calcite-button>
 
       <h2>Test 8. Loading: Enable via toggle loading animation switch</h2>
       <!-- Switcher to add loading class-->  
@@ -181,22 +181,22 @@
 
       <h2>Test 11. Icons within Buttons</h2>
 
-      <calcite-button aria-label="Share layer">
+      <calcite-button label="Share layer">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 30 30">
           <path fill="#fff" d="M22.117 7H7.883A.883.883 0 0 0 7 7.883v14.234c0 .487.396.883.883.883H15v-7h-3v-2h3v-.992c0-2.066 1.277-3.192 3.121-3.192.883 0 1.879.066 1.879.096V12h-1.764c-1.002 0-1.236.148-1.236.848V14h2.73l-.911 2H17v7h5.117a.884.884 0 0 0 .883-.883V7.883A.883.883 0 0 0 22.117 7z"/>
         </svg>
       </calcite-button>
 
-      <calcite-button aria-label="Add layer">
-        <calcite-icon scale="s" icon="layer"></calcite-icon>
+      <calcite-button label="Add layer small scale">
+        <calcite-icon scale="s" icon="layer" text-label="layer"></calcite-icon>
       </calcite-button>
 
-      <calcite-button aria-label="Add layer">
-        <calcite-icon scale="m" icon="layer"></calcite-icon>
+      <calcite-button label="Add layer medium scale">
+        <calcite-icon scale="m" icon="layer" text-label="layer"></calcite-icon>
       </calcite-button>
 
-      <calcite-button aria-label="Add layer">
-        <calcite-icon scale="l" icon="layer"></calcite-icon>
+      <calcite-button label="Add layer large scale">
+        <calcite-icon scale="l" icon="layer" text-label="layer"></calcite-icon>
       </calcite-button>
 
 
@@ -219,11 +219,8 @@
   </body>
 
   <script>
-    // Loading switch constants
-    const loadingSwitch = document.querySelector("#loading-switch");
-    const scaleRadios = document.querySelector("#scale-group");
-    const appearanceRadios = document.querySelector("#appearance-group");
-    const colorRadios = document.querySelector("#color-group");
+
+
 
     // On load
     window.onload = () => {
@@ -234,27 +231,12 @@
       });
 
       // Loading switch
+      const loadingSwitch = document.querySelector("#loading-switch");
       loadingSwitch.addEventListener("calciteSwitchChange", () => {
           document.querySelectorAll(".loading-transition").forEach((button) => {
             button.toggleAttribute("loading");
           });
       });
-      scaleRadios.addEventListener("calciteRadioGroupChange", (e) => {
-        document.querySelectorAll(".loading-transition").forEach((button) => {
-          button.setAttribute("scale", e.detail);
-        });
-      });
-      appearanceRadios.addEventListener("calciteRadioGroupChange", (e) => {
-        document.querySelectorAll(".loading-transition").forEach((button) => {
-          button.setAttribute("appearance", e.detail);
-        });
-      });
-      colorRadios.addEventListener("calciteRadioGroupChange", (e) => {
-        document.querySelectorAll(".loading-transition").forEach((button) => {
-          button.setAttribute("color", e.detail);
-        });
-      });
-      // End loading switch
     };
 
   </script>

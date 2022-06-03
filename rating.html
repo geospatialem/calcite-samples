@@ -63,7 +63,48 @@
 
       <h1><code>rating</code></h1>
 
-      <calcite-rating></calcite-rating>
+      <h2>Test 1. Scale</h2>
+      <calcite-label>Small scale
+        <calcite-rating scale="s"></calcite-rating>
+      </calcite-label>
+
+      <calcite-label>Medium scale
+        <calcite-rating scale="m"></calcite-rating>
+      </calcite-label>
+
+      <calcite-label>Large scale
+        <calcite-rating scale="l"></calcite-rating>
+      </calcite-label>
+
+      <h2>Test 2. Rating</h2>
+
+      <calcite-label>Average
+        <calcite-rating average="3.45"></calcite-rating>
+      </calcite-label>
+
+      <calcite-label>Read only and Average
+        <calcite-rating average="3.45" read-only></calcite-rating>
+      </calcite-label>
+
+      <h2>Test 3. Rating with Chip</h2>
+
+      <calcite-label>Average with chip
+        <calcite-rating average="3.45" show-chip></calcite-rating>
+      </calcite-label>
+
+      <calcite-label>Read only value with chip
+        <calcite-rating average="3.45" read-only show-chip></calcite-rating>
+      </calcite-label>
+
+      <calcite-label>Disabled with average and chip
+        <calcite-rating disabled average="3.45" show-chip></calcite-rating>
+      </calcite-label>
+
+      <calcite-label>Rating with value and previous rating count
+        <calcite-rating value="3" count="240" show-chip></calcite-rating>
+      </calcite-label>
+
+
 
     </main>
   </body>

@@ -76,7 +76,7 @@
 			</div>
 
       <!-- 1. with label, auto-dismiss-duration: fast, color: red -->
-      <calcite-button onclick="triggerAnimation('fast')">Fast duration</calcite-button>
+      <calcite-button onkeypress="triggerAnimation(event, 'fast')" onclick="triggerAnimation(event, 'fast')">Fast duration</calcite-button>
       <calcite-alert id="fast" label="Fast alert" auto-dismiss auto-dismiss-duration="fast" color="red" icon="exclamation-mark-triangle" intl-close="Close" scale="m">
         <div slot="title">Fast dismiss alert</div>
         <div slot="message">This message will disappear at a fast speed.</div>
@@ -84,21 +84,21 @@
 
 
       <!-- 2. no label, auto-dismiss-duration: medium, color: yellow -->
-      <calcite-button onclick="triggerAnimation('medium')">Medium duration</calcite-button>
+      <calcite-button onkeypress="triggerAnimation(event, 'medium')" onclick="triggerAnimation(event, 'medium')">Medium duration</calcite-button>
       <calcite-alert id="medium" auto-dismiss auto-dismiss-duration="medium" color="yellow" icon="exclamation-mark-triangle" intl-close="Close" scale="m">
         <div slot="title">Medium dismiss alert</div>
         <div slot="message">This message will disappear at a medium speed.</div>
       </calcite-alert>
 
       <!-- 3. no label, auto-dismiss-duration: slow, color: green, scale: small -->
-      <calcite-button onclick="triggerAnimation('slow')">Slow duration</calcite-button>
+      <calcite-button onkeypress="triggerAnimation(event, 'slow')" onclick="triggerAnimation(event, 'slow')">Slow duration</calcite-button>
       <calcite-alert id="slow" auto-dismiss auto-dismiss-duration="slow" color="green" icon="exclamation-mark-triangle" intl-close="Close" scale="s">
         <div slot="title">Slow dismiss alert</div>
         <div slot="message">This message will disappear at a slow speed.</div>
       </calcite-alert>
 
       <!-- 4. with label, user only dismissed, color: blue -->
-      <calcite-button onclick="triggerAnimation('none')">No duration</calcite-button>
+      <calcite-button onkeypress="triggerAnimation(event, 'none')" onclick="triggerAnimation(event, 'none')">No duration</calcite-button>
       <calcite-alert id="none" label="User dismissed alert" color="blue" icon="exclamation-mark-triangle" intl-close="Close" scale="m">
         <div slot="title">No duration alert</div>
         <div slot="message">This message will disappear when selecting a different duration, or when the user closes it. There is no time limit associated with this alert.</div>
@@ -119,16 +119,18 @@
     };
 
     // On button click, enable the calcite alert
-    const triggerAnimation = (animationName) => {
-      // Remove all active calcite alerts
-      document.querySelectorAll('calcite-alert').forEach(node => node.active = false)
-      // Activate selected calcite alert
-      const noticeEl = document.querySelector(`#${animationName}`);
-      const noticePreEl = document.querySelector(`#${animationName} pre`);
-      if (!noticeEl.hasAttribute("active")) {
-        noticeEl.setAttribute("active", "");
+    const triggerAnimation = (event, animationName) => {
+      if (event.type === 'click' || event.type === 'keypress' && event.keyCode === '13' || event.type === 'keypress' && event.keyCode === '32') {
+        // Remove all active calcite alerts
+        document.querySelectorAll('calcite-alert').forEach(node => node.active = false)
+        // Activate selected calcite alert
+        const noticeEl = document.querySelector(`#${animationName}`);
+        const noticePreEl = document.querySelector(`#${animationName} pre`);
+        if (!noticeEl.hasAttribute("active")) {
+          noticeEl.setAttribute("active", "");
+        }
+        noticeEl.classList.add(`calcite-animate__${animationName}`);
       }
-      noticeEl.classList.add(`calcite-animate__${animationName}`);
     };
   </script>
 </html>
