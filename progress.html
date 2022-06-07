@@ -14,12 +14,11 @@
       href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.82/dist/calcite/calcite.css"
     />
     <style>
-      h1,
-      calcite-progress {
+      h1 {
         margin-bottom: 5rem;
       }
-      h2 {
-        margin-bottom: 3rem;
+      h2, calcite-progress {
+        padding: 2rem 0rem;
       }
       body {
         font-family: var(--calcite-sans-family);
@@ -63,7 +62,14 @@
 
       <h1><code>progress</code></h1>
 
-      <calcite-progress></calcite-progress>
+      <h2>Test 1. Determinate Progress</h2>
+      <calcite-progress type="determinate" label="Determinate progress" value="0.5" text="50% Complete"></calcite-progress>
+
+      <h2>Test 2. Indeterminate Progress</h2>
+      <calcite-progress type="indeterminate" label="Indeterminate progress"></calcite-progress>
+
+      <h2>Test 3. Reversed Progress</h2>
+      <calcite-progress type="indeterminate" reversed label="Reversed indeterminate progress"></calcite-progress>
 
     </main>
   </body>

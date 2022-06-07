@@ -19,7 +19,8 @@
         margin-bottom: 5rem;
       }
       h2 {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
+        margin-top: 3rem;
       }
       body {
         font-family: var(--calcite-sans-family);
@@ -63,7 +64,84 @@
 
       <h1><code>slider</code></h1>
 
-      <calcite-slider></calcite-slider>
+      <h2>Test 1. Slider scale</h2>
+      <calcite-label>Small:
+        <calcite-slider scale="s" min="10000" max="100000" value="100000" step="1000" min-label="10000" max-label="100000"></calcite-slider>
+      </calcite-label>
+
+      <calcite-label>Medium:
+        <calcite-slider scale="m" min="10000" max="100000" value="100000" step="1000" min-label="10000" max-label="100000"></calcite-slider>
+      </calcite-label>
+
+      <calcite-label>Large:
+        <calcite-slider scale="l" min="10000" max="100000" value="100000" step="1000" min-label="10000" max-label="100000"></calcite-slider>
+      </calcite-label>
+
+      <h2>Test 2. Disabled Slider</h2>
+      <calcite-slider disabled min="10000" max="100000" value="50000" step="1000" min-label="10000" max-label="100000"></calcite-slider>
+
+      <h2>Test 3. Slider with Label Handle</h2>
+      <calcite-slider label-handles min="0" max="1000" value="1000" step="100" min-label="0" max-label="1000"></calcite-slider>
+
+      <h2>Test 4. Slider with Precise Handle</h2>
+      <calcite-slider precise min="10000" max="100000" value="100000" step="1000" min-label="10000" max-label="100000"></calcite-slider>
+
+      <h2>Test 5. Slider with Precise Label Handle</h2>
+      <calcite-label>Label Handle:
+        <calcite-slider label-handles precise min="10000" max="100000" value="100000" step="1000" min-label="10000" max-label="100000"></calcite-slider>
+      </calcite-label>
+
+      <calcite-label>Label Handle with Decimal step:
+        <calcite-slider label-handles precise min="10000" max="100000" value="100000" step="1000.12" min-label="10000" max-label="100000"></calcite-slider>
+      </calcite-label>
+
+      <h2>Test 6. Slider with Ticks</h2>
+
+      <calcite-label>Ticks:
+
+      </calcite-label>
+
+      <calcite-label>Ticks with labeled handles:
+        <calcite-slider min="0" max="100" value="40" step="10" ticks="10" label-handles min-label="0" max-label="100"></calcite-slider>
+      </calcite-label>
+
+      <calcite-label>Labeled Ticks:
+        <calcite-slider min="0" max="100" value="40" step="10" ticks="10" label-handles label-ticks min-label="0" max-label="100"></calcite-slider>
+      </calcite-label>
+
+      <h2>Test 7. Slider with Ranges</h2>
+
+      <calcite-label>Range handles:
+        <calcite-slider min="10000" max="100000" min-value="10000" max-value="100000" step="1000"  min-label="Temperature range (lower)" max-label="Temperature range (upper)"></calcite-slider>
+      </calcite-label>
+
+      <calcite-label>Range with labeled handles:
+        <calcite-slider label-handles min="10000" max="100000" min-value="10000" max-value="100000" step="1000"  min-label="Temperature range (lower)" max-label="Temperature range (upper)"></calcite-slider>
+      </calcite-label>
+
+      <h2>Test 8. Slider with Histogram</h2>
+
+      <calcite-label>Histogram:
+        <calcite-slider min="0" max="100" value="60" step="1" class="js-histogram" min-label="Temperature range (lower)" max-label="Temperature range (upper>"></calcite-slider>
+      </calcite-label>
+
+      <calcite-label>Histogram with labeled handle:
+        <calcite-slider min="0" max="100" value="60" step="1" class="js-histogram" label-handles min-label="Temperature range (lower)" max-label="Temperature range (upper>"></calcite-slider>
+      </calcite-label>
+
+      <calcite-label>Histogram with color stops:
+        <calcite-slider min="0" max="100" value="60" step="1" class="js-histogram js-histogram-colors" min-label="Temperature range (lower)" max-label="Temperature range (upper>"></calcite-slider>
+      </calcite-label>
+
+      <calcite-label>Histogram disabled:
+        <calcite-slider disabled min="0" max="100" value="60" step="1" class="js-histogram" min-label="Temperature range (lower)" max-label="Temperature range (upper>"></calcite-slider>
+      </calcite-label>
+
+      <calcite-label>Range Histogram:
+        <calcite-slider class="js-histogram" min="0" max="100" min-value="50" max-value="85" step="1" min-label="Temperature range (lower)" max-label="Temperature range (upper)" scale="m"></calcite-slider>
+      </calcite-label>
+
+      
 
     </main>
   </body>
@@ -76,6 +154,36 @@
       document.body.classList.toggle("calcite-theme-dark");
       });
     };
+
+    const histogram = [
+        [0, 0],
+        [20, 12],
+        [40, 25],
+        [60, 55],
+        [80, 10],
+        [100, 0]
+      ];
+      [].slice.call(document.querySelectorAll(".js-histogram")).forEach(function (graphElement) {
+        graphElement.histogram = histogram;
+      });
+
+      const rainbow = ["red", "orange", "yellow", "green", "cyan", "blue", "violet"];
+      const colorStops = rainbow.map((color, i) => ({ offset: (1 / (rainbow.length - 1)) * i, color }));
+      document.querySelectorAll(".js-histogram-colors").forEach(function (graphElement) {
+        graphElement.histogramStops = colorStops;
+      });
+
+      document.querySelectorAll(".js-histogram-negative").forEach(
+        (slider) =>
+          (slider.histogram = [
+            [-100, 0],
+            [-80, 12],
+            [-60, 25],
+            [-40, 55],
+            [-20, 10],
+            [0, 0]
+          ])
+      );
 
   </script>
 </html>
