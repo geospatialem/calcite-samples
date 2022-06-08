@@ -15,7 +15,7 @@
     />
     <style>
       h1,
-      calcite-radio-button {
+      calcite-radio-button-group {
         margin-bottom: 5rem;
       }
       h2 {
@@ -61,9 +61,91 @@
         </calcite-label>
       </div>
 
-      <h1><code>radio-button</code></h1>
+      <h1><code>radio-button and radio-button-group</code></h1>
 
-      <calcite-radio-button></calcite-radio-button>
+      <h2>Test 1. Radio Button Group Scale </h2>
+
+      <h3>Small scale:</h3>
+      <calcite-radio-button-group layout="vertical" name="Small scale radio button group test" scale="s">
+        <calcite-label layout="inline">
+            <calcite-radio-button value="Maps"></calcite-radio-button>Maps
+        </calcite-label>
+        <calcite-label layout="inline">
+            <calcite-radio-button checked value="Layers"></calcite-radio-button>Layers
+        </calcite-label>
+        <calcite-label layout="inline">
+            <calcite-radio-button value="Data"></calcite-radio-button>Data
+        </calcite-label>
+        <calcite-label layout="inline">
+            <calcite-radio-button value="Geograph"></calcite-radio-button>Geography
+        </calcite-label>
+      </calcite-radio-button-group>
+
+      <h3>Medium scale:</h3>
+      <calcite-radio-button-group layout="vertical" name="Medium scale radio button group test" scale="m">
+        <calcite-label layout="inline">
+            <calcite-radio-button value="Maps"></calcite-radio-button>Maps
+        </calcite-label>
+        <calcite-label layout="inline">
+          <calcite-radio-button checked value="Layers"></calcite-radio-button>Layers
+        </calcite-label>
+        <calcite-label layout="inline">
+            <calcite-radio-button value="Data"></calcite-radio-button>Data
+        </calcite-label>
+        <calcite-label layout="inline">
+            <calcite-radio-button value="Geography"></calcite-radio-button>Geography
+        </calcite-label>
+      </calcite-radio-button-group>
+
+      <h3>Large scale:</h3>
+      <calcite-radio-button-group layout="vertical" name="Large scale radio button group test" scale="l">
+        <calcite-label layout="inline">
+            <calcite-radio-button value="Maps"></calcite-radio-button>Maps
+        </calcite-label>
+        <calcite-label layout="inline">
+          <calcite-radio-button value="Layers" checked></calcite-radio-button>Layers
+        </calcite-label>
+        <calcite-label layout="inline">
+            <calcite-radio-button value="Data"></calcite-radio-button>Data
+        </calcite-label>
+        <calcite-label layout="inline">
+            <calcite-radio-button value="Geography"></calcite-radio-button>Geography
+        </calcite-label>
+      </calcite-radio-button-group>
+
+
+      <h2>Test 2. Disabled Radio Button Group</h2>
+      <calcite-radio-button-group disabled layout="vertical" name="Disabled radio button group test">
+        <calcite-label layout="inline">
+            <calcite-radio-button value="Maps"></calcite-radio-button>Maps
+        </calcite-label>
+        <calcite-label layout="inline">
+          <calcite-radio-button checked value="Layers"></calcite-radio-button>Layers
+        </calcite-label>
+        <calcite-label layout="inline">
+            <calcite-radio-button disabled value="Data"></calcite-radio-button>Data
+        </calcite-label>
+        <calcite-label layout="inline">
+            <calcite-radio-button value="Geography"></calcite-radio-button>Geography
+        </calcite-label>
+      </calcite-radio-button-group>
+
+      <h2>Test 3. Disabled Radio Button</h2>
+      <calcite-radio-button-group layout="vertical" name="Disabled radio button test">
+        <calcite-label layout="inline">
+            <calcite-radio-button value="Maps"></calcite-radio-button>Maps
+        </calcite-label>
+        <calcite-label layout="inline">
+          <calcite-radio-button value="Layers" checked></calcite-radio-button>Layers
+        </calcite-label>
+        <calcite-label layout="inline">
+            <calcite-radio-button disabled value="Data"></calcite-radio-button>Data
+        </calcite-label>
+        <calcite-label layout="inline">
+            <calcite-radio-button value="Geography"></calcite-radio-button>Geography
+        </calcite-label>
+      </calcite-radio-button-group>
+
 
     </main>
   </body>
