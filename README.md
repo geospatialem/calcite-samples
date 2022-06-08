@@ -1,8 +1,7 @@
 # calcite-samples
 ## [Form](0-form.html)
 Complex sample that contains multiple components.
-## Components (n=38)
-
+## Components (n=39)
 - [Accordion and Accordion Item](accordion.html)  
 - [Action](action.html)
 - [Action Bar, Action Group and Action](action-bar.html)
@@ -37,12 +36,13 @@ Complex sample that contains multiple components.
 - [Split Button](split-button.html)
 - [Stepper and Stepper Item](stepper.html)  
 - [Switch](switch.html)
+- [Tabs, Tab Nav, Tab Title and Tab](tabs.html)
 - [Time Picker](time-picker.html)
 - [Tooltip](tooltip.html)
 - [Tree and Tree Item](tree.html)
 - [Value List and Value List Item](value-list.html)
 
-## Component pages in progress (n=12)
+## Component pages in progress (n=11)
 - Block, Block Section and Notice
 - Filter
 - Flow
@@ -51,7 +51,6 @@ Complex sample that contains multiple components.
 - Radio Button and Radio Button Group
 - Radio Group and Radio Group Item
 - Shell Center Row
-- Tabs, Tab Nav, Tab Title and Tab
 - Tile Select Group and Tile Select
 - Tile
 - Tip, Tip Group and Tip Manager
