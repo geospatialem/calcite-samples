@@ -42,9 +42,8 @@ Complex sample that contains multiple components.
 - [Tree and Tree Item](tree.html)
 - [Value List and Value List Item](value-list.html)
 
-## Component pages in progress (n=11)
+## Component pages in progress (n=10)
 - Block, Block Section and Notice
-- Filter
 - Flow
 - Panel
 - Popover
