@@ -14,11 +14,11 @@
       href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.83/dist/calcite/calcite.css"
     />
     <style>
-      h1,
-      calcite-tooltip {
+      h1 {
         margin-bottom: 5rem;
       }
-      h2 {
+      h2, 
+      calcite-button {
         margin-bottom: 3rem;
       }
       body {
@@ -63,7 +63,31 @@
 
       <h1><code>tooltip</code></h1>
 
-      <calcite-tooltip></calcite-tooltip>
+
+      <h2>Test 1. Tooltip</h2>
+
+      <calcite-button appearance="outline" id="tooltip-auto">Tooltip</calcite-button>
+
+      <calcite-tooltip label="Tooltip for test 1" placement="auto" reference-element="tooltip-auto">
+        <p>This is an example of <code>calcite-tooltip</code>.</p>
+      </calcite-tooltip>
+
+      <h2>Test 2. Close tooltip on click</h2>
+
+      <calcite-button appearance="outline" id="close-tooltip-onclick">Close tooltip on click</calcite-button>
+
+      <calcite-tooltip label="Close tooltip on close" placement="auto" reference-element="close-tooltip-onclick">
+        <p>This is an example of <code>calcite-tooltip</code>.</p>
+      </calcite-tooltip>
+
+      <h2>Test 3. Open tooltip</h2>
+
+      <calcite-button appearance="outline" id="open-tooltip">Close tooltip on click</calcite-button>
+
+      <calcite-tooltip open label="Open tooltip" placement="auto" reference-element="open-tooltip">
+        <p>This is an example of an open <code>calcite-tooltip</code>.</p>
+      </calcite-tooltip>
+      
 
     </main>
   </body>
