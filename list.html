@@ -61,9 +61,81 @@
         </calcite-label>
       </div>
 
-      <h1><code>list</code></h1>
+      <h1><code>list, list-item-group and list-item</code></h1>
 
-      <calcite-list></calcite-list>
+      <h2>Test 1. List</h2>
+      <calcite-list>
+        <calcite-list-item label="River" description="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream." value="river">
+            <calcite-action text="Enable River layer" slot="actions-end" icon="layer"></calcite-action>
+        </calcite-list-item>
+        <calcite-list-item label="Mountain" description="A large natural elevation of the earth's surface rising abruptly from the surrounding level." value="mountain" selected>
+            <calcite-action text="Enable Mountain layer" slot="actions-end" icon="layer"></calcite-action>
+        </calcite-list-item>
+        <calcite-list-item label="Lake" description="A large body of water surrounded by land." value="lake">
+            <calcite-action text="Enable Lake layer" slot="actions-end" icon="layer"></calcite-action>
+        </calcite-list-item>
+        <calcite-list-item disabled label="Disabled item" description="An example of a disabled list item." value="disabled">
+          <calcite-action text="Disabled layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-list-item>
+    </calcite-list>
+
+    <h2>Test 2. Disabled List</h2>
+    <calcite-list disabled>
+      <calcite-list-item label="River" description="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream." value="river">
+        <calcite-action text="Enable River layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-list-item>
+      <calcite-list-item label="Mountain" description="A large natural elevation of the earth's surface rising abruptly from the surrounding level." value="mountain" selected>
+        <calcite-action text="Enable Mountain layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-list-item>
+      <calcite-list-item label="Lake" description="A large body of water surrounded by land." value="lake">
+        <calcite-action text="Enable Lake layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-list-item>
+  </calcite-list>
+
+  <h2>Test 3. List with non-interactive list items</h2>
+  <calcite-list>
+    <calcite-list-item non-interactive label="River" description="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream." value="river">
+      <calcite-action text="Enable River layer" slot="actions-end" icon="layer"></calcite-action>
+    </calcite-list-item>
+    <calcite-list-item non-interactive label="Mountain" description="A large natural elevation of the earth's surface rising abruptly from the surrounding level." value="mountain" selected>
+      <calcite-action text="Enable Mountain layer" slot="actions-end" icon="layer"></calcite-action>
+    </calcite-list-item>
+    <calcite-list-item non-interactive label="Lake" description="A large body of water surrounded by land." value="lake">
+      <calcite-action text="Enable Lake layer" slot="actions-end" icon="layer"></calcite-action>
+    </calcite-list-item>
+</calcite-list>
+
+  <h2>Test 4. Heading Level List</h2>
+
+  <h3>Heading level in list:</h3>
+  <calcite-list heading-level="4">
+    <calcite-list-item-group heading="Natural Resources">
+      <calcite-list-item label="River" description="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream." value="river">
+        <calcite-action text="Enable River layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-list-item>
+      <calcite-list-item label="Mountain" description="A large natural elevation of the earth's surface rising abruptly from the surrounding level." value="mountain" selected>
+        <calcite-action text="Enable Mountain layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-list-item>
+      <calcite-list-item label="Lake" description="A large body of water surrounded by land." value="lake">
+        <calcite-action text="Enable Lake layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-list-item>
+    </calcite-list-item-group>
+  </calcite-list>
+
+  <h3>Heading Level in list group:</h3>
+  <calcite-list>
+    <calcite-list-item-group heading-level="4" heading="Natural Resources">
+    <calcite-list-item label="River" description="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream." value="river">
+      <calcite-action text="Enable River layer" slot="actions-end" icon="layer"></calcite-action>
+    </calcite-list-item>
+    <calcite-list-item label="Mountain" description="A large natural elevation of the earth's surface rising abruptly from the surrounding level." value="mountain" selected>
+      <calcite-action text="Enable Mountain layer" slot="actions-end" icon="layer"></calcite-action>
+    </calcite-list-item>
+    <calcite-list-item label="Lake" description="A large body of water surrounded by land." value="lake">
+      <calcite-action text="Enable Lake layer" slot="actions-end" icon="layer"></calcite-action>
+    </calcite-list-item>
+  </calcite-list-item-group>
+  </calcite-list>
 
     </main>
   </body>
