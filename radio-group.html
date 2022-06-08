@@ -61,9 +61,130 @@
         </calcite-label>
       </div>
 
-      <h1><code>radio-group</code></h1>
+      <h1><code>radio-group and radio-group-item</code></h1>
 
-      <calcite-radio-group></calcite-radio-group>
+      <h2>Test 1. Radio group scale</h2>
+      <calcite-label>Small scale:
+      <calcite-radio-group scale="s">
+        <calcite-radio-group-item value="layers">Layers</calcite-radio-group-item>
+        <calcite-radio-group-item value="data" checked>Data</calcite-radio-group-item>
+        <calcite-radio-group-item value="geography">Geography</calcite-radio-group-item>
+        <calcite-radio-group-item value="maps">Maps</calcite-radio-group-item>
+      </calcite-radio-group>
+      </calcite-label>
+
+      <calcite-label>Medium scale:
+      <calcite-radio-group scale="m">
+        <calcite-radio-group-item value="layers">Layers</calcite-radio-group-item>
+        <calcite-radio-group-item value="data" checked>Data</calcite-radio-group-item>
+        <calcite-radio-group-item value="geography">Geography</calcite-radio-group-item>
+        <calcite-radio-group-item value="maps">Maps</calcite-radio-group-item>
+      </calcite-radio-group>
+      </calcite-label>
+
+      <calcite-label>Large scale:
+      <calcite-radio-group scale="l">
+        <calcite-radio-group-item value="layers">Layers</calcite-radio-group-item>
+        <calcite-radio-group-item value="data" checked>Data</calcite-radio-group-item>
+        <calcite-radio-group-item value="geography">Geography</calcite-radio-group-item>
+        <calcite-radio-group-item value="maps">Maps</calcite-radio-group-item>
+      </calcite-radio-group>
+      </calcite-label>
+
+      <h2>Test 2. Radio group outline appearance</h2>
+      <calcite-label>Outline appearance:
+      <calcite-radio-group appearance="outline">
+        <calcite-radio-group-item value="layers">Layers</calcite-radio-group-item>
+        <calcite-radio-group-item value="data" checked>Data</calcite-radio-group-item>
+        <calcite-radio-group-item value="geography">Geography</calcite-radio-group-item>
+        <calcite-radio-group-item value="maps">Maps</calcite-radio-group-item>
+      </calcite-radio-group>
+      </calcite-label>
+
+      <h2>Test 3. Radio group vertical layout</h2>
+      <calcite-label>Vertical layout:
+      <calcite-radio-group layout="vertical">
+        <calcite-radio-group-item value="layers">Layers</calcite-radio-group-item>
+        <calcite-radio-group-item value="data" checked>Data</calcite-radio-group-item>
+        <calcite-radio-group-item value="geography">Geography</calcite-radio-group-item>
+        <calcite-radio-group-item value="maps">Maps</calcite-radio-group-item>
+      </calcite-radio-group>
+      </calcite-label>
+
+      <calcite-label>Vertical layout with outline appearance:
+        <calcite-radio-group layout="vertical" appearance="outline">
+          <calcite-radio-group-item value="layers">Layers</calcite-radio-group-item>
+          <calcite-radio-group-item value="data" checked>Data</calcite-radio-group-item>
+          <calcite-radio-group-item value="geography">Geography</calcite-radio-group-item>
+          <calcite-radio-group-item value="maps">Maps</calcite-radio-group-item>
+        </calcite-radio-group>
+        </calcite-label>
+
+      <h2>Test 4. Radio group disabled</h2>
+      <calcite-label>Disabled:
+      <calcite-radio-group disabled>
+        <calcite-radio-group-item value="layers">Layers</calcite-radio-group-item>
+        <calcite-radio-group-item value="data" checked>Data</calcite-radio-group-item>
+        <calcite-radio-group-item value="geography">Geography</calcite-radio-group-item>
+        <calcite-radio-group-item value="maps">Maps</calcite-radio-group-item>
+      </calcite-radio-group>
+      </calcite-label>
+
+      <calcite-label>Disabled outline appearance:
+        <calcite-radio-group disabled appearance="outline">
+          <calcite-radio-group-item value="layers">Layers</calcite-radio-group-item>
+          <calcite-radio-group-item value="data" checked>Data</calcite-radio-group-item>
+          <calcite-radio-group-item value="geography">Geography</calcite-radio-group-item>
+          <calcite-radio-group-item value="maps">Maps</calcite-radio-group-item>
+        </calcite-radio-group>
+        </calcite-label>
+
+        <calcite-label>Disabled vertical layout:
+          <calcite-radio-group disabled layout="vertical">
+            <calcite-radio-group-item value="layers">Layers</calcite-radio-group-item>
+            <calcite-radio-group-item value="data" checked>Data</calcite-radio-group-item>
+            <calcite-radio-group-item value="geography">Geography</calcite-radio-group-item>
+            <calcite-radio-group-item value="maps">Maps</calcite-radio-group-item>
+          </calcite-radio-group>
+          </calcite-label>
+
+      <h2>Test 5. Radio group full width</h2>
+      <calcite-label>Full width:
+      <calcite-radio-group width="full">
+        <calcite-radio-group-item value="layers">Layers</calcite-radio-group-item>
+        <calcite-radio-group-item value="data" checked>Data</calcite-radio-group-item>
+        <calcite-radio-group-item value="geography">Geography</calcite-radio-group-item>
+        <calcite-radio-group-item value="maps">Maps</calcite-radio-group-item>
+      </calcite-radio-group>
+      </calcite-label>
+
+      <calcite-label>Full width with outline appearance:
+        <calcite-radio-group width="full" appearance="outline">
+          <calcite-radio-group-item value="layers">Layers</calcite-radio-group-item>
+          <calcite-radio-group-item value="data" checked>Data</calcite-radio-group-item>
+          <calcite-radio-group-item value="geography">Geography</calcite-radio-group-item>
+          <calcite-radio-group-item value="maps">Maps</calcite-radio-group-item>
+        </calcite-radio-group>
+        </calcite-label>
+
+      <h2>Test 6. Radio group with icons</h2>
+      <calcite-label>Icons:
+      <calcite-radio-group>
+        <calcite-radio-group-item value="layers" icon="add-layer">Layers</calcite-radio-group-item>
+        <calcite-radio-group-item value="data" icon="data" checked>Data</calcite-radio-group-item>
+        <calcite-radio-group-item value="geography" icon="globe">Geography</calcite-radio-group-item>
+        <calcite-radio-group-item value="maps" icon="color-coded-map">Maps</calcite-radio-group-item>
+      </calcite-radio-group>
+      </calcite-label>
+
+      <calcite-label>Icons with outline appearance:
+        <calcite-radio-group appearance="outline">
+          <calcite-radio-group-item value="layers" icon="add-layer">Layers</calcite-radio-group-item>
+          <calcite-radio-group-item value="data" icon="data" checked>Data</calcite-radio-group-item>
+          <calcite-radio-group-item value="geography" icon="globe">Geography</calcite-radio-group-item>
+          <calcite-radio-group-item value="maps" icon="color-coded-map">Maps</calcite-radio-group-item>
+        </calcite-radio-group>
+        </calcite-label>
 
     </main>
   </body>
