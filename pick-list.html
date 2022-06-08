@@ -61,9 +61,104 @@
         </calcite-label>
       </div>
 
-      <h1><code>pick-list</code></h1>
+      <h1><code>pick-list, pick-list-group and pick-list-item</code></h1>
 
-      <calcite-pick-list></calcite-pick-list>
+      <h2>Test 1. Pick List</h2>
+      <calcite-pick-list>
+        <calcite-pick-list-item label="River" description="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream." value="river">
+          <calcite-action text="Enable River layer" slot="actions-end" icon="layer"></calcite-action>
+        </calcite-pick-list-item>
+        <calcite-pick-list-item label="Mountain" description="A large natural elevation of the earth's surface rising abruptly from the surrounding level." value="mountain" selected>
+          <calcite-action text="Enable Mountain layer" slot="actions-end" icon="layer"></calcite-action>
+        </calcite-pick-list-item>
+        <calcite-pick-list-item label="Lake" description="A large body of water surrounded by land." value="lake">
+          <calcite-action text="Enable Lake layer" slot="actions-end" icon="layer"></calcite-action>
+        </calcite-pick-list-item>
+        <calcite-pick-list-item disabled label="Disabled item" description="A disabled pick list item." value="disabled">
+          <calcite-action text="Disabled layer" slot="actions-end" icon="layer"></calcite-action>
+        </calcite-pick-list-item>
+      </calcite-pick-list>
+
+      <h2>Test 2. Removable Pick List Items</h2>
+      <calcite-pick-list>
+        <calcite-pick-list-item removable label="River" description="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream." value="river">
+          <calcite-action text="Enable River layer" slot="actions-end" icon="layer"></calcite-action>
+        </calcite-pick-list-item>
+        <calcite-pick-list-item removable label="Mountain" description="A large natural elevation of the earth's surface rising abruptly from the surrounding level." value="mountain" selected>
+          <calcite-action text="Enable Mountain layer" slot="actions-end" icon="layer"></calcite-action>
+        </calcite-pick-list-item>
+        <calcite-pick-list-item removable label="Lake" description="A large body of water surrounded by land." value="lake">
+          <calcite-action text="Enable Lake layer" slot="actions-end" icon="layer"></calcite-action>
+        </calcite-pick-list-item>
+      </calcite-pick-list>
+
+    <h2>Test 3. Disabled Pick List</h2>
+    <calcite-pick-list disabled>
+      <calcite-pick-list-item label="River" description="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream." value="river">
+        <calcite-action text="Enable River layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-pick-list-item>
+      <calcite-pick-list-item label="Mountain" description="A large natural elevation of the earth's surface rising abruptly from the surrounding level." value="mountain" selected>
+        <calcite-action text="Enable Mountain layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-pick-list-item>
+      <calcite-pick-list-item label="Lake" description="A large body of water surrounded by land." value="lake">
+        <calcite-action text="Enable Lake layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-pick-list-item>
+    </calcite-pick-list>
+
+    <h2>Test 4. Heading Level</h2>
+    <calcite-pick-list heading-level="3">
+      <calcite-pick-list-item label="River" description="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream." value="river">
+        <calcite-action text="Enable River layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-pick-list-item>
+      <calcite-pick-list-item label="Mountain" description="A large natural elevation of the earth's surface rising abruptly from the surrounding level." value="mountain" selected>
+        <calcite-action text="Enable Mountain layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-pick-list-item>
+      <calcite-pick-list-item label="Lake" description="A large body of water surrounded by land." value="lake">
+        <calcite-action text="Enable Lake layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-pick-list-item>
+    </calcite-pick-list>
+
+    <h2>Test 5. Select multiple items from list</h2>
+    <calcite-pick-list multiple>
+      <calcite-pick-list-item label="River" description="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream." value="river">
+        <calcite-action text="Enable River layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-pick-list-item>
+      <calcite-pick-list-item label="Mountain" description="A large natural elevation of the earth's surface rising abruptly from the surrounding level." value="mountain" selected>
+        <calcite-action text="Enable Mountain layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-pick-list-item>
+      <calcite-pick-list-item label="Lake" description="A large body of water surrounded by land." value="lake">
+        <calcite-action text="Enable Lake layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-pick-list-item>
+    </calcite-pick-list>
+
+    <h2>Test 6. Selection of list items follows the focus</h2>
+    <calcite-pick-list selection-follows-focus>
+      <calcite-pick-list-item label="River" description="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream." value="river">
+        <calcite-action text="Enable River layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-pick-list-item>
+      <calcite-pick-list-item label="Mountain" description="A large natural elevation of the earth's surface rising abruptly from the surrounding level." value="mountain" selected>
+        <calcite-action text="Enable Mountain layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-pick-list-item>
+      <calcite-pick-list-item label="Lake" description="A large body of water surrounded by land." value="lake">
+        <calcite-action text="Enable Lake layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-pick-list-item>
+    </calcite-pick-list>
+
+    <h2>Test 7. Group Pick List</h2>
+    <calcite-pick-list>
+      <calcite-pick-list-group group-title="Natural Areas" heading-level="3">
+      <calcite-pick-list-item label="River" description="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream." value="river">
+        <calcite-action text="Enable River layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-pick-list-item>
+      <calcite-pick-list-item label="Mountain" description="A large natural elevation of the earth's surface rising abruptly from the surrounding level." value="mountain" selected>
+        <calcite-action text="Enable Mountain layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-pick-list-item>
+      <calcite-pick-list-item label="Lake" description="A large body of water surrounded by land." value="lake">
+        <calcite-action text="Enable Lake layer" slot="actions-end" icon="layer"></calcite-action>
+      </calcite-pick-list-item>
+      </calcite-pick-list-group>
+    </calcite-pick-list>
+
 
     </main>
   </body>
