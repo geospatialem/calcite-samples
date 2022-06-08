@@ -14,11 +14,11 @@
       href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.82/dist/calcite/calcite.css"
     />
     <style>
-      h1,
-      calcite-modal {
+      h1 {
         margin-bottom: 5rem;
       }
-      h2 {
+      h2, 
+      .button-space {
         margin-bottom: 3rem;
       }
       body {
@@ -63,7 +63,241 @@
 
       <h1><code>modal</code></h1>
 
-      <calcite-modal></calcite-modal>
+      <ul>
+        <li>To view each modal test, a button is located after each h2 heading that needs to be activated to display it.</li>
+        <li>Test 4 is intended for mouse users, but can be conducted by someone who doesn't use a mouse.</li>
+        <li>If possible, run through each test with each theme by toggling the theme switch.</li>
+      </ul>
+
+      <h2>Test 1. Modal scale</h2>
+
+      <!-- Small scale -->
+      <calcite-modal class="js-modal-s-s" width="s" scale="s" aria-labelledby="modal-title">
+        <div slot="header" id="modal-title">Small scale modal</div>
+        <div slot="content">
+          <p>The "Save" button is for visual purposes only, and is disabled.</p>
+          <p>To close the modal either:</p>
+          <ul>
+            <li>Select the "Cancel" button via keyboard or mouse,</li>
+            <li>Use the "esc" key,</li>
+            <li>Select the close button via keyboard or mouse, or</li>
+            <li>Click outside the modal dialog window.</li>
+          </ul>
+        </div>
+        <calcite-button onkeypress="openModal(event, '.js-modal-s-s')" onClick="openModal(event, '.js-modal-s-s')" slot="secondary" width="full" appearance="outline">Cancel</calcite-button>
+        <calcite-button disabled slot="primary" width="full">Save</calcite-button>
+    </calcite-modal>
+
+    <calcite-button class="button-space" onkeypress="openModal(event, '.js-modal-s-s')" onClick="openModal(event, '.js-modal-s-s')" appearance="outline">Small scale modal</calcite-button>
+
+      <br>
+
+      <!-- Medium scale -->
+      <calcite-modal class="js-modal-s-m" width="s" scale="m" aria-labelledby="modal-title-2">
+        <div slot="header" id="modal-title-2">Medium scale modal</div>
+        <div slot="content">
+          <p>The "Save" button is for visual purposes only, and is disabled.</p>
+          <p>To close the modal either:</p>
+          <ul>
+            <li>Select the "Cancel" button via keyboard or mouse,</li>
+            <li>Use the "esc" key,</li>
+            <li>Select the close button via keyboard or mouse, or</li>
+            <li>Click outside the modal dialog window.</li>
+          </ul>
+        </div>
+        <calcite-button onkeypress="openModal(event, '.js-modal-s-m')" onClick="openModal(event, '.js-modal-s-m')" slot="secondary" width="full" appearance="outline">Cancel</calcite-button>
+        <calcite-button disabled slot="primary" width="full">Save</calcite-button>
+    </calcite-modal>
+
+    <calcite-button class="button-space" onkeypress="openModal(event, '.js-modal-s-m')" onClick="openModal(event, '.js-modal-s-m')" appearance="outline">Medium scale modal</calcite-button>
+
+    <br>
+
+        <!-- Large scale -->
+        <calcite-modal class="js-modal-s-l" width="s" scale="l" aria-labelledby="modal-title-3">
+          <div slot="header" id="modal-title-3">Large scale modal</div>
+          <div slot="content">
+            <p>The "Save" button is for visual purposes only, and is disabled.</p>
+            <p>To close the modal either:</p>
+            <ul>
+              <li>Select the "Cancel" button via keyboard or mouse,</li>
+              <li>Use the "esc" key,</li>
+              <li>Select the close button via keyboard or mouse, or</li>
+              <li>Click outside the modal dialog window.</li>
+            </ul>
+          </div>
+          <calcite-button onkeypress="openModal(event, '.js-modal-s-l')" onClick="openModal(event, '.js-modal-s-l')" slot="secondary" width="full" appearance="outline">Cancel</calcite-button>
+          <calcite-button disabled slot="primary" width="full">Save</calcite-button>
+      </calcite-modal>
+  
+      <calcite-button class="button-space" onkeypress="openModal(event, '.js-modal-s-l')" onClick="openModal(event, '.js-modal-s-l')" appearance="outline">Large scale modal</calcite-button>
+
+
+      <h2>Test 2. Modal type</h2>
+
+      <!-- Destructive modal -->
+      <calcite-modal class="destructive" color="red" aria-labelledby="modal-title-4">
+        <div slot="header" id="modal-title-4">Destructive action modal</div>
+        <div slot="content">
+          <p>The "Delete" button is for visual purposes only, and is disabled.</p>
+          <p>To close the modal either:</p>
+          <ul>
+            <li>Select the "Cancel" button via keyboard or mouse,</li>
+            <li>Use the "esc" key,</li>
+            <li>Select the close button via keyboard or mouse, or</li>
+            <li>Click outside the modal dialog window.</li>
+          </ul>
+        </div>
+        <calcite-button color="red" onkeypress="openModal(event, '.destructive')" onClick="openModal(event, '.destructive')" slot="secondary" width="full" appearance="outline">Cancel</calcite-button>
+        <calcite-button color="red" disabled slot="primary" width="full">Delete</calcite-button>
+    </calcite-modal>
+
+    <calcite-button class="button-space" onkeypress="openModal(event, '.destructive')" onClick="openModal(event, '.destructive')" appearance="outline">Destructive modal</calcite-button>
+
+    <br>
+
+      <!-- Info modal -->
+      <calcite-modal class="info" color="blue" aria-labelledby="modal-title-5">
+        <div slot="header" id="modal-title-5">Info action modal</div>
+        <div slot="content">
+          <p>The "Save" button is for visual purposes only, and is disabled.</p>
+          <p>To close the modal either:</p>
+          <ul>
+            <li>Select the "Cancel" button via keyboard or mouse,</li>
+            <li>Use the "esc" key,</li>
+            <li>Select the close button via keyboard or mouse, or</li>
+            <li>Click outside the modal dialog window.</li>
+          </ul>
+        </div>
+        <calcite-button onkeypress="openModal(event, '.info')" onClick="openModal(event, '.info')" slot="secondary" width="full" appearance="outline">Cancel</calcite-button>
+        <calcite-button disabled slot="primary" width="full">Save</calcite-button>
+    </calcite-modal>
+
+    <calcite-button class="button-space" onkeypress="openModal(event, '.info')" onClick="openModal(event, '.info')" appearance="outline">Info modal</calcite-button>
+
+    <h2>Test 3. Modal cannot close with escape key</h2>
+
+          <calcite-modal disable-escape class="no-esc" aria-labelledby="modal-title-6">
+            <div slot="header" id="modal-title-6">Modal cannot close with escape key</div>
+            <div slot="content">
+              <p>The "Save" button is for visual purposes only, and is disabled.</p>
+              <p>To close the modal either:</p>
+              <ul>
+                <li>Select the "Cancel" button via keyboard or mouse,</li>
+                <li>Select the close button via keyboard or mouse, or</li>
+                <li>Click outside the modal dialog window.</li>
+              </ul>
+            </div>
+            <calcite-button onkeypress="openModal(event, '.no-esc')" onClick="openModal(event, '.no-esc')" slot="secondary" width="full" appearance="outline">Cancel</calcite-button>
+            <calcite-button disabled slot="primary" width="full">Save</calcite-button>
+        </calcite-modal>
+    
+        <calcite-button class="button-space" onkeypress="openModal(event, '.no-esc')" onClick="openModal(event, '.no-esc')" appearance="outline">Modal cannot close with escape key</calcite-button>
+
+        <h2>Test 4. [Intended for Mouse users] Modal cannot close when clicked outside of the modal dialog</h2>
+
+        <calcite-modal disable-outside-close class="no-out-close" aria-labelledby="modal-title-7">
+          <div slot="header" id="modal-title-7">Modal cannot close when clicked outside of modal dialog</div>
+          <div slot="content">
+            <p>The "Save" button is for visual purposes only, and is disabled.</p>
+            <p>To close the modal either:</p>
+            <ul>
+              <li>Select the "Cancel" button via keyboard or mouse,</li>
+              <li>Select the close button via keyboard or mouse, or</li>
+              <li>Click outside the modal dialog window.</li>
+            </ul>
+          </div>
+          <calcite-button onkeypress="openModal(event, '.no-out-close')" onClick="openModal(event, '.no-out-close')" slot="secondary" width="full" appearance="outline">Cancel</calcite-button>
+          <calcite-button disabled slot="primary" width="full">Save</calcite-button>
+      </calcite-modal>
+  
+      <calcite-button class="button-space" onkeypress="openModal(event, '.no-out-close')" onClick="openModal(event, '.no-out-close')" appearance="outline">Modal cannot close when clicked outside of modal dialog</calcite-button>
+
+      <h2>Test 5. Modal window size and features</h2>
+
+      <!-- Full screen -->
+      <calcite-modal fullscreen class="full-screen" aria-labelledby="modal-title-8">
+        <div slot="header" id="modal-title-8">Full screen modal</div>
+        <div slot="content">
+          <p>The "Save" button is for visual purposes only, and is disabled.</p>
+          <p>To close the modal either:</p>
+          <ul>
+            <li>Select the "Cancel" button via keyboard or mouse,</li>
+            <li>Use the "esc" key,</li>
+            <li>Select the close button via keyboard or mouse, or</li>
+            <li>Click outside the modal dialog window.</li>
+          </ul>
+        </div>
+        <calcite-button onkeypress="openModal(event, '.full-screen')" onClick="openModal(event, '.full-screen')" slot="secondary" width="full" appearance="outline">Cancel</calcite-button>
+        <calcite-button disabled slot="primary" width="full">Save</calcite-button>
+    </calcite-modal>
+
+    <calcite-button class="button-space" onkeypress="openModal(event, '.full-screen')" onClick="openModal(event, '.full-screen')" appearance="outline">Full screen modal</calcite-button>
+
+    <br>
+
+          <!-- Docked -->
+          <calcite-modal docked class="docked" aria-labelledby="modal-title-9">
+            <div slot="header" id="modal-title-9">Docked modal</div>
+            <div slot="content">
+              <p>For devices smaller than a tablet, this modal with "dock" to the bottom.</p>
+              <p>The "Save" button is for visual purposes only, and is disabled.</p>
+              <p>To close the modal either:</p>
+              <ul>
+                <li>Select the "Cancel" button via keyboard or mouse,</li>
+                <li>Use the "esc" key,</li>
+                <li>Select the close button via keyboard or mouse, or</li>
+                <li>Click outside the modal dialog window.</li>
+              </ul>
+            </div>
+            <calcite-button onkeypress="openModal(event, '.docked')" onClick="openModal(event, '.docked')" slot="secondary" width="full" appearance="outline">Cancel</calcite-button>
+            <calcite-button disabled slot="primary" width="full">Save</calcite-button>
+        </calcite-modal>
+    
+        <calcite-button class="button-space" onkeypress="openModal(event, '.docked')" onClick="openModal(event, '.docked')" appearance="outline">Docked modal</calcite-button>
+
+        <br>
+
+        <!-- Custom width -->
+        <calcite-modal class="width" width="500" aria-labelledby="modal-title-10">
+          <div slot="header" id="modal-title-10">Custom width modal</div>
+          <div slot="content">
+            <p>The "Save" button is for visual purposes only, and is disabled.</p>
+            <p>To close the modal either:</p>
+            <ul>
+              <li>Select the "Cancel" button via keyboard or mouse,</li>
+              <li>Use the "esc" key,</li>
+              <li>Select the close button via keyboard or mouse, or</li>
+              <li>Click outside the modal dialog window.</li>
+            </ul>
+          </div>
+          <calcite-button onkeypress="openModal(event, '.width')" onClick="openModal(event, '.width')" slot="secondary" width="full" appearance="outline">Cancel</calcite-button>
+          <calcite-button disabled slot="primary" width="full">Save</calcite-button>
+      </calcite-modal>
+  
+      <calcite-button class="button-space" onkeypress="openModal(event, '.width')" onClick="openModal(event, '.width')" appearance="outline">Custom width modal</calcite-button>
+
+      <br>
+
+              <!-- Gray background -->
+              <calcite-modal class="gray" background-color="grey" aria-labelledby="modal-title-11">
+                <div slot="header" id="modal-title-11">Grey background modal</div>
+                <div slot="content">
+                  <p>The "Save" button is for visual purposes only, and is disabled.</p>
+                  <p>To close the modal either:</p>
+                  <ul>
+                    <li>Select the "Cancel" button via keyboard or mouse,</li>
+                    <li>Use the "esc" key,</li>
+                    <li>Select the close button via keyboard or mouse, or</li>
+                    <li>Click outside the modal dialog window.</li>
+                  </ul>
+                </div>
+                <calcite-button onkeypress="openModal(event, '.gray')" onClick="openModal(event, '.gray')" slot="secondary" width="full" appearance="outline">Cancel</calcite-button>
+                <calcite-button disabled slot="primary" width="full">Save</calcite-button>
+            </calcite-modal>
+        
+            <calcite-button class="button-space" onkeypress="openModal(event, '.gray')" onClick="openModal(event, '.gray')" appearance="outline">Grey background modal</calcite-button>
+    
 
     </main>
   </body>
@@ -76,6 +310,13 @@
       document.body.classList.toggle("calcite-theme-dark");
       });
     };
+
+    // Open the selected modal dialog
+    function openModal(event, selector) {
+      if (event.type === 'click' || event.type === 'keypress' && event.keyCode === '13' || event.type === 'keypress' && event.keyCode === '32') {
+        document.querySelector(selector).active = !document.querySelector(selector).active;
+      }
+    }
 
   </script>
 </html>
