@@ -63,7 +63,205 @@
 
       <h1><code>dropdown</code></h1>
 
-      <calcite-dropdown></calcite-dropdown>
+      <h2>Test 1. Dropdown scale</h2>
+
+      <calcite-label>Small scale:</calcite-label>
+
+      <calcite-dropdown scale="s" width="s">
+        <calcite-button icon-end="hamburger" appearance="outline" slot="dropdown-trigger">Width: small</calcite-button>
+        <calcite-dropdown-group group-title="Location terrain">
+          <calcite-dropdown-item>Grassland</calcite-dropdown-item>
+          <calcite-dropdown-item active>Forest</calcite-dropdown-item>
+          <calcite-dropdown-item>Trail</calcite-dropdown-item>
+          <calcite-dropdown-item>Park</calcite-dropdown-item>
+          <calcite-dropdown-item>Lake</calcite-dropdown-item>
+          <calcite-dropdown-item>Mountain</calcite-dropdown-item>
+          <calcite-dropdown-item>River</calcite-dropdown-item>
+        </calcite-dropdown-group>
+      </calcite-dropdown>
+
+      <br>
+      <calcite-label>Medium scale:</calcite-label>
+
+      <calcite-dropdown scale="m" width="s">
+        <calcite-button icon-end="hamburger" appearance="outline" slot="dropdown-trigger">Width: small</calcite-button>
+        <calcite-dropdown-group group-title="Location terrain">
+          <calcite-dropdown-item>Grassland</calcite-dropdown-item>
+          <calcite-dropdown-item active>Forest</calcite-dropdown-item>
+          <calcite-dropdown-item>Trail</calcite-dropdown-item>
+          <calcite-dropdown-item>Park</calcite-dropdown-item>
+          <calcite-dropdown-item>Lake</calcite-dropdown-item>
+          <calcite-dropdown-item>Mountain</calcite-dropdown-item>
+          <calcite-dropdown-item>River</calcite-dropdown-item>
+        </calcite-dropdown-group>
+      </calcite-dropdown>
+
+      <br>
+
+      <calcite-label>Large scale:</calcite-label>
+
+      <calcite-dropdown scale="l" width="s">
+        <calcite-button icon-end="hamburger" appearance="outline" slot="dropdown-trigger">Width: small</calcite-button>
+        <calcite-dropdown-group group-title="Location terrain">
+          <calcite-dropdown-item>Grassland</calcite-dropdown-item>
+          <calcite-dropdown-item active>Forest</calcite-dropdown-item>
+          <calcite-dropdown-item>Trail</calcite-dropdown-item>
+          <calcite-dropdown-item>Park</calcite-dropdown-item>
+          <calcite-dropdown-item>Lake</calcite-dropdown-item>
+          <calcite-dropdown-item>Mountain</calcite-dropdown-item>
+          <calcite-dropdown-item>River</calcite-dropdown-item>
+        </calcite-dropdown-group>
+      </calcite-dropdown>
+
+      <h2>Test 2. Dropdown with disable close on select</h2>
+      <ol>
+        <li>Open the dropdown and select an item in the list.</li>
+        <li>Once an item is selected the dropdown will remain open, and additional selections can take place.</li>
+      </ol>
+      <br>
+      <calcite-dropdown disable-close-on-select>
+        <calcite-button icon-end="hamburger" appearance="outline" slot="dropdown-trigger">Disable close on select</calcite-button>
+        <calcite-dropdown-group selection-mode="multi" group-title="Location terrain">
+          <calcite-dropdown-item>Grassland</calcite-dropdown-item>
+          <calcite-dropdown-item active>Forest</calcite-dropdown-item>
+          <calcite-dropdown-item>Trail</calcite-dropdown-item>
+          <calcite-dropdown-item>Park</calcite-dropdown-item>
+          <calcite-dropdown-item>Lake</calcite-dropdown-item>
+          <calcite-dropdown-item>Mountain</calcite-dropdown-item>
+          <calcite-dropdown-item>River</calcite-dropdown-item>
+        </calcite-dropdown-group>
+      </calcite-dropdown>
+
+      <h2>Test 3. Disabled Dropdown</h2>
+      <calcite-dropdown disabled>
+        <calcite-button icon-end="hamburger" appearance="outline" slot="dropdown-trigger">Disabled</calcite-button>
+        <calcite-dropdown-group group-title="Location terrain">
+          <calcite-dropdown-item>Grassland</calcite-dropdown-item>
+          <calcite-dropdown-item active>Forest</calcite-dropdown-item>
+          <calcite-dropdown-item>Trail</calcite-dropdown-item>
+          <calcite-dropdown-item>Park</calcite-dropdown-item>
+          <calcite-dropdown-item>Lake</calcite-dropdown-item>
+          <calcite-dropdown-item>Mountain</calcite-dropdown-item>
+          <calcite-dropdown-item>River</calcite-dropdown-item>
+        </calcite-dropdown-group>
+      </calcite-dropdown>
+
+      <h2>Test 4. Dropdown with Max Items of 3 shown (remaining items are scrollable)</h2>
+      <calcite-dropdown max-items="3">
+        <calcite-button slot="dropdown-trigger" icon-end="hamburger">Max Items Shown</calcite-button>
+        <calcite-dropdown-group selection-mode="single" group-title="Location terrain">
+          <calcite-dropdown-item>Grassland</calcite-dropdown-item>
+          <calcite-dropdown-item active>Forest</calcite-dropdown-item>
+          <calcite-dropdown-item>Trail</calcite-dropdown-item>
+          <calcite-dropdown-item>Park</calcite-dropdown-item>
+          <calcite-dropdown-item>Lake</calcite-dropdown-item>
+          <calcite-dropdown-item>Mountain</calcite-dropdown-item>
+          <calcite-dropdown-item>River</calcite-dropdown-item>
+        </calcite-dropdown-group>
+    </calcite-dropdown>
+
+    <h2>Test 5. Dropdown Selection Type</h2>
+
+    <h3>Single select dropdown</h3>
+    <calcite-dropdown>
+      <calcite-button slot="dropdown-trigger" icon-end="hamburger">Single select dropdown</calcite-button>
+        <calcite-dropdown-group selection-mode="single" group-title="Selection Mode: Single">
+            <calcite-dropdown-item>Grassland</calcite-dropdown-item>
+            <calcite-dropdown-item active>Forest</calcite-dropdown-item>
+            <calcite-dropdown-item>Trail</calcite-dropdown-item>
+            <calcite-dropdown-item>Park</calcite-dropdown-item>
+            <calcite-dropdown-item>Lake</calcite-dropdown-item>
+            <calcite-dropdown-item>Mountain</calcite-dropdown-item>
+            <calcite-dropdown-item>River</calcite-dropdown-item>
+        </calcite-dropdown-group>
+    </calcite-dropdown>
+
+    <h3>Multi-select dropdown</h3>
+      <calcite-dropdown>
+        <calcite-button slot="dropdown-trigger" icon-end="hamburger">Multi-select dropdown</calcite-button>
+          <calcite-dropdown-group selection-mode="multi" group-title="Selection Mode: Multi">
+              <calcite-dropdown-item>Grassland</calcite-dropdown-item>
+              <calcite-dropdown-item active>Forest</calcite-dropdown-item>
+              <calcite-dropdown-item>Trail</calcite-dropdown-item>
+              <calcite-dropdown-item active>Park</calcite-dropdown-item>
+              <calcite-dropdown-item>Lake</calcite-dropdown-item>
+              <calcite-dropdown-item>Mountain</calcite-dropdown-item>
+              <calcite-dropdown-item>River</calcite-dropdown-item>
+          </calcite-dropdown-group>
+      </calcite-dropdown>
+
+    <h3>No select dropdown</h3>
+    <calcite-dropdown>
+      <calcite-button slot="dropdown-trigger" icon-end="hamburger">No select dropdown</calcite-button>
+          <calcite-dropdown-group selection-mode="none" group-title="Selection Mode: None">
+              <calcite-dropdown-item>Grassland</calcite-dropdown-item>
+              <calcite-dropdown-item>Forest</calcite-dropdown-item>
+              <calcite-dropdown-item>Trail</calcite-dropdown-item>
+              <calcite-dropdown-item>Park</calcite-dropdown-item>
+              <calcite-dropdown-item>Lake</calcite-dropdown-item>
+              <calcite-dropdown-item>Mountain</calcite-dropdown-item>
+              <calcite-dropdown-item>River</calcite-dropdown-item>
+          </calcite-dropdown-group>
+        </calcite-dropdown>
+
+    <h2>Test 6. Dropdown Triggers</h2>
+
+    <h3>Button triggered dropdown</h3>
+    <calcite-dropdown>
+      <calcite-button slot="dropdown-trigger">Button trigger</calcite-button>
+      <calcite-dropdown-group group-title="Button trigger">
+        <calcite-dropdown-item>Grassland</calcite-dropdown-item>
+        <calcite-dropdown-item active>Forest</calcite-dropdown-item>
+        <calcite-dropdown-item>Trail</calcite-dropdown-item>
+        <calcite-dropdown-item>Park</calcite-dropdown-item>
+        <calcite-dropdown-item>Lake</calcite-dropdown-item>
+        <calcite-dropdown-item>Mountain</calcite-dropdown-item>
+        <calcite-dropdown-item>River</calcite-dropdown-item>
+      </calcite-dropdown-group>
+    </calcite-dropdown>
+
+    <h3>Action triggered dropdown</h3>
+    <calcite-dropdown>
+      <calcite-action slot="dropdown-trigger" text-enabled text="Action Trigger"></calcite-action>
+      <calcite-dropdown-group group-title="Action trigger">
+        <calcite-dropdown-item>Grassland</calcite-dropdown-item>
+        <calcite-dropdown-item active>Forest</calcite-dropdown-item>
+        <calcite-dropdown-item>Trail</calcite-dropdown-item>
+        <calcite-dropdown-item>Park</calcite-dropdown-item>
+        <calcite-dropdown-item>Lake</calcite-dropdown-item>
+        <calcite-dropdown-item>Mountain</calcite-dropdown-item>
+        <calcite-dropdown-item>River</calcite-dropdown-item>
+      </calcite-dropdown-group>
+    </calcite-dropdown>
+
+
+    <h3>Link triggered dropdown</h3>
+    <calcite-dropdown>
+      <calcite-link slot="dropdown-trigger" appearance="solid">Link Trigger</calcite-link>
+      <calcite-dropdown-group group-title="Link trigger">
+        <calcite-dropdown-item>Grassland</calcite-dropdown-item>
+        <calcite-dropdown-item active>Forest</calcite-dropdown-item>
+        <calcite-dropdown-item>Trail</calcite-dropdown-item>
+        <calcite-dropdown-item>Park</calcite-dropdown-item>
+        <calcite-dropdown-item>Lake</calcite-dropdown-item>
+        <calcite-dropdown-item>Mountain</calcite-dropdown-item>
+        <calcite-dropdown-item>River</calcite-dropdown-item>
+      </calcite-dropdown-group>
+    </calcite-dropdown>
+
+    <h3>Div triggered dropdown</h3>
+    <calcite-dropdown>
+      <div slot="dropdown-trigger" appearance="solid" tabindex="0">Div Trigger</div>
+      <calcite-dropdown-group group-title="Div trigger">
+        <calcite-dropdown-item>Grassland</calcite-dropdown-item>
+        <calcite-dropdown-item active>Forest</calcite-dropdown-item>
+        <calcite-dropdown-item>Trail</calcite-dropdown-item>
+        <calcite-dropdown-item>Park</calcite-dropdown-item>
+        <calcite-dropdown-item>Lake</calcite-dropdown-item>
+        <calcite-dropdown-item>Mountain</calcite-dropdown-item>
+        <calcite-dropdown-item>River</calcite-dropdown-item>
+      </calcite-dropdown-group>
+    </calcite-dropdown>
 
     </main>
   </body>
