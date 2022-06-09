@@ -61,9 +61,77 @@
         </calcite-label>
       </div>
 
-      <h1><code>tip</code></h1>
+      <h1><code>tip, tip-manager and tip-group</code></h1>
 
-      <calcite-tip></calcite-tip>
+      <h2>Test 1. Tip</h2>
+      <calcite-tip heading="River" intl-close="Close">
+        <img slot="thumbnail" src="https://placeimg.com/1000/600/nature" alt="Nature placeholder image">
+        <p>A large natural stream of water flowing in a channel to the sea, a lake, or another such stream.</p>
+        <a href="http://www.esri.com">Esri website example link</a>
+      </calcite-tip>
+
+      <h2>Test 2. Tip with Heading Level</h2>
+      <calcite-tip heading="River" intl-close="Close" heading-level="3">
+        <img slot="thumbnail" src="https://placeimg.com/1000/600/nature" alt="Nature placeholder image">
+        <p>A large natural stream of water flowing in a channel to the sea, a lake, or another such stream.</p>
+        <a href="http://www.esri.com">Esri website example link</a>
+      </calcite-tip>
+
+      <h2>Test 3. Non-dismissible Tip</h2>
+      <calcite-tip heading="River" intl-close="Close" non-dismissible>
+        <img slot="thumbnail" src="https://placeimg.com/1000/600/nature" alt="Nature placeholder image">
+        <p>A large natural stream of water flowing in a channel to the sea, a lake, or another such stream.</p>
+        <a href="http://www.esri.com">Esri website example link</a>
+      </calcite-tip>
+
+      <h2>Test 4. Selected Tip</h2>
+      <calcite-tip heading="River" intl-close="Close" selected>
+        <img slot="thumbnail" src="https://placeimg.com/1000/600/nature" alt="Nature placeholder image">
+        <p>A large natural stream of water flowing in a channel to the sea, a lake, or another such stream.</p>
+        <a href="http://www.esri.com">Esri website example link</a>
+      </calcite-tip>
+
+      <h2>Test 5. Tip Manager</h2>
+      <calcite-tip-manager intl-close="Close" intl-next="Next" intl-previous="Previous" intl-default-title="Natural Resources">
+        <calcite-tip-group group-title="Natural Resources">
+            <calcite-tip heading="River" intl-close="Close">
+                <img slot="thumbnail" src="https://placeimg.com/1000/600/nature" alt="Nature placeholder image">
+                <p>A large natural stream of water flowing in a channel to the sea, a lake, or another such stream.</p>
+                <a href="http://www.esri.com">Esri website example link</a>
+            </calcite-tip>
+            <calcite-tip heading="Mountain" intl-close="Close" selected>
+                <img slot="thumbnail" src="https://placeimg.com/1000/600/nature" alt="Nature placeholder image">
+                <p>A large natural elevation of the earth's surface rising abruptly from the surrounding level.</p>
+                <a href="http://www.esri.com">Esri website example link</a>
+            </calcite-tip>
+            <calcite-tip heading="Lake" intl-close="Close">
+                <img slot="thumbnail" src="https://placeimg.com/1000/600/nature" alt="Nature placeholder image">
+                <p>A large body of water surrounded by land.</p>
+                <a href="http://www.esri.com">Esri website example link</a>
+            </calcite-tip>
+        </calcite-tip-group>
+      </calcite-tip-manager>
+
+      <h2>Test 6. Tip Manager with heading level</h2>
+      <calcite-tip-manager heading-level="3" intl-close="Close" intl-next="Next" intl-previous="Previous" intl-default-title="Natural Resources">
+        <calcite-tip-group group-title="Natural Resources">
+            <calcite-tip heading="River" intl-close="Close">
+                <img slot="thumbnail" src="https://placeimg.com/1000/600/nature" alt="Nature placeholder image">
+                <p>A large natural stream of water flowing in a channel to the sea, a lake, or another such stream.</p>
+                <a href="http://www.esri.com">Esri website example link</a>
+            </calcite-tip>
+            <calcite-tip heading="Mountain" intl-close="Close" selected>
+                <img slot="thumbnail" src="https://placeimg.com/1000/600/nature" alt="Nature placeholder image">
+                <p>A large natural elevation of the earth's surface rising abruptly from the surrounding level.</p>
+                <a href="http://www.esri.com">Esri website example link</a>
+            </calcite-tip>
+            <calcite-tip heading="Lake" intl-close="Close">
+                <img slot="thumbnail" src="https://placeimg.com/1000/600/nature" alt="Nature placeholder image">
+                <p>A large body of water surrounded by land.</p>
+                <a href="http://www.esri.com">Esri website example link</a>
+            </calcite-tip>
+        </calcite-tip-group>
+      </calcite-tip-manager>
 
     </main>
   </body>
