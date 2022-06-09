@@ -63,7 +63,41 @@
 
       <h1><code>panel</code></h1>
 
-      <calcite-panel></calcite-panel>
+      <h2>Test 1. Panel</h2>
+      <calcite-panel height-scale="s" heading="River" summary="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream."></calcite-panel>
+
+      <h2>Test 2. Disabled Panel</h2>
+      <calcite-panel disabled height-scale="s" heading="River" summary="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream."></calcite-panel>
+
+      <h2>Test 3. Dismissible Panel</h2>
+      <calcite-panel dismissible height-scale="s" intl-close="Close" intl-options="Options" heading="River" summary="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream."></calcite-panel>
+
+      <h2>Test 4. Panel with Heading</h2>
+      <calcite-panel heading="River" heading-level="3" height-scale="s" summary="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream."></calcite-panel>
+
+      <h2>Test 5. Panel with Footer</h2>
+      <calcite-panel heading="River" summary="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream.">
+        <div slot="footer">River panel footer</div>
+      </calcite-panel>
+
+      <h2>Test 6. Panel with Header</h2>
+      <calcite-panel heading="River" intl-options="Options" summary="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream.">
+        <calcite-action text="left" label="icon left" icon="left" slot="header-actions-start"></calcite-action>
+        <calcite-action text="right" label="icon right" icon="right" slot="header-actions-end"></calcite-action>
+      </calcite-panel>
+
+      <h2>Test 7. Scrollable Panel</h2>
+      <div style="height: 300px; display: flex">
+        <calcite-panel heading="River">
+          <div>
+            <p style="height: 600px">A large natural stream of water flowing in a channel to the sea, a lake, or another such stream.</p>
+            <p>End.</p>
+          </div>
+        </calcite-panel>
+      </div>
+
+      <h2>Test 8. Loading Panel</h2>
+      <calcite-panel heading="River" loading height-scale="s" summary="A large natural stream of water flowing in a channel to the sea, a lake, or another such stream."></calcite-panel>
 
     </main>
   </body>
