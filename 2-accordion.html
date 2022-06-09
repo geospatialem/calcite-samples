@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Accordion (advanced)</title>
+    <script
+      type="module"
+      src="https://unpkg.com/@esri/calcite-components@1.0.0-beta.83/dist/calcite/calcite.esm.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.83/dist/calcite/calcite.css"
+    />
+    <style>
+      h1,
+      calcite-accordion {
+        margin-bottom: 5rem;
+      }
+      h2 {
+        margin: 3rem 0rem;
+      }
+      body {
+        font-family: var(--calcite-sans-family);
+        font-size: var(--calcite-font-size-0);
+        color: var(--calcite-ui-text-1);
+        max-width: 1024px;
+        min-width: 280px;
+        width: 70vw;
+        padding: 0 var(--calcite-spacing-double);
+        margin: 0 auto;
+        background-color: var(--calcite-ui-background);
+      }
+      /* Theme Switcher */
+      #theme-label {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 2;
+        background-color: var(--calcite-ui-background);
+        border: 1px solid;
+        border-color: var(--calcite-ui-border-1);
+        border-radius: var(--calcite-border-radius);
+        margin: 0;
+        padding: 10px;
+      }
+      #theme-label label {
+        margin: 0;
+      }
+      body {
+  width: 360px !important;
+}
+
+.download-content-section {
+  margin-top: 1.25rem;
+  padding-bottom: 0.625rem;
+}
+
+.helper-desc {
+   margin-bottom: 1.25rem;
+}
+
+calcite-label {
+  display: block;
+  font-weight: 500;
+}
+
+calcite-radio-group {
+    margin-bottom: 1.25rem;
+}
+
+calcite-radio-group-item[checked] {
+  border: 2px solid #0079C1;
+} 
+
+.time-inputs {
+   display: grid;
+   grid-template-columns: 200px, 1fr;
+   grid-gap: 0.625rem;
+}
+
+.day-select {
+  margin-bottom: 1.25rem;
+  width: auto;
+}
+
+calcite-input-date-picker {
+  display: block;
+}
+
+calcite-select, 
+calcite-input-date-picker, 
+calcite-radio-group, 
+calcite-input-time-picker {
+  margin-top: 0.313rem;
+}
+    </style>
+  </head>
+  <body>
+    <main>
+
+      <h1><code>accordion (advanced)</code></h1>
+
+      <!-- calcite-switch -->
+			<div id="theme-label">
+			  <calcite-label layout="inline">
+				Toggle theme
+				<calcite-switch id="theme-switch"></calcite-switch>
+			  </calcite-label>
+			</div>
+      
+      <calcite-accordion>
+        <calcite-accordion-item item-title="Download Scheduling" item-subtitle="" active>
+          <div class="download-content-section">
+            <div class="helper-desc">
+              This tool will automatically try to determine the best time to generate a download file for this item. However, you can choose to manually set when you want the download file to be updated.
+            </div>
+            <div class="scheduler-options">
+              <calcite-label>Frequency
+              <calcite-radio-group name="Frequency" scale="m" width="full" layout="vertical">
+                <calcite-radio-group-item value="automatic">Automatic</calcite-radio-group-item>
+                <calcite-radio-group-item value="scheduled" checked>Scheduled</calcite-radio-group-item>
+                <calcite-radio-group-item value="never">Never</calcite-radio-group-item>
+              </calcite-radio-group>
+            </calcite-label>
+              
+              <calcite-label>Repeat
+                <calcite-radio-group name="Repeat" scale="m" width="full" layout="vertical">
+                  <calcite-radio-group-item value="daily" checked>Daily</calcite-radio-group-item>
+                  <calcite-radio-group-item value="weekly">Weekly</calcite-radio-group-item>
+                  <calcite-radio-group-item value="monthly">Monthly</calcite-radio-group-item>
+                  <calcite-radio-group-item value="yearly">Yearly</calcite-radio-group-item>
+                </calcite-radio-group>
+              </calcite-label>
+
+              <!-- Dynamic labels depending on what the user selects in the 'Repeat' radio group -->
+
+              <!-- Weekly -->
+              <div id="weekly" class="dependency" style="display:none;">
+                <calcite-label>Day of week
+                  <calcite-select label="Day of week">
+                    <calcite-option>Sunday</calcite-option>
+                    <calcite-option>Monday</calcite-option>
+                    <calcite-option>Tuesday</calcite-option>
+                    <calcite-option>Wednesday</calcite-option>
+                    <calcite-option>Thursday</calcite-option>
+                    <calcite-option>Friday</calcite-option>
+                    <calcite-option>Saturday</calcite-option>
+                  </calcite-select>
+                </calcite-label>
+              </div>
+
+              <!-- Monthly -->
+              <div id="monthly" class="dependency" style="display:none;">
+                <calcite-label>Day of month
+                  <calcite-select label="Day of month">
+                    <calcite-option>1</calcite-option>
+                    <calcite-option>2</calcite-option>
+                    <calcite-option>3</calcite-option>
+                    <calcite-option>4</calcite-option>
+                    <calcite-option>5</calcite-option>
+                    <calcite-option>6</calcite-option>
+                    <calcite-option>7</calcite-option>
+                    <calcite-option>8</calcite-option>
+                    <calcite-option>9</calcite-option>
+                    <calcite-option>10</calcite-option>
+                    <calcite-option>11</calcite-option>
+                    <calcite-option>12</calcite-option>
+                    <calcite-option>13</calcite-option>
+                    <calcite-option>14</calcite-option>
+                    <calcite-option>15</calcite-option>
+                    <calcite-option>16</calcite-option>
+                    <calcite-option>17</calcite-option>
+                    <calcite-option>18</calcite-option>
+                    <calcite-option>19</calcite-option>
+                    <calcite-option>20</calcite-option>
+                    <calcite-option>21</calcite-option>
+                    <calcite-option>22</calcite-option>
+                    <calcite-option>23</calcite-option>
+                    <calcite-option>24</calcite-option>
+                    <calcite-option>25</calcite-option>
+                    <calcite-option>26</calcite-option>
+                    <calcite-option>27</calcite-option>
+                    <calcite-option>28</calcite-option>
+                    <calcite-option>29</calcite-option>
+                    <calcite-option>30</calcite-option>
+                    <calcite-option>31</calcite-option>
+                  </calcite-select>
+                </calcite-label>
+              </div>
+
+              <!-- Yearly -->
+              <div id="yearly" class="dependency" style="display:none;">
+                <calcite-label>Day of year
+                  <calcite-input-date-picker></calcite-input-date-picker>
+                </calcite-label>
+              </div>
+
+              
+              <div class="time-inputs">
+                <!-- Time of day -->
+                <calcite-label>Time of Day
+                <calcite-input-time-picker></calcite-input-time-picker>
+                </calcite-label>
+                <!-- Timezone -->
+                <calcite-label>Time Zone
+                <calcite-select label="Time Zone">
+                  <calcite-option-group label="Time Zone">
+                      <calcite-option>EDT</calcite-option>
+                      <calcite-option selected>CT</calcite-option>
+                      <calcite-option>PST</calcite-option>
+                  </calcite-option-group>
+                </calcite-select>
+              </calcite-label>
+               </div>
+
+            </div>
+          </div>
+      </calcite-accordion-item>
+    
+        
+    </calcite-accordion>
+
+    </main>
+  </body>
+  <script>
+    window.onload = () => {
+      // Theme Switcher
+      const themeSwitch = document.getElementById("theme-switch");
+      themeSwitch.addEventListener("calciteSwitchChange", () => {
+      document.body.classList.toggle("calcite-theme-dark");
+      });
+
+      // Showcase the dropdown depending on user selection
+      document.addEventListener('calciteRadioGroupChange', function(event) {
+        if (event.target.name === 'Repeat') {
+          // Hide all elements (weekly, monthly, yearly)
+          const weekly = document.getElementById("weekly");
+          weekly.style.display = 'none';
+          const monthly = document.getElementById("monthly");
+          monthly.style.display = 'none';
+          const yearly = document.getElementById("yearly");
+          yearly.style.display = 'none';
+          // Tries to add an element (no element for daily)
+          try {
+            const elementToChange = document.getElementById(event.detail);
+            elementToChange.style.display = 'block';
+          } catch(err) {
+            // Do nothing
+          }
+        }
+      });
+    };
+  </script>
+</html>

@@ -1,6 +1,9 @@
 # calcite-samples
-## [Form](0-form.html)
-Complex sample that contains multiple components.
+
+## Complex samples (n=3)
+- [Form](0-form.html): Contains multiple components in a form.
+- [Panel](1-panel.html): Complex solution with multiple elements in a `calcite-panel`.
+- [Accordion](2-accordion): Complex solution with multiple elements in a `calcite-accordion`.
 ## Components (n=49)
 - [Accordion and Accordion Item](accordion.html)  
 - [Action](action.html)
