@@ -14,9 +14,8 @@
       href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.83/dist/calcite/calcite.css"
     />
     <style>
-      h1,
-      calcite-shell-center-row {
-        margin-bottom: 5rem;
+      h1 {
+        margin-bottom: 1rem;
       }
       h2 {
         margin-bottom: 3rem;
@@ -48,6 +47,11 @@
       #theme-label label {
         margin: 0;
       }
+
+      calcite-shell {
+        top: 10rem;
+        height: calc(100vh - 10rem);
+      }
     </style>
   </head>
   <body>
@@ -63,7 +67,92 @@
 
       <h1><code>shell-center-row</code></h1>
 
-      <calcite-shell-center-row></calcite-shell-center-row>
+      <p>Similar to <code>shell</code>, but includes content in between the panels in the center.</p>
+
+      <calcite-shell>
+
+        <!-- Primary panel (left) -->
+        <calcite-shell-panel slot="primary-panel" position="start" detached>
+            <calcite-action-bar slot="action-bar">
+                <calcite-action-group>
+                    <calcite-action text="Add action" icon="plus"></calcite-action>
+                    <calcite-action text="Save action, disabled" disabled icon="save"></calcite-action>
+                    <calcite-action text="Layers action, Indicator on" active indicator icon="layers"></calcite-action>
+                </calcite-action-group>
+            </calcite-action-bar>
+            <calcite-block collapsible heading="Navigate through the action bar" summary="Enabling items in the menu will have no action unless selecting the Collapse/Expand action. However, can all content be accessed?"  heading-level="2">
+                <calcite-block-content>
+                    <calcite-action text="Item 1, Plus icon, and Indicator on" text-enabled indicator icon="plus">
+                    </calcite-action>
+                    <calcite-action text="Item 2, Save icon" text-enabled icon="save"></calcite-action>
+                    <calcite-action text="Item 3, Banana icon" text-enabled icon="banana"></calcite-action>
+                </calcite-block-content>
+            </calcite-block>
+            <calcite-block collapsible heading="Additional Block example" summary="Can this block content be accessed?" heading-level="2">
+                <calcite-block-content>
+                    <p>Supporting text content in block.</p>
+                </calcite-block-content>
+            </calcite-block>
+        </calcite-shell-panel>
+
+
+        <!-- Center Row -->
+        <calcite-shell-center-row slot="center-row" detached id="center-row">
+          <calcite-panel heading="Shell Center Row example" summary="Content for the center row.">
+            <calcite-block heading="Shell center row example" summary="Expand to learn more" collapsible>
+              <calcite-notice active>
+                  <div slot="message">Shell center row displays content in the middle of the page.</div>
+              </calcite-notice>
+            </calcite-block>
+          </calcite-panel>
+
+          <calcite-action-bar slot="action-bar">
+            <calcite-action-group slot="bottom-actions">
+              <calcite-action icon="lightbulb" text="Tips" id="tip-manager-button"></calcite-action>
+              <calcite-action icon="mega-phone" text="Feedback" id="tip-manager-button-2"></calcite-action>
+            </calcite-action-group>
+          </calcite-action-bar>
+        </calcite-shell-center-row>
+
+
+        <!-- Contextual panel (right) -->
+        <calcite-shell-panel slot="contextual-panel" position="end" detached height-scale="s">
+            <calcite-action-bar slot="action-bar">
+                <calcite-action-group>
+                    <calcite-action text="Add" active icon="plus"></calcite-action>
+                    <calcite-action text="Save" disabled icon="save"></calcite-action>
+                    <calcite-action text="Layers" icon="layers"></calcite-action>
+                </calcite-action-group>
+                <calcite-action-group>
+                    <calcite-action text="Add" icon="plus"></calcite-action>
+                    <calcite-action text="Save" disabled icon="save"></calcite-action>
+                    <calcite-action text="Layers" icon="layers"></calcite-action>
+                </calcite-action-group>
+                <calcite-action slot="bottom-actions" text="Tips" icon="lightbulb"></calcite-action>
+            </calcite-action-bar>
+            <calcite-flow>
+                <calcite-panel heading="Value List Example">
+                    <calcite-block collapsible open heading="A filter-enabled value list" summary="An itemized list with supporting icons." heading-level="2">
+                        <calcite-value-list multiple>
+                            <calcite-value-list-item label="Item 1"
+                                description="Lightning bolt" value="lightning">
+                                <calcite-action slot="actions-end" icon="camera-flash-on" text="Lightning bolt">
+                                </calcite-action>
+                            </calcite-value-list-item>
+                            <calcite-value-list-item label="Item 2"
+                                description="Banana" value="banana">
+                                <calcite-action slot="actions-end" icon="banana" text="Banana"></calcite-action>
+                            </calcite-value-list-item>
+                            <calcite-value-list-item label="Item 3"
+                                description="Human" value="human">
+                                <calcite-action slot="actions-end" icon="person2" text="Person"></calcite-action>
+                            </calcite-value-list-item>
+                        </calcite-value-list>
+                    </calcite-block>
+                </calcite-panel>
+            </calcite-flow>
+        </calcite-shell-panel>
+    </calcite-shell>
 
     </main>
   </body>
