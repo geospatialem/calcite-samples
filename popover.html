@@ -15,7 +15,7 @@
     />
     <style>
       h1,
-      calcite-popover {
+      calcite-button {
         margin-bottom: 5rem;
       }
       h2 {
@@ -63,7 +63,45 @@
 
       <h1><code>popover</code></h1>
 
-      <calcite-popover></calcite-popover>
+      <h2>Test 1. Popover</h2>
+      <calcite-popover label="Test 1 for popover" reference-element="popover-button">
+        <p style="padding:0 10px;display:flex;flex-direction:row">
+            <calcite-icon icon="3d-glasses"></calcite-icon> Popover content
+        </p>
+      </calcite-popover>
+      <calcite-button id="popover-button">Activate Popover</calcite-button>
+
+      <h2>Test 2. Popover with Close Button</h2>
+      <calcite-popover dismissible label="Test 2 for popover" reference-element="popover-button2">
+        <p style="padding:0 10px;display:flex;flex-direction:row">
+            <calcite-icon icon="3d-glasses"></calcite-icon> Popover content
+        </p>
+      </calcite-popover>
+      <calcite-button id="popover-button2">Activate Popover with Close Button</calcite-button>
+
+      <h2>Test 3. Close Popover from click event outside the button/popover</h2>
+      <calcite-popover auto-close label="Test 3 for popover" reference-element="popover-button3">
+        <p style="padding:0 10px;display:flex;flex-direction:row">
+            <calcite-icon icon="3d-glasses"></calcite-icon> Popover content
+        </p>
+      </calcite-popover>
+      <calcite-button id="popover-button3">Activate Popover that closes on a click event outside of the button/popover</calcite-button>
+
+      <h2>Test 4. Opened Popover</h2>
+      <calcite-popover open label="Test 4 for popover" reference-element="popover-button4">
+        <p style="padding:0 10px;display:flex;flex-direction:row">
+            <calcite-icon icon="3d-glasses"></calcite-icon> Popover content
+        </p>
+      </calcite-popover>
+      <calcite-button id="popover-button4">Popover open on load</calcite-button>
+
+      <h2>Test 5. Popover with Heading</h2>
+      <calcite-popover heading="Popover heading" heading-level="3" label="Test 5 for popover" reference-element="popover-button5">
+        <p style="padding:0 10px;display:flex;flex-direction:row">
+            <calcite-icon icon="3d-glasses"></calcite-icon> Popover content
+        </p>
+      </calcite-popover>
+      <calcite-button id="popover-button5">Activate Popover with Heading</calcite-button>
 
     </main>
   </body>
