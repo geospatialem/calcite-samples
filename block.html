@@ -61,9 +61,105 @@
         </calcite-label>
       </div>
 
-      <h1><code>block</code></h1>
+      <h1><code>block and block-section</code></h1>
 
-      <calcite-block></calcite-block>
+      <h2>Test 1. Block Section</h2>
+
+      <calcite-block open heading="Natural Resources" summary="Materials or substances such as minerals, forests, water, and fertile land that occur in nature and can be used for economic gain.">
+        <calcite-block-section open text="River" intl-collapse="Collapse" intl-expand="Expand">
+            <calcite-notice active>
+                <div slot="message">A large natural stream of water flowing in a channel to the sea, a lake, or another such stream.</div>
+            </calcite-notice>
+        </calcite-block-section>
+      </calcite-block>
+
+      <h2>Test 2. Block with Status</h2>
+
+      <h3>Block Valid:</h3>
+      <calcite-block status="valid" open heading="Natural Resources" summary="Materials or substances such as minerals, forests, water, and fertile land that occur in nature and can be used for economic gain.">
+        <calcite-block-section open text="River" intl-collapse="Collapse" intl-expand="Expand">
+            <calcite-notice active>
+                <div slot="message">A large natural stream of water flowing in a channel to the sea, a lake, or another such stream.</div>
+            </calcite-notice>
+        </calcite-block-section>
+      </calcite-block>
+
+      <h3>Block Section Valid:</h3>
+      <calcite-block open heading="Natural Resources" summary="Materials or substances such as minerals, forests, water, and fertile land that occur in nature and can be used for economic gain.">
+        <calcite-block-section open text="River" intl-collapse="Collapse" intl-expand="Expand" status="valid">
+            <calcite-notice active>
+                <div slot="message">A large natural stream of water flowing in a channel to the sea, a lake, or another such stream.</div>
+            </calcite-notice>
+        </calcite-block-section>
+      </calcite-block>
+
+      <h3>Block Invalid:</h3>
+      <calcite-block status="invalid" open heading="Natural Resources" summary="A category of companies that provide basic amenities, such as water, sewage services, electricity, dams, and natural gas.">
+        <calcite-block-section open text="River" intl-collapse="Collapse" intl-expand="Expand">
+            <calcite-notice active>
+                <div slot="message">A large natural stream of water flowing in a channel to the sea, a lake, or another such stream.</div>
+            </calcite-notice>
+        </calcite-block-section>
+      </calcite-block>
+
+      <h3>Block Section Invalid:</h3>
+      <calcite-block open heading="Natural Resources" summary="Materials or substances such as minerals, forests, water, and fertile land that occur in nature and can be used for economic gain.">
+        <calcite-block-section open text="River" intl-collapse="Collapse" intl-expand="Expand" status="invalid">
+            <calcite-notice active>
+                <div slot="message">A large body of water surrounded by land.</div>
+            </calcite-notice>
+        </calcite-block-section>
+      </calcite-block>
+
+      <h2>Test 3. Block Section with toggle switch</h2>
+      <calcite-block open heading="Natural Resources" summary="Materials or substances such as minerals, forests, water, and fertile land that occur in nature and can be used for economic gain.">
+        <calcite-block-section open text="River" intl-collapse="Collapse" intl-expand="Expand" toggle-display="switch">
+            <calcite-notice active>
+                <div slot="message">A large body of water surrounded by land.</div>
+            </calcite-notice>
+        </calcite-block-section>
+      </calcite-block>
+
+      <h2>Test 4. Collapsed Block</h2>
+      <calcite-block collapsible heading="Natural Resources" summary="Materials or substances such as minerals, forests, water, and fertile land that occur in nature and can be used for economic gain.">
+        <calcite-block-section open text="River" intl-collapse="Collapse" intl-expand="Expand">
+            <calcite-notice active>
+                <div slot="message">A large body of water surrounded by land.</div>
+            </calcite-notice>
+        </calcite-block-section>
+      </calcite-block>
+
+      <h2>Test 5. Disabled Block</h2>
+      <calcite-block disabled heading="Natural Resources" summary="Materials or substances such as minerals, forests, water, and fertile land that occur in nature and can be used for economic gain.">
+        <calcite-block-section open text="River" intl-collapse="Collapse" intl-expand="Expand">
+            <calcite-notice active>
+                <div slot="message">A large body of water surrounded by land.</div>
+            </calcite-notice>
+        </calcite-block-section>
+      </calcite-block>
+
+      <h2>Test 6. Block with Drag Handle</h2>
+      <calcite-block drag-handle heading="Natural Resources" summary="Materials or substances such as minerals, forests, water, and fertile land that occur in nature and can be used for economic gain.">
+        <calcite-notice active>
+            <div slot="message">An excellent assortment of content.</div>
+        </calcite-notice>
+      </calcite-block>
+
+      <h2>Test 7. Block with Heading Level</h2>
+      <calcite-block heading="Natural Resources" heading-level="3" summary="Materials or substances such as minerals, forests, water, and fertile land that occur in nature and can be used for economic gain.">
+        <calcite-notice active>
+            <div slot="message">An excellent assortment of content.</div>
+        </calcite-notice>
+      </calcite-block>
+
+      <h2>Test 8. Loading Block</h2>
+      <calcite-block loading heading="Natural Resources" summary="Materials or substances such as minerals, forests, water, and fertile land that occur in nature and can be used for economic gain.">
+        <calcite-notice active>
+            <div slot="message">An excellent assortment of content.</div>
+        </calcite-notice>
+      </calcite-block>
+
+
 
     </main>
   </body>
