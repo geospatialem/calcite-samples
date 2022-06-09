@@ -63,7 +63,32 @@
 
       <h1><code>flow</code></h1>
 
-      <calcite-flow></calcite-flow>
+      <h2>Test 1. Flow</h2>
+      <calcite-flow>
+        <calcite-panel heading="Parent panel">
+        </calcite-panel>
+        <calcite-panel heading="Child panel that will be removed when selecting 'back'">
+        </calcite-panel>
+      </calcite-flow>
+
+      <h2>Test 2. Flow with footer actions</h2>
+      <calcite-flow>
+        <calcite-panel heading="What are the most popular commute alternatives?">
+          <calcite-button slot="footer-actions" appearance="outline">Save</calcite-button>
+          <calcite-button slot="footer-actions" appearance="outline">Cancel</calcite-button>
+        </calcite-panel>
+      </calcite-flow>
+
+      <h2>Test 3. Add new items to Flow</h2>
+      <calcite-button id="add-panel" appearance="solid" icon-end="plus" scale="l">Add Flow Item</calcite-button>
+      <br><br>
+      <h3>Adds panel to flow:</h3>
+      <calcite-flow id="flow">
+        <calcite-panel heading="Parent panel" summary="Select the 'Add Flow Item' button to add in additional panels.">
+          <calcite-button slot="footer-actions" class="btn" appearance="outline">Save</calcite-button>
+          <calcite-button slot="footer-actions" class="btn btn-secondary" appearance="outline">Cancel</calcite-button>
+        </calcite-panel>
+      </calcite-flow>
 
     </main>
   </body>
@@ -76,6 +101,37 @@
       document.body.classList.toggle("calcite-theme-dark");
       });
     };
+
+    // Add a new panel to the flow (test 3)
+    const flowNode = document.getElementById("flow");
+
+    const addFlowButtonNode = document.getElementById("add-panel");
+
+    addFlowButtonNode.addEventListener("click", function () {
+      const newNode = document.createElement("calcite-panel");
+
+      newNode.beforeBack = function () {
+        newNode.loading = true;
+        newNode.disabled = true;
+        return new Promise((resolve) =>
+          setTimeout(() => {
+            newNode.disabled = false;
+            newNode.loading = false;
+            resolve();
+          }, 1000)
+        );
+      };
+
+      newNode.heading = "Item " + (flowNode.childElementCount + 1);
+      newNode.summary = "Child panel that will be removed when selecting 'back'.";
+      newNode.innerHTML = `
+        <p><img src="https://placeimg.com/300/200/nature" alt="nature" /></p>
+        <calcite-action label="pencil icon" slot="menu-actions" icon="pencil"></calcite-action>
+        <calcite-button slot="footer-actions" appearance="outline">Save</calcite-button>
+        <calcite-button slot="footer-actions" appearance="outline">Cancel</calcite-button>
+      `;
+      flowNode.appendChild(newNode);
+    });
 
   </script>
 </html>
