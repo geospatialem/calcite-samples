@@ -14,8 +14,8 @@
       href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.83/dist/calcite/calcite.css"
     />
     <style>
-      h1,
-      calcite-tile-select {
+      h1, 
+      calcite-tile-select-group {
         margin-bottom: 5rem;
       }
       h2 {
@@ -61,9 +61,89 @@
         </calcite-label>
       </div>
 
-      <h1><code>tile-select</code></h1>
+      <h1><code>tile-select and tile-select-group</code></h1>
 
-      <calcite-tile-select></calcite-tile-select>
+      <h2>Test 1. Tile Select Group with Tile Select</h2>
+
+      <h3>Horizontal:</h3>
+      <calcite-tile-select-group>
+        <calcite-tile-select icon="lightbulb" name="horizontal-three" value="horizontal-three" heading="Utilities" description="Provides basic amenities, such as water, sewage services, electricity, dams, and natural gas."></calcite-tile-select>
+        <calcite-tile-select checked icon="wrench" name="horizontal-one" value="horizontal-one" heading="Manufacturing" description="Manufacturing is the making of goods by hand or by machine that upon completion the business sells to a customer."></calcite-tile-select>
+        <calcite-tile-select icon="car" name="horizontal-two" value="horizontal-two" heading="Transportation" description="The movement of goods and persons from place to place and the various means by which such movement is accomplished."></calcite-tile-select>
+      </calcite-tile-select-group>
+
+      <h3>Vertical:</h3>
+      <calcite-tile-select-group layout="vertical">
+        <calcite-tile-select icon="lightbulb" name="vertical-three" value="vertical-three" heading="Utilities" description="Provides basic amenities, such as water, sewage services, electricity, dams, and natural gas."></calcite-tile-select>
+        <calcite-tile-select checked icon="wrench" name="vertical-one" value="vertical-one" heading="Manufacturing" description="Manufacturing is the making of goods by hand or by machine that upon completion the business sells to a customer."></calcite-tile-select>
+        <calcite-tile-select icon="car" name="vertical-two" value="vertical-two" heading="Transportation" description="The movement of goods and persons from place to place and the various means by which such movement is accomplished."></calcite-tile-select>
+      </calcite-tile-select-group>
+
+      <h2>Test 2. Tile Select and Tile Select Group Disabled</h2>
+      <h3>Tile Select Group Disabled:</h3>
+      <calcite-tile-select-group disabled>
+        <calcite-tile-select icon="lightbulb" name="disabled-three" value="disabled-three" heading="Utilities" description="Provides basic amenities, such as water, sewage services, electricity, dams, and natural gas."></calcite-tile-select>
+        <calcite-tile-select checked icon="wrench" name="disabled-one" value="disabled-one" heading="Manufacturing" description="Manufacturing is the making of goods by hand or by machine that upon completion the business sells to a customer."></calcite-tile-select>
+        <calcite-tile-select icon="car" name="disabled-two" value="disabled-two" heading="Transportation" description="The movement of goods and persons from place to place and the various means by which such movement is accomplished."></calcite-tile-select>
+      </calcite-tile-select-group>
+
+      <h3>Tile Select Disabled:</h3>
+      <calcite-tile-select-group>
+        <calcite-tile-select disabled icon="lightbulb" name="disabled-light" value="disabled-light" heading="Utilities" description="Provides basic amenities, such as water, sewage services, electricity, dams, and natural gas."></calcite-tile-select>
+        <calcite-tile-select checked icon="wrench" name="disabled-wrench" value="disabled-wrench" heading="Manufacturing" description="Manufacturing is the making of goods by hand or by machine that upon completion the business sells to a customer."></calcite-tile-select>
+        <calcite-tile-select icon="car" name="disabled-car" value="disabled-car" heading="Transportation" description="The movement of goods and persons from place to place and the various means by which such movement is accomplished."></calcite-tile-select>
+      </calcite-tile-select-group>
+
+      <h2>Test 3. Tile Select with Interactive Radio</h2>
+
+      <h3>Radio at start:</h3>
+      <calcite-tile-select-group>
+        <calcite-tile-select input-enabled icon="lightbulb" name="radio-start" value="1" heading="Utilities" description="Provides basic amenities, such as water, sewage services, electricity, dams, and natural gas."></calcite-tile-select>
+        <calcite-tile-select input-enabled checked icon="wrench" name="radio-start" value="2" heading="Manufacturing" description="Manufacturing is the making of goods by hand or by machine that upon completion the business sells to a customer."></calcite-tile-select>
+        <calcite-tile-select input-enabled icon="car" name="radio-start" value="3" heading="Transportation" description="The movement of goods and persons from place to place and the various means by which such movement is accomplished."></calcite-tile-select>
+      </calcite-tile-select-group>
+
+      <h3>Radio at end:</h3>
+      <calcite-tile-select-group>
+        <calcite-tile-select input-enabled input-alignment="end" icon="lightbulb" name="radio-end" value="1" heading="Utilities" description="Provides basic amenities, such as water, sewage services, electricity, dams, and natural gas."></calcite-tile-select>
+        <calcite-tile-select input-enabled input-alignment="end" checked icon="wrench" name="radio-end" value="2" heading="Manufacturing" description="Manufacturing is the making of goods by hand or by machine that upon completion the business sells to a customer."></calcite-tile-select>
+        <calcite-tile-select input-enabled input-alignment="end" icon="car" name="radio-end" value="3" heading="Transportation" description="The movement of goods and persons from place to place and the various means by which such movement is accomplished."></calcite-tile-select>
+      </calcite-tile-select-group>
+
+      <h3>Radio with disabled tile select:</h3>
+      <calcite-tile-select-group>
+        <calcite-tile-select input-enabled icon="lightbulb" name="radio-disabled" value="1" heading="Utilities" description="Provides basic amenities, such as water, sewage services, electricity, dams, and natural gas."></calcite-tile-select>
+        <calcite-tile-select disabled input-enabled icon="wrench" name="radio-disabled" value="2" heading="Manufacturing" description="Manufacturing is the making of goods by hand or by machine that upon completion the business sells to a customer."></calcite-tile-select>
+        <calcite-tile-select checked input-enabled icon="car" name="radio-disabled" value="3" heading="Transportation" description="The movement of goods and persons from place to place and the various means by which such movement is accomplished."></calcite-tile-select>
+      </calcite-tile-select-group>
+
+
+      <h2>Test 4. Tile Select with Interactive Checkbox</h2>
+
+      <h3>Checkbox at start:</h3>
+      <calcite-tile-select-group>
+        <calcite-tile-select input-enabled type="checkbox" icon="lightbulb" name="select-start" value="1" heading="Utilities" description="Provides basic amenities, such as water, sewage services, electricity, dams, and natural gas."></calcite-tile-select>
+        <calcite-tile-select input-enabled type="checkbox" checked icon="wrench" name="select-start" value="2" heading="Manufacturing" description="Manufacturing is the making of goods by hand or by machine that upon completion the business sells to a customer."></calcite-tile-select>
+        <calcite-tile-select input-enabled type="checkbox" icon="car" name="select-start" value="3" heading="Transportation" description="The movement of goods and persons from place to place and the various means by which such movement is accomplished."></calcite-tile-select>
+      </calcite-tile-select-group>
+
+      <h3>Checkbox at end:</h3>
+      <calcite-tile-select-group>
+        <calcite-tile-select input-enabled input-alignment="end" type="checkbox" icon="lightbulb" name="select-end" value="1" heading="Utilities" description="Provides basic amenities, such as water, sewage services, electricity, dams, and natural gas."></calcite-tile-select>
+        <calcite-tile-select input-enabled input-alignment="end" type="checkbox" checked icon="wrench" name="select-end" value="2" heading="Manufacturing" description="Manufacturing is the making of goods by hand or by machine that upon completion the business sells to a customer."></calcite-tile-select>
+        <calcite-tile-select input-enabled input-alignment="end" type="checkbox" icon="car" name="select-end" value="3" heading="Transportation" description="The movement of goods and persons from place to place and the various means by which such movement is accomplished."></calcite-tile-select>
+      </calcite-tile-select-group>
+
+      <h3>Checkbox with disabled tile select:</h3>
+      <calcite-tile-select-group>
+        <calcite-tile-select input-enabled type="checkbox" icon="lightbulb" name="select-start" value="1" heading="Utilities" description="Provides basic amenities, such as water, sewage services, electricity, dams, and natural gas."></calcite-tile-select>
+        <calcite-tile-select disabled input-enabled type="checkbox" icon="wrench" name="select-start" value="2" heading="Manufacturing" description="Manufacturing is the making of goods by hand or by machine that upon completion the business sells to a customer."></calcite-tile-select>
+        <calcite-tile-select checked input-enabled type="checkbox" icon="car" name="select-start" value="3" heading="Transportation" description="The movement of goods and persons from place to place and the various means by which such movement is accomplished."></calcite-tile-select>
+      </calcite-tile-select-group>
+
+
+
+      
 
     </main>
   </body>
