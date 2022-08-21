@@ -119,9 +119,9 @@
 
 
       <h2>Test 3. Default with Icons </h2>
-      <calcite-button icon-start="arrow-left" icon-end="arrow-right" color="blue" scale="s">Button</calcite-button>
-      <calcite-button icon-start="arrow-left" icon-end="arrow-right" color="blue" scale="m">Button</calcite-button>
-      <calcite-button icon-start="arrow-left" icon-end="arrow-right" color="blue" scale="l">Button</calcite-button>
+      <calcite-button icon-start="arrow-left" icon-end="arrow-right" color="blue" scale="s">Default with icons, small scale</calcite-button>
+      <calcite-button icon-start="arrow-left" icon-end="arrow-right" color="blue" scale="m">Default with icons, medium scale</calcite-button>
+      <calcite-button icon-start="arrow-left" icon-end="arrow-right" color="blue" scale="l">Default with icons, large scale</calcite-button>
       
       
       <h2>Test 4. Icons only</h2>
@@ -131,21 +131,21 @@
 
 
       <h2>Test 5. Rounded</h2>
-      <calcite-button color="blue" scale="s" round>Button</calcite-button>
-      <calcite-button color="blue" scale="m" round>Button</calcite-button>
-      <calcite-button color="blue" scale="l" round>Button</calcite-button>
+      <calcite-button label="Rounded, small scale" color="blue" scale="s" round>Button</calcite-button>
+      <calcite-button label="Rounded, medium scale" color="blue" scale="m" round>Button</calcite-button>
+      <calcite-button label="Rounded, large scale" color="blue" scale="l" round>Button</calcite-button>
 
 
       <h2>Test 6. Rounded with Icons</h2>
-      <calcite-button icon-start="arrow-left" icon-end="arrow-right" color="blue" scale="s" round>Button</calcite-button>
-      <calcite-button icon-start="arrow-left" icon-end="arrow-right" color="blue" scale="m" round>Button</calcite-button>
-      <calcite-button icon-start="arrow-left" icon-end="arrow-right" color="blue" scale="l" round>Button</calcite-button>
+      <calcite-button label="Rounded with icons, small scale" icon-start="arrow-left" icon-end="arrow-right" color="blue" scale="s" round>Button</calcite-button>
+      <calcite-button label="Rounded with icons, medium scale" icon-start="arrow-left" icon-end="arrow-right" color="blue" scale="m" round>Button</calcite-button>
+      <calcite-button label="Rounded with icons, large scale" icon-start="arrow-left" icon-end="arrow-right" color="blue" scale="l" round>Button</calcite-button>
 
 
       <h2>Test 7. Rounded Icon only</h2>
-      <calcite-button icon-start="save" color="blue" scale="s" round label="Small scale save"> </calcite-button>
-      <calcite-button icon-start="save" color="blue" scale="m" round label="Medium scale save"> </calcite-button>
-      <calcite-button icon-start="save" color="blue" scale="l" round label="Large scale save"> </calcite-button>
+      <calcite-button icon-start="save" color="blue" scale="s" round label="Icon only and rounded, small scale"></calcite-button>
+      <calcite-button icon-start="save" color="blue" scale="m" round label="Icon only and rounded, medium scale"></calcite-button>
+      <calcite-button icon-start="save" color="blue" scale="l" round label="Icon only and rounded, large scale"></calcite-button>
 
       <h2>Test 8. Loading: Enable via toggle loading animation switch</h2>
       <!-- Switcher to add loading class-->  
@@ -154,7 +154,7 @@
         <calcite-switch id="loading-switch"></calcite-switch>
       </calcite-label>
       <br>
-      <calcite-button class="loading-transition" color="blue" appearance="solid" icon-end="download">Attachments</calcite-button>
+      <calcite-button class="loading-transition" color="blue" appearance="solid" icon-end="download" label="Loading button status">Attachments</calcite-button>
 
       <h2>Test 9. Widths</h2>
       <calcite-button title="Auto width (default)">Auto width (default)</calcite-button>
@@ -171,12 +171,12 @@
       <calcite-button title="Alignment icon-end space-between" alignment="icon-end-space-between" icon-start="layers" icon-end="chevron-down" width="half">Alignment icon-end space-between</calcite-button>
 
       <h3>Test 10b. Right-to-Left Alignments: For localizations that read content right-to-left</h3>
-      <calcite-button dir="rtl" title="Alignment center (default))" icon-start="layers" icon-end="chevron-down" width="half">Alignment center (default)</calcite-button>
-      <calcite-button dir="rtl" title="Alignment start" alignment="start" icon-start="layers" icon-end="chevron-down" width="half">Alignment start</calcite-button>
-      <calcite-button dir="rtl" title="Alignment end" alignment="end" icon-start="layers" icon-end="chevron-down" width="half">Alignment end</calcite-button>
-      <calcite-button dir="rtl" title="Alignment space-between" alignment="space-between" icon-start="layers" icon-end="chevron-down" width="half">Alignment space-between</calcite-button>
-      <calcite-button dir="rtl" title="Alignment icon-start space-between" alignment="icon-start-space-between" icon-start="layers" icon-end="chevron-down" width="half">Alignment icon-start space-between</calcite-button>
-      <calcite-button dir="rtl" title="Alignment icon-end space-between" alignment="icon-end-space-between" icon-start="layers" icon-end="chevron-down" width="half">Alignment icon-end space-between</calcite-button>
+      <calcite-button dir="rtl" title="Alignment center (default))" icon-start="layers" icon-end="chevron-down" width="half" label="RTL Alignment center (default)">Alignment center (default)</calcite-button>
+      <calcite-button dir="rtl" title="Alignment start" alignment="start" icon-start="layers" icon-end="chevron-down" width="half" label="RTL Alignment start">Alignment start</calcite-button>
+      <calcite-button dir="rtl" title="Alignment end" alignment="end" icon-start="layers" icon-end="chevron-down" width="half" label="RTL Alignment end">Alignment end</calcite-button>
+      <calcite-button dir="rtl" title="Alignment space-between" alignment="space-between" icon-start="layers" icon-end="chevron-down" width="half" label="RTL Alignment space-between">Alignment space-between</calcite-button>
+      <calcite-button dir="rtl" title="Alignment icon-start space-between" alignment="icon-start-space-between" icon-start="layers" icon-end="chevron-down" width="half" label="RTL Alignment icon-start space-between">Alignment icon-start space-between</calcite-button>
+      <calcite-button dir="rtl" title="Alignment icon-end space-between" alignment="icon-end-space-between" icon-start="layers" icon-end="chevron-down" width="half" label="RTL Alignment icon-end space-between">Alignment icon-end space-between</calcite-button>
 
 
       <h2>Test 11. Icons within Buttons</h2>

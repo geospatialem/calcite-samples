@@ -75,17 +75,17 @@
         <calcite-shell-panel slot="primary-panel" position="start" detached>
             <calcite-action-bar slot="action-bar">
                 <calcite-action-group>
-                    <calcite-action text="Add action" icon="plus"></calcite-action>
-                    <calcite-action text="Save action, disabled" disabled icon="save"></calcite-action>
-                    <calcite-action text="Layers action, Indicator on" active indicator icon="layers"></calcite-action>
+                    <calcite-action text="Add action" icon="plus" label="Add action, for display purposes only"></calcite-action>
+                    <calcite-action text="Save action, disabled" disabled icon="save" label="Disabled save action, for display purposes only"></calcite-action>
+                    <calcite-action text="Layers action, Indicator on" active indicator icon="layers" label="Layers action, for display purposes only"></calcite-action>
                 </calcite-action-group>
             </calcite-action-bar>
             <calcite-block collapsible heading="Navigate through the action bar" summary="Enabling items in the menu will have no action unless selecting the Collapse/Expand action. However, can all content be accessed?"  heading-level="2">
                 <calcite-block-content>
-                    <calcite-action text="Item 1, Plus icon, and Indicator on" text-enabled indicator icon="plus">
+                    <calcite-action text="Item 1, Plus icon, and Indicator on" text-enabled indicator icon="plus" label="Plus action, for display purposes only">
                     </calcite-action>
-                    <calcite-action text="Item 2, Save icon" text-enabled icon="save"></calcite-action>
-                    <calcite-action text="Item 3, Banana icon" text-enabled icon="banana"></calcite-action>
+                    <calcite-action text="Item 2, Save icon" text-enabled icon="save" label="Save action, for display purposes only"></calcite-action>
+                    <calcite-action text="Item 3, Banana icon" text-enabled icon="banana" label="Banana action, for display purposes only"></calcite-action>
                 </calcite-block-content>
             </calcite-block>
             <calcite-block collapsible heading="Additional Block example" summary="Can this block content be accessed?" heading-level="2">
@@ -108,8 +108,8 @@
 
           <calcite-action-bar slot="action-bar">
             <calcite-action-group slot="bottom-actions">
-              <calcite-action icon="lightbulb" text="Tips" id="tip-manager-button"></calcite-action>
-              <calcite-action icon="mega-phone" text="Feedback" id="tip-manager-button-2"></calcite-action>
+              <calcite-action icon="lightbulb" text="Tips" id="tip-manager-button" label="Tips action, for display purposes only"></calcite-action>
+              <calcite-action icon="mega-phone" text="Feedback" id="tip-manager-button-2" label="Feedback action, for display purposes only"></calcite-action>
             </calcite-action-group>
           </calcite-action-bar>
         </calcite-shell-center-row>
@@ -119,16 +119,16 @@
         <calcite-shell-panel slot="contextual-panel" position="end" detached height-scale="s">
             <calcite-action-bar slot="action-bar">
                 <calcite-action-group>
-                    <calcite-action text="Add" active icon="plus"></calcite-action>
-                    <calcite-action text="Save" disabled icon="save"></calcite-action>
-                    <calcite-action text="Layers" icon="layers"></calcite-action>
+                    <calcite-action text="Add" active icon="plus" label="Add action, for display purposes only"></calcite-action>
+                    <calcite-action text="Save" disabled icon="save" label="Save action, for display purposes only"></calcite-action>
+                    <calcite-action text="Layers" icon="layers" label="Layers action, for display purposes only"></calcite-action>
                 </calcite-action-group>
                 <calcite-action-group>
-                    <calcite-action text="Add" icon="plus"></calcite-action>
-                    <calcite-action text="Save" disabled icon="save"></calcite-action>
-                    <calcite-action text="Layers" icon="layers"></calcite-action>
+                    <calcite-action text="Add" icon="plus" label="Add action, for display purposes only"></calcite-action>
+                    <calcite-action text="Save" disabled icon="save" label="Disabled save action, for display purposes only"></calcite-action>
+                    <calcite-action text="Layers" icon="layers" label="Layers action, for display purposes only"></calcite-action>
                 </calcite-action-group>
-                <calcite-action slot="bottom-actions" text="Tips" icon="lightbulb"></calcite-action>
+                <calcite-action slot="bottom-actions" text="Tips" icon="lightbulb" label="Tips action, for display purposes only"></calcite-action>
             </calcite-action-bar>
             <calcite-flow>
                 <calcite-panel heading="Value List Example">
@@ -136,16 +136,16 @@
                         <calcite-value-list multiple>
                             <calcite-value-list-item label="Item 1"
                                 description="Lightning bolt" value="lightning">
-                                <calcite-action slot="actions-end" icon="camera-flash-on" text="Lightning bolt">
+                                <calcite-action slot="actions-end" icon="camera-flash-on" text="Lightning bolt" label="Lightning action, for display purposes only">
                                 </calcite-action>
                             </calcite-value-list-item>
                             <calcite-value-list-item label="Item 2"
                                 description="Banana" value="banana">
-                                <calcite-action slot="actions-end" icon="banana" text="Banana"></calcite-action>
+                                <calcite-action slot="actions-end" icon="banana" text="Banana" label="Banana action, for display purposes only"></calcite-action>
                             </calcite-value-list-item>
                             <calcite-value-list-item label="Item 3"
                                 description="Human" value="human">
-                                <calcite-action slot="actions-end" icon="person2" text="Person"></calcite-action>
+                                <calcite-action slot="actions-end" icon="person2" text="Person" label="Person action, for display purposes only"></calcite-action>
                             </calcite-value-list-item>
                         </calcite-value-list>
                     </calcite-block>
