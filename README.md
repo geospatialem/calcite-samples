@@ -1,15 +1,18 @@
-# calcite-samples
+# Calcite samples
 
 ## Complex samples (n=3)
+
 - [Form](0-form.html): Contains multiple components in a form.
 - [Panel](1-panel.html): Complex solution with multiple elements in a `calcite-panel`.
 - [Accordion](2-accordion): Complex solution with multiple elements in a `calcite-accordion`.
+
 ## Components (n=49)
-- [Accordion and Accordion Item](accordion.html)  
+
+- [Accordion and Accordion Item](accordion.html)
 - [Action](action.html)
 - [Action Bar, Action Group and Action](action-bar.html)
 - [Action Pad and Action](action-pad.html)
-- [Alert](alert.html)  
+- [Alert](alert.html)
 - [Avatar and Chip](avatar.html)
 - [Block and Block Section](block.html)
 - [Button](button.html)
@@ -20,7 +23,7 @@
 - [Dropdown, Dropdown Group and Dropdown Item](dropdown.html)
 - [Floating Action Button (FAB)](fab.html)
 - [Flow](flow.html)
-- [Inline Editable](inline-editable.html)  
+- [Inline Editable](inline-editable.html)
 - [Input and Input Message](input.html)
 - [Input Date Picker](input-date-picker.html)
 - [Input Time Picker](input-time-picker.html)
@@ -44,7 +47,7 @@
 - [Shell Center Row](shell-center-row.html)
 - [Slider](slider.html)
 - [Split Button](split-button.html)
-- [Stepper and Stepper Item](stepper.html)  
+- [Stepper and Stepper Item](stepper.html)
 - [Switch](switch.html)
 - [Tabs, Tab Nav, Tab Title and Tab](tabs.html)
 - [Tile](tile.html)
